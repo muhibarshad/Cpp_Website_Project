@@ -1,0 +1,530 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    font-family: 'Baloo Bhaina 2', cursive;
+}
+.contanier
+{
+    width: 100%;
+    height: 100vh;
+    padding-left:8% ;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+.logo
+{
+    font-size: 40px;
+    cursor: pointer;
+    margin: 30px;
+    color: darkorange;
+}
+.navbar
+{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color:rgb(245, 245, 245);
+}
+nav
+{
+    flex: 1;
+    text-align: right;
+}
+nav ul li
+{
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+nav ul li a
+{
+    text-decoration: none;
+    color:black ;
+    font-size: 20px;
+}
+nav ul li a:hover
+{
+    cursor: pointer;
+    color: rgb(1, 148, 128);
+    text-decoration: underline;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+#menu-icon
+{
+    display: none;
+}
+@media only screen and (max-width:700px)
+{
+    .contanier
+    {
+        padding-left:0% ;
+        padding-right: 0%;
+    }
+    nav ul
+    {
+        width: 100%;
+        height: 60%;  
+        background-color: rgb(173 61 61);
+        position: absolute;
+        top: 115px;
+        right: 0;
+        z-index: 2;
+    }
+    nav ul li a
+    {
+        color: #fff;
+    }
+    #menu-icon
+    {
+       display: inline-block;
+       min-width: 15%;
+       max-width: 15%;
+       margin-right: 30px;
+       cursor: pointer;
+    }
+   #menu_list
+   {
+       transition: 0.5sec;
+       overflow: hidden;
+   }
+}
+/*Amazing part*/
+.container-3
+{
+    width: 90%;
+    height: 100vh;
+    padding-left:8% ;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+.heading-2
+{
+    background-color: whitesmoke;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 50px;
+    width: 105%;
+}
+.row-3
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.amazing
+{
+    width: 200%;
+    height: 60%;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.25);
+}
+.amazing-header
+{
+    padding: 35px 55px;
+   height: 4vh;
+   overflow: hidden;
+   background-size: cover;
+    
+}
+.amazing-body
+{
+    padding:30px 20px;
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.btn2
+{
+    width: 40vh;
+    height: 8vh;
+    margin: 8px 20px;
+    font-size: 18px;
+    background-color: rgb(0, 147, 184);
+    color: aliceblue;
+    border: none;
+    outline: none;
+}
+.btn2:hover
+{
+    background-color: rgb(130, 230, 255);
+    color: black;
+    cursor: pointer;
+} 
+@media only screen and (max-width:1000px)
+{
+    .amazing
+    {
+        width: 50%;
+    }
+}
+@media only screen and (max-width:620px)
+{
+    .container-3
+    {
+       margin-top: 970px;
+        width: 100%;
+    }
+    .heading-2
+    {
+        width: 107%;
+        background-color: #eb675e;
+        font-size:14px ;
+        padding: 0px;
+    }
+    .amazing
+    {
+        width: 100%;
+    }
+    .amazing-header
+{
+   padding: 10px 0px;
+   height:12vh;
+   margin-left: 2px;
+   overflow: visible;
+   background-size: contain;
+   font-size: 15px;
+    
+}
+    .btn2
+    {
+        width: 20vh;
+        height: 4vh;
+        margin: 15px 10px;
+        font-size: 13px;
+    }
+}
+/*Now Css for the footer*/
+.contanier-4
+{
+    width: 90%;
+    height: 68vh;
+    padding-left:8% ;
+    padding-right: 8%;
+    box-sizing: border-box;
+    background-color:rgb(245, 245, 245);
+    margin-left: 30px;
+}
+.row-4
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+}
+.footer-col ul
+{
+    list-style: none;
+    
+}
+.footer-col ul a
+{
+    text-decoration: none;
+}
+#about_us
+{
+    width: 50%;
+}
+footer
+{
+    padding: 20px 30px;
+}
+.footer-col
+{
+    width: 25%;
+    padding: 10px 40px;
+}
+.footer-col h4
+{
+    margin: 10px 0px;
+    font-size: 20px;
+}
+.footer-col ul li
+{
+    padding: 4px 0px;
+}
+.footer-col ul li a
+{
+    color: rgb(0, 111, 131);
+    font-weight: bold;
+}
+#insta
+{
+  padding: 0px 7px ;
+  color: #8a3ab9;
+}
+#face
+{
+  padding: 0px 7px ;
+  color: #062975;
+}
+#whats
+{
+  padding: 0px 7px ;
+  color: #049e25;
+}
+#twit
+{
+  padding: 0px 7px ;
+  color: #084cdf;
+}
+@media only screen and  (max-width:700px)
+{
+    .contanier-4
+    {
+        height: 120vh;
+    }
+
+    #about_us
+{
+    width: 110%;
+}
+footer
+{
+    padding: 0px 5px;
+}
+.footer-col
+{
+    width:50%;
+    padding: 14px 5px;
+}
+.footer-col h4
+{
+    margin: 10px 0px;
+    font-size: 20px;
+}
+.footer-col ul li
+{
+    padding: 4px 0px;
+}
+.footer-col ul li a
+{
+    color: rgb(0, 111, 131);
+    font-weight: bold;
+
+}
+.footer-col ul li a:hover
+{
+    color: #fb5283;
+    cursor: pointer;
+}
+.container-5
+{
+    margin-bottom: 15px;
+}
+}
+/*ALst_footer*/
+.container-5
+{
+    width: 95%;
+    height: 15vh;
+    padding-left:4% ;
+    padding-right: 4%;
+    box-sizing: border-box;
+    background-color:rgb(160, 186, 192);
+    margin-left: 30px;
+    margin-bottom: 12px;
+}
+.footer-2 h1
+{
+    text-align: center;
+    justify-content: center;
+    padding: 25px 0px;
+    font-size: 20px;
+    color: rgb(0, 67, 70);
+}
+/*Website starts here*/
+.heading h1
+{
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 200px;
+    z-index: -1;
+}
+.heading h1
+{
+    margin-top: 80px;
+    font-size: 40px;
+}
+.heading h1
+{
+    width: 0ch;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: text 4s steps(14) infinite alternate;
+    border-right: 3px solid black;
+}
+@keyframes text {
+    0%
+    {
+        width: 0ch;
+    }
+    50%
+    {
+        width: 14ch;
+    }
+}
+.contanier-2
+{
+    width: 100%;
+    height: 120vh;
+    box-sizing: border-box;
+ 
+}
+.col-1
+{
+
+    height: 510px;
+    width: 23%;
+    margin-top: 20px;
+}
+.col-2
+{
+    width: 70%;
+    /* height: 100%; */
+    overflow: scroll;
+
+}
+.topic 
+{
+    position: fixed;
+    /* position: sticky; */
+    top: 115px;
+    left: 0px;
+}
+.topic h2
+{
+    text-align: center;
+    font-size: 30px;
+}
+.topic ul li a
+{
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+.topic ul li button
+{
+    background-color: #e9ebf1;
+    border: 2px solid #e9ebf1;
+    transition: 0.3s;
+    box-shadow: 3px 4px 40px -10px rgba(0,0,0,0.25);
+}
+.topic ul li
+{
+    list-style: none;
+}
+.row-1
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.topic ul button:hover
+{
+    background-color: #fb5283;
+    cursor: pointer;
+    transform: scale(1.02);
+    border: #062975;
+    font-size: 20px;
+    box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.25);
+}
+
+.topic ul li button:hover
+{
+  color: white;
+}
+.basics h2
+{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 40px;
+}
+.btnside
+{
+    width:180px ;
+    height: 8vh;
+    font-size: 18px;
+    color: rgb(3, 93, 105);
+    font-weight: bold;
+}
+@media only screen and (max-width:700px)
+{
+    
+    .topic 
+    {
+        position: static;
+        top: 115px;
+        left: 0px;
+    }
+    .heading h1 
+    {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+.col-2 .code
+{  width:100% ;
+   
+    overflow: scroll;
+}
+.basics h2
+{
+    font-size: 20px;
+}
+
+.topic h2
+{
+    text-align: left;
+    font-size: 18px;
+}
+.btnside
+{
+    width:100px ;
+    height: 7vh;
+    font-size: 22px;
+    color: rgb(3, 93, 105);
+    font-weight: bold;
+}
+.topic ul li button
+{
+  padding: 10px 0px;
+}
+.topic ul li button
+{
+   font-size: 15px;
+}
+.topic ul button:hover
+{
+    background-color: #fb5283;
+    cursor: pointer;
+    transform: scale(1.02);
+    border: #062975;
+    font-size: 17px;
+    box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.25);
+}
+
+.topic ul li button:hover
+{
+  color: white;
+}
+
+.row-1
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+}
+/*Website code starts at here*/
