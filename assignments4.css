@@ -1,0 +1,199 @@
+*
+{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+}
+.contanier
+{
+    margin: 150px 250px;
+    width: 80%;
+    height: 50vh;
+    background-color: rgb(255, 9, 9);
+}
+.Alert
+{
+    width: 90%;
+    height: 90vh;
+    padding-left: 8px;
+    padding-right: 8px;
+    box-sizing: border-box;
+}
+
+.img h1
+{
+    text-align: center;
+    position: relative;
+    top: 60px;
+    color: rgb(239, 255, 21);
+}
+.img img
+{
+    width: 10%;
+    position: relative;
+    left: 230px;
+    bottom: 20px;
+}
+.heading 
+{
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    justify-content: center;
+}
+.access
+{
+    position:absolute;
+    top: 100px;
+    left: 300px;
+
+}
+.access button
+{
+    width: 25vh;
+    height: 7vh;
+    border-radius: 20px;
+    background-color: rgb(156, 93, 238);
+    border: 2px solid rgb(156, 93, 238); 
+    font-size: 20px;
+    color: white;
+}
+.access button:hover
+{
+    width: 26vh;
+    cursor: pointer;
+    height: 8vh;
+    color: black;
+    border-radius: 20px;
+    background-color: rgb(202, 168, 246);
+    border: 2px solid rgb(202, 168, 246);
+}
+.blog button
+{
+    width: 25vh;
+    height: 7vh;
+    border-radius: 20px;
+    color: white;
+    background-color: rgb(233, 93, 238);
+    border: 2px solid rgb(233, 93, 238);
+    font-size: 20px;
+}
+.blog
+{
+    position:absolute;
+    bottom: 70px;
+    left: 550px
+}
+.blog button:hover
+{
+    width: 25vh;
+    height: 7vh;
+    color: black;
+    border-radius: 20px;
+    background-color: rgb(237, 169, 240);
+    border: 2px solid rgb(237, 169, 240);
+    font-size: 20px;
+    cursor: pointer;
+}
+@media only screen and (max-width:700px)
+{
+    .contanier
+    {
+        margin: 150px 250px;
+        width: 100%;
+        height: 30vh;
+        background-color: rgb(255, 9, 9);
+        border-radius: 20px;
+    }
+    .Alert
+    {
+        width: 90%;
+        height: 60vh;
+        padding-left: 8px;
+        padding-right: 8px;
+        box-sizing: border-box;
+    }
+    
+    .img h1
+    {
+        text-align: center;
+        position: relative;
+        top: 60px;
+        color: rgb(239, 255, 21);
+    }
+    .img img
+    {
+        width: 20%;
+        position: relative;
+        left: 10px;
+        bottom: 0px;
+    }
+    .heading 
+    {
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        justify-content: center;
+    }
+    .access
+    {
+        position:absolute;
+        top: 50px;
+        left: 300px;
+    
+    }
+    .access button
+    {
+        width: 25vh;
+        height: 7vh;
+        border-radius: 20px;
+        background-color: rgb(156, 93, 238);
+        border: 2px solid rgb(156, 93, 238); 
+        font-size: 20px;
+        color: white;
+    }
+    .access button:hover
+    {
+        width: 26vh;
+        cursor: pointer;
+        height: 8vh;
+        color: black;
+        border-radius: 20px;
+        background-color: rgb(202, 168, 246);
+        border: 2px solid rgb(202, 168, 246);
+    }
+    .blog button
+    {
+        width: 15vh;
+        height: 5vh;
+        border-radius: 20px;
+        color: white;
+        background-color: rgb(233, 93, 238);
+        border: 2px solid rgb(233, 93, 238);
+        font-size: 20px;
+    }
+    .blog
+    {
+        position:absolute;
+        bottom: 370px;
+        left: 350px
+    }
+    .blog button:hover
+    {
+        width: 16vh;
+        height: 6vh;
+        cursor: pointer;
+        color: black;
+        border-radius: 20px;
+        background-color: rgb(237, 169, 240);
+        border: 2px solid rgb(237, 169, 240);
+        font-size: 22px;
+    }
+}
+
+
+
+
+
+
+

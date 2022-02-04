@@ -94,117 +94,7 @@ nav ul li a:hover
        overflow: hidden;
    }
 }
-/*Amazing part*/
-.container-3
-{
-    width: 90%;
-    height: 100vh;
-    padding-left:8% ;
-    padding-right: 8%;
-    box-sizing: border-box;
-}
-.heading-2
-{
-    background-color: whitesmoke;
-    text-align: center;
-    font-size: 25px;
-    margin-top: 50px;
-    width: 105%;
-}
-.row-3
-{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-.amazing
-{
-    width: 200%;
-    height: 60%;
-    background-color: #fff;
-    border: none;
-    outline: none;
-    margin-top: 50px;
-    margin-bottom: 40px;
-    transition: 0.3s;
-    box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.25);
-}
-.amazing-header
-{
-    padding: 35px 55px;
-   height: 4vh;
-   overflow: hidden;
-   background-size: cover;
-    
-}
-.amazing-body
-{
-    padding:30px 20px;
-    text-align: center;
-    font-size: 20px;
-    font-family: sans-serif;
-}
-.btn2
-{
-    width: 40vh;
-    height: 8vh;
-    margin: 8px 20px;
-    font-size: 18px;
-    background-color: rgb(0, 147, 184);
-    color: aliceblue;
-    border: none;
-    outline: none;
-}
-.btn2:hover
-{
-    background-color: rgb(130, 230, 255);
-    color: black;
-    cursor: pointer;
-} 
-@media only screen and (max-width:1000px)
-{
-    .amazing
-    {
-        width: 50%;
-    }
-}
-@media only screen and (max-width:620px)
-{
-    .container-3
-    {
-       margin-top: 970px;
-        width: 100%;
-    }
-    .heading-2
-    {
-        width: 107%;
-        background-color: #eb675e;
-        font-size:14px ;
-        padding: 0px;
-    }
-    .amazing
-    {
-        width: 100%;
-    }
-    .amazing-header
-{
-   padding: 10px 0px;
-   height:12vh;
-   margin-left: 2px;
-   overflow: visible;
-   background-size: contain;
-   font-size: 15px;
-    
-}
-    .btn2
-    {
-        width: 20vh;
-        height: 4vh;
-        margin: 15px 10px;
-        font-size: 13px;
-    }
-}
+
 /*Now Css for the footer*/
 .contanier-4
 {
@@ -215,6 +105,7 @@ nav ul li a:hover
     box-sizing: border-box;
     background-color:rgb(245, 245, 245);
     margin-left: 30px;
+    margin-top: 400px;
 }
 .row-4
 {
@@ -241,7 +132,7 @@ footer
 }
 .footer-col
 {
-    width: 25%;
+    width: 21%;
     padding: 10px 40px;
 }
 .footer-col h4
@@ -535,22 +426,18 @@ footer
     padding-left:8% ;
     padding-right: 8%;
     box-sizing: border-box;
-    /* background-color:rgb(245, 245, 245); */
     margin-left: 80px;
     position: relative;
     bottom: 500px;
-
 }
 .row-6-1
 {
     height: 170vh;
     width: 100%;
-    /* border:2px solid #8a3ab9; */
-    background-color:rgb(168, 82, 139);
+    background-color:rgb(221, 221, 221)
 }
 .row-6-1 .formdiv
-{
-   
+{  
     margin-top: 45px;
     margin-left: 150px;
 }
@@ -558,17 +445,19 @@ footer
 {
     border: 2px solid rgb(3, 119, 155);
     margin-top: 45px;
-    margin-left: 100px;
+    margin-left: 10px;
     font-size: 30px;
     font-weight: bold;
-    background: #fb5283;
-    border-radius: 20px;
+    background: #00798f;
+    outline: none;
+
+    color: white;
 }
 .submit input:hover
 {
- background: #f76890;
+ background: #69dbdb;
  cursor: pointer;
- color: rgb(241, 239, 239);
+ color: rgb(12, 11, 11);
 }
 .formdiv input 
 {
@@ -581,23 +470,119 @@ footer
 .formdiv h1
 {
     margin-bottom: 20px;
-    margin-left: 120px;
+    margin-left: 10px;
     margin-right: 270px;
     margin-bottom: 40px;
-    color: #dfad08;
-    border: 2px solid black;
-    
-    
+    color: #dfad08;   
 }
 .formdiv .textarea
 {
     margin-right: 300px;
-    border: 1px solid black;
+
 }
 
  .Ask 
 {
     width: 100%;
     height: 40vh;
-  
+}
+.conatct-us-side
+{
+    display: none;
+}
+.responsive
+{
+    display: none;
+}
+.formsubmit
+{
+    display: none;
+}
+@media only screen and (max-width:700px)
+{
+ .contanier-6
+    {
+        width: 118%;
+        height: 100vh;
+        padding-left:8% ;
+        padding-right: 8%;
+        box-sizing: border-box;
+        position: relative;
+        bottom: -100px;
+        right: 120px;
+    }
+.row-6-1 .formdiv
+{
+    
+    margin-top: 55px;
+    margin-left: 40px;
+}
+.submit input
+{
+    border: 2px solid rgb(3, 119, 155);
+    margin-top: 45px;
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    background: #00798f;
+    outline: none;
+
+    color: white;
+}
+.submit input:hover
+{
+ background: #69dbdb;
+ cursor: pointer;
+ color: rgb(12, 11, 11);
+}
+.formdiv input 
+{
+    border: 2px solid rgb(3, 119, 155);
+    padding: 12px 100px;
+    border-radius: 0px;
+    outline: none;
+}
+.formdiv h1
+{
+    margin-bottom: 20px;
+    margin-left: 0px;
+    margin-right: 270px;
+    margin-bottom: 40px;
+    color: #dfad08; 
+    font-size: 25px;  
+}
+.formdiv .textarea
+{
+    margin-right: 0px;
+}
+.row-6-1
+{
+    height: 100vh;
+    width: 100%;
+    background-color:rgb(221, 221, 221)
+}
+.conatct-us-side
+{
+    display: block;
+    position: relative;
+    top:130px;
+    right: 50px;
+    font-size: 15px;
+    text-align: center;
+    z-index: -1;
+}
+ .conatct-us-side h1
+{
+  font-size: 30px;
+}
+.formsubmit
+{
+    display: block;
+    position: relative;
+    left: 70px;
+    top: 140px;
+    padding-top: 30px;
+    font-size: 15px;
+}
+
 }

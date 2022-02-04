@@ -99,6 +99,87 @@ nav ul li a:hover
    }
 }
 /*Amazing part*/
+.assignments
+{
+    position: absolute;
+    top: 190px;
+    right: 101px;
+}
+.assignments button
+{
+    width: 170px;
+    height: 120px;
+    font-size: 20px;
+    color: rgb(42, 3, 105);
+    font-weight: bold;
+    border: #dfbe2c;
+    background: #dfbe2c;
+    border-radius: 20px;
+
+}
+.assignments button:hover
+{
+    background-color: #fb5283;
+    cursor: pointer;
+    color: white;;
+    transform: scale(1.02);
+    border: #062975;
+    font-size: 17px;
+    box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.25);
+}
+.arrow img
+{
+    position: absolute;
+    right: 141px;
+    width: 90px;
+    z-index: -1;
+}
+.arrowleft img
+{
+  display: none;
+}
+@media only screen and (max-width:700px)
+{
+ .assignments
+ {
+
+    top: 185px;
+    right: 11px;
+ }
+ .assignments button
+ {
+    width: 90px;
+    height:60px;
+    font-size: 10px;
+ }
+ .arrow
+ {
+     display: none;
+ }
+ .arrowleft img
+{
+  display: block;
+}
+.arrowleft img
+{
+    position: absolute;
+    top: 200px;
+    right: 100px;
+    width: 40px;
+    z-index: -1;
+}
+.assignments button:hover
+{
+    background-color: #fb5283;
+    cursor: pointer;
+    color: white;;
+    transform: scale(1.02);
+    border: #062975;
+    font-size: 10px;
+   
+}
+}
+
 .container-3
 {
     width: 90%;
@@ -528,7 +609,7 @@ footer
 }
 
 /*All code CSS are WRITTEN As*/
-.contanier-6
+/* .contanier-6
 {
     width: 100%;
     height: 1610vh;
@@ -563,6 +644,111 @@ footer
     {
         height: 1250vh;
     }
+} */
+
+
+
+
+/*The Alert part start here*/
+.comingsoon
+{
+    position: absolute;
+    top: 330px;
+    left: 700px;
+    height: 70vh;
+    width: 80vh;
+    text-align: center;
+    z-index: -1;
+    background: #f80202;
+}
+.comingsoon h1
+{
+    color: white;
+}
+.alert img
+{
+    position: absolute;
+    width: 37%;
+    height: 70%;
+    right: 565px;
+    top: 330px;
+    z-index: -1;
+}
+.comingcontact
+{
+    position: absolute;
+    top: 750px;
+    right: 540px;
+}
+.comingcontact button
+{
+    height: 7vh;
+    width: 25vh;
+    font-size: 20px;
+    color: #e9ebf1;
+    background-color: #008170;
+    border: 2px solid #008170;
+    border-radius: 20px;
+}
+.comingcontact button:hover
+{
+    cursor: pointer;
+    height: 7vh;
+    width: 25vh;
+    font-size: 20px;
+    color: #000000;
+    background-color: #10ac97;
+    border: 2px solid #10ac97;
+}
+@media only screen and (max-width:700px)
+{
+ .comingsoon
+{
+    position: absolute;
+    top: 650px;
+    left: 110px;
+    height: 67vh;
+    width: 70%;
+    text-align: left;
+    z-index: -1;
+    background: #f80202;
+    font-size: 15px;
+}
+.alert img
+{
+    position: absolute;
+    width: 70%;
+    height: 40%;
+    left: 110px;
+    top: 270px;
+    z-index: -1;
+}
+.comingcontact
+{
+    position: absolute;
+    top: 1300px;
+    right: 40px;
+}
+.comingcontact button
+{
+    height: 7vh;
+    width: 25vh;
+    font-size: 20px;
+    color: #e9ebf1;
+    background-color: #008170;
+    border: 2px solid #008170;
+    border-radius: 20px;
+}
+.comingcontact button:hover
+{
+    cursor: pointer;
+    height: 7vh;
+    width: 25vh;
+    font-size: 20px;
+    color: #000000;
+    background-color: #10ac97;
+    border: 2px solid #10ac97;
+}
 }
 
 

@@ -99,6 +99,86 @@ nav ul li a:hover
    }
 }
 /*Amazing part*/
+.assignments
+{
+    position: absolute;
+    top: 190px;
+    right: 101px;
+}
+.assignments button
+{
+    width: 170px;
+    height: 120px;
+    font-size: 20px;
+    color: rgb(42, 3, 105);
+    font-weight: bold;
+    border: #dfbe2c;
+    background: #dfbe2c;
+    border-radius: 20px;
+
+}
+.assignments button:hover
+{
+    background-color: #fb5283;
+    cursor: pointer;
+    color: white;;
+    transform: scale(1.02);
+    border: #062975;
+    font-size: 17px;
+    box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.25);
+}
+.arrow img
+{
+    position: absolute;
+    right: 141px;
+    width: 90px;
+    z-index: -1;
+}
+.arrowleft img
+{
+  display: none;
+}
+@media only screen and (max-width:700px)
+{
+ .assignments
+ {
+
+    top: 185px;
+    right: 11px;
+ }
+ .assignments button
+ {
+    width: 90px;
+    height:60px;
+    font-size: 10px;
+ }
+ .arrow
+ {
+     display: none;
+ }
+ .arrowleft img
+{
+  display: block;
+}
+.arrowleft img
+{
+    position: absolute;
+    top: 200px;
+    right: 100px;
+    width: 40px;
+    z-index: -1;
+}
+.assignments button:hover
+{
+    background-color: #fb5283;
+    cursor: pointer;
+    color: white;;
+    transform: scale(1.02);
+    border: #062975;
+    font-size: 10px;
+   
+}
+}
 .container-3
 {
     width: 90%;

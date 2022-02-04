@@ -344,16 +344,67 @@ footer
     color: rgb(0, 67, 70);
 }
 /*Website starts here*/
+.contanier-6
+{
+    border: 2px solid rgb(24, 216, 216);
+    border-radius: 100px;
+    background-color: rgb(24, 216, 216);
+    width: 50%;
+    height: 70vh;
+    margin-top: 100px;
+    margin-bottom: 200px;
+
+}
+.sin
+{
+    margin-top: 70px;
+}
+.formdiv input
+{
+    margin: 30px 85px;
+    padding: 15px 100px;
+    border-radius: 10px;
+    border: 2px solid rgb(24, 216, 216);
+}
+
+.submit
+{
+    margin-top: 20px;
+    margin-left: 200px;
+  
+}
+.submit input
+{
+    height: 7vh;
+    width: 17vh;
+    font-size: 18px;
+    border:2px solid #fb5283;
+    font-weight: bold;
+    outline: none;
+    color: rgb(0, 0, 0);
+    background: linear-gradient(to right,#fb5283,#ff3527);
+}
+.submit input:hover
+{
+    height: 7vh;
+    width: 19vh;
+    font-size: 19px;
+    border:2px solid coral;
+    font-weight: bold;
+    outline: none;
+    color: rgb(228, 228, 228);
+   background: coral;
+}
 .heading h1
 {
     flex-basis: 40%;
     position: relative;
-    margin-left: 200px;
+    margin-left: 100px;
     z-index: -1;
 }
 .heading h1
 {
-    margin-top: 80px;
+    margin-top: 50px;
     font-size: 40px;
 }
 .heading h1
@@ -361,7 +412,7 @@ footer
     width: 0ch;
     overflow: hidden;
     white-space: nowrap;
-    animation: text 3s steps(13) infinite alternate;
+    animation: text 3s steps(16) infinite alternate;
     border-right: 3px solid black;
 }
 @keyframes text {
@@ -371,160 +422,85 @@ footer
     }
     50%
     {
-        width: 13ch;
+        width: 16ch;
     }
 }
-.contanier-2
+.create
 {
-    width: 100%;
-    height: 120vh;
-    box-sizing: border-box;
- 
+   text-align: center;
 }
-.col-1
+.side-img
 {
-
-    height: 510px;
-    width: 23%;
-    margin-top: 20px;
+    border-left: 4px solid black;
+    height: 100vh;
+    width: 100vh;
+    position:absolute;
+    left: 700px;
+    top: 140px;
+    z-index: -1;
+    
 }
-.col-2
+.img-sinup img
 {
-    width: 70%;
-    /* height: 100%; */
-    overflow: scroll;
-
-}
-.topic 
-{
-    position: fixed;
-    /* position: sticky; */
-    top: 115px;
-    left: 0px;
-}
-.topic h2
-{
-    text-align: center;
-    font-size: 30px;
-}
-.topic ul li a
-{
-    text-decoration: none;
-    font-size: 20px;
-
-}
-
-.topic ul li button
-{
-    background-color: #e9ebf1;
-    border: 2px solid #e9ebf1;
-    transition: 0.3s;
-    box-shadow: 3px 4px 40px -10px rgba(0,0,0,0.25);
-}
-.topic ul li
-{
-    list-style: none;
-}
-.row-1
-{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.topic ul button:hover
-{
-    background-color: #fb5283;
-    cursor: pointer;
-    transform: scale(1.02);
-    border: #062975;
-    font-size: 20px;
-    box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.25);
-}
-
-.topic ul li button:hover
-{
-  color: white;
-
-}
-.basics h2
-{
-    text-align: center;
-    font-size: 30px;
-    margin-top: 40px;
-}
-.btnside
-{
-    width:180px ;
-    height: 8vh;
-    font-size: 18px;
-    color: rgb(3, 93, 105);
-    font-weight: bold;
+    margin-left: 22px;
+    width: 87vh;
+    height: 100vh;
 }
 @media only screen and (max-width:700px)
 {
+    .contanier-6
+{
+
+    width: 100%;
+    height: 50vh;
+}
+.sin
+{
+    margin-top: 70px;
+}
+.formdiv input
+{
+    margin: 30px 25px;
+    padding: 15px 100px;
+    border-radius: 10px;
+    border: 2px solid rgb(24, 216, 216);
+}
+
+.submit
+{
+    margin-top: 20px;
+    margin-left: 130px;
+  
+}
+.submit input
+{
+    height: 5vh;
+    width: 12vh;
+    outline: none;
+
+}
+.submit input:hover
+{
+    height: 6vh;
+    width: 13vh;
+    font-size: 17px;;
+
+}
+.heading h1
+{
+    margin-left: 50px;
+}
+.heading h1
+{
+    margin-top: 100px;
+}
+.side-img
+{
+   display: none;
     
-    .topic 
-    {
-        position: static;
-        top: 115px;
-        left: 0px;
-    }
-    .heading h1 
-    {
-        font-size: 24px;
-        margin-left: 10px;
-    }
-.col-2 .code
-{  width:100% ;
-   
-    overflow: scroll;
 }
-.basics h2
+.img-sinup img
 {
-    font-size: 20px;
+   display: none;
 }
-
-.topic h2
-{
-    text-align: left;
-    font-size: 18px;
-}
-.btnside
-{
-    width:100px ;
-    height: 7vh;
-    font-size: 22px;
-    color: rgb(3, 93, 105);
-    font-weight: bold;
-}
-.topic ul li button
-{
-  padding: 10px 0px;
-}
-.topic ul li button
-{
-   font-size: 15px;
-}
-.topic ul button:hover
-{
-    background-color: #fb5283;
-    cursor: pointer;
-    transform: scale(1.02);
-    border: #062975;
-    font-size: 17px;
-    box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.25);
-}
-
-.topic ul li button:hover
-{
-  color: white;
-}
-
-.row-1
-{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
 }
