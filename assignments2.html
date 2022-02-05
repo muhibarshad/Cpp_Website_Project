@@ -1,55 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assignments2.css">
-    <title>Assignment-2</title>
-</head>
-
-<body>
-    <div class="Alert">
-        <a href="assignments.html" class="access"><button>Go back</button></a>
-        <div class="contanier">
-            <div class="img">
-                <h1>No,Access</h1>
-                <img src="./images/alert2.png" alt="Alert">
-            </div>
-            <div class="heading">
-                It is not assigned yet,
-                <br>
-                When it is assigned to the class,
-                <br>
-                then we uploaded it imediately
-                <br>
-                If you find any problem in c++ in concepts then you must check the blog
-                and also contact us
-            </div>
-
-        </div>
-        <div class="blog">
-            <a href="blog.html"><button>Blog</button></a>
-            <a href="contact.html"><button>Contact</button></a>
-
-        </div>
-        </div>
-</body>
-
-</html>
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -88,7 +38,7 @@
         <div class="contanier-2">
             <div class="heading">
                 <h1>PF-PUCIT(NEW-CAMPUS)</h1>
-                <h2>ASSIGNMENT 01:</h2>
+                <h2>ASSIGNMENT 02:</h2>
             </div>
             <div class="row-1">
                 <div class="col-1">
@@ -109,21 +59,24 @@
                 </div>
                 <div class="col-2">
                     <div class="basics">
-                      <h2>Sample:Sum_Of_Two_Numbers</h2>
+                      <h2>Sample:String print function</h2>
                        <div class="code">
                         <pre class="cpp"><code class="language-cpp">
                             <xmp>
                                 #include<iostream>
+                                    #include<string>
                                     using namespace std;
                                     int main()
                                     {
-                                        int num_1=50;
-                                        int num_2=100;
-                                        int sum;
-                                        sum=num_1+num_2;
-                                        cout<<"The sum of these two numbers = "<<sum<<endl;
+                                        string name;
+                                        cout<<"Enter the string"<<endl;
+                                        getline(cin,name,'$');//It terminates the 
+                                        //input at the 4 sign and print the full line
+                                        cout<<name;
                                         return 0;
                                     }
+                                        
+                                    
                                     
                             </xmp>
                         </code></pre>
@@ -138,30 +91,114 @@
      <div class="contanier-6">
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 1. Write a program that displays size of int, float, double, char and bool data types, use sizeof() 
-                    function.
+                <h3>Task 1.(Displaying Shapes with Asterisks) Write a program that prints a box, an oval, an arrow and a 
+                    diamond as follows:)
                     </h3>
                 <div class="code2">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /* This Program is used to display the size of different dataTypes 
-                            Key_point:
-                                 We use the function sizeof(dataTypes) :
-                          */
-                          #include<iostream>
-                          using namespace std;
-                          int main()
-                          {
-                              
-                              cout<<"The size of Int_data_Type  is "<<sizeof(int)<<" Bytes \n";
-                              cout<<"The size of Float_data_Type  is "<<sizeof(float)<<" Bytes \n";
-                              cout<<"The size of Double_data_Type  is "<<sizeof(double)<<" Bytes \n";
-                              cout<<"The size of Char_data_Type is  "<<sizeof(char)<<" Bytes \n";
-                              cout<<"The size of Bool_data_Type is  "<<sizeof(bool)<<" Bytes \n";
+                            #include<iostream>
+                                #include<iomanip>
+                                using namespace std;
+                                int main()
+                                {
+                                    //Part(a)----Square
+                                    cout<<setw(9)<<"*********"<<endl;
+                                    cout<<"*"<<setw(8)<<"*"<<endl;
+                                    cout<<"*"<<setw(8)<<"*"<<endl;
+                                    cout<<"*"<<setw(8)<<"*"<<endl;
+                                    cout<<"*"<<setw(8)<<"*"<<endl;
+                                    cout<<"*"<<setw(8)<<"*"<<endl;
+                                    cout<<"*"<<setw(8)<<"*"<<endl;
+                                    cout<<"*"<<setw(8)<<"*"<<endl;
+                                    cout<<setw(9)<<"*********"<<endl;
+                                    //Part (b)-----Oval
+                                    cout<<"The oval is printed as:"<<endl;
+                                    cout<<setw(5)<<"***"<<setw(2)<<" "<<endl;
+                                    cout<<setw(2)<<"*"<<setw(3)<<" "<<left<<setw(2)<<"*"<<endl;
+                                    cout<<left<<setw(6)<<"*"<<"*"<<endl;
+                                    cout<<left<<setw(6)<<"*"<<"*"<<endl;
+                                    cout<<left<<setw(6)<<"*"<<"*"<<endl;
+                                    cout<<left<<setw(6)<<"*"<<"*"<<endl;
+                                    cout<<left<<setw(6)<<"*"<<"*"<<endl;
+                                    cout<<right<<setw(2)<<"*"<<setw(3)<<" "<<left<<setw(2)<<"*"<<endl;
+                                    cout<<right<<setw(5)<<"***"<<setw(2)<<" "<<endl;
+                                    //Part (c)-------Arrow
+                                    cout<<endl;
+                                    cout<<"The arrow os printted as:"<<endl;
+                                    cout<<setw(3)<<"*"<<setw(2)<<" "<<endl;
+                                    cout<<setw(4)<<"***"<<" "<<endl;
+                                    cout<<setw(5)<<"*****"<<endl;
+                                    cout<<setw(3)<<"*"<<endl;
+                                    cout<<setw(3)<<"*"<<endl;
+                                    cout<<setw(3)<<"*"<<endl;
+                                    cout<<setw(3)<<"*"<<endl;
+                                    cout<<setw(3)<<"*"<<endl;
+                                    cout<<setw(3)<<"*"<<endl;
+                                    //Part (d) -------Diamond
+                                    cout<<endl;
+                                    cout<<"The diamond is printted as:"<<endl;
+                                    cout<<setw(5)<<"*"<<endl;
+                                    cout<<setw(4)<<"*"<<" "<<"*"<<endl;
+                                    cout<<setw(3)<<"*"<<setw(4)<<"*"<<endl;
+                                    cout<<setw(2)<<"*"<<setw(6)<<"*"<<endl;
+                                    cout<<setw(1)<<"*"<<setw(8)<<"*"<<endl;
+                                    cout<<setw(2)<<"*"<<setw(6)<<"*"<<endl;
+                                    cout<<setw(3)<<"*"<<setw(4)<<"*"<<endl;
+                                    cout<<setw(4)<<"*"<<" "<<"*"<<endl;
+                                    cout<<setw(5)<<"*"<<endl;
+                                    
+                                    return 0;
+                                }
                           
-                              return 0;
-                          }
-                          
+                        </xmp>
+                    </code></pre>
+                    <h3>The output is as:</h3>
+                    <pre><code class="language-cpp">
+                        <xmp>
+                            
+
+*********                          
+*       *
+*       *
+*       *
+*       *
+*       *
+*       *
+*       *
+*********
+The oval is printed as:
+  ***
+ *   *
+*     *
+*     *
+*     *
+*     *
+*     *
+ *   *
+  ***  
+
+The arrow os printted as:
+  *
+ ***
+*****
+  *
+  *
+  *
+  *
+  *
+  *
+
+The diamond is printted as:
+    *
+   * *
+  *   *
+ *     *
+*       *
+ *     *
+  *   *
+   * *
+    *
                         </xmp>
                     </code></pre>
                 </div>
@@ -170,31 +207,73 @@
          </div>
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 2. Write a program that compute area of a rectangle, whose height if 9m and width is 5m.Display 
-                    its area.</h3>
+                <h3>Task 2. (Digits of an Integer) Write a program that inputs a five-digit integer, separates the integer into<br> 
+                    its digits and prints them separated by three spaces each. [Hint: Use the integer division and <br>
+                    modulus operators.] For example, if the user types in 42339, the program should print:<br> 
+                    4 2 3 3 9 <br>
+                    (Table) Using the techniques learned in class until now, write a program that calculates the <br>
+                    squares and cubes of the integers from 0 to 5. <br>
+                    Use tabs to print the following neatly formatted table of values: <br>
+                    Integer square cube <br>
+                    0 0 0 <br>
+                    1 1 1<br>
+                    2 4 8<br>
+                    3 9 27<br>
+                    4 16 64<br>
+                    5 25 125</h3>
                 <div class="code3">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*This is a Program to display the area of arectangle
-                            Key_point:
-                               area=height*Width;
-                         */
-                         #include<iostream>
-                         using namespace std;
-                         int main()
-                         {
-                             
-                             int height=9;
-                             int width=5;
-                             int area=0;//Intiliaze to zero to overwrite the garbage value
-                             cout<<"Calculate the area of a rectangle:"<<endl;
-                             cout<<"height=9m"<<endl;
-                             cout<<"width=5m"<<endl;
-                             area=height*width;
-                             cout<<"The area of a rectangle = "<<area<<"m^2"<<endl;
-                             
-                             return 0;
-                         }
+                            #include<iostream>
+                                #include<cmath>
+                                using namespace std;
+                                int main()
+                                {
+                                    //Digits of a number
+                                    int num1=0;
+                                    int rem1=0;/*All values are initialize to zero to overwrite the garbage value*/
+                                    int rem2=0;
+                                    int rem3=0;
+                                    int rem4=0;
+                                    int rem5=0;
+                                    cout<<"Enter the five-digit number:"<<endl;
+                                    cin>>num1;
+                                    cout<<"The given number is separated as:"<<endl;
+                                    //Reminder 5
+                                       rem5=num1%10;
+                                    //Reminder 4
+                                    num1=num1/10;
+                                    rem4=num1%10;
+                                    //Reminder 3
+                                    num1=num1/10;
+                                    rem3=num1%10;
+                                    //Reminder 2
+                                    num1=num1/10;
+                                    rem2=num1%10;
+                                    //Reminder 1
+                                    num1=num1/10;
+                                    rem1=num1%10;
+                                    //Seaparted numbers are printted as
+                                    cout<<rem1<<" "<<rem2<<" "<<rem3<<" "<<rem4<<" "<<rem5<<" "<<endl;
+                                    
+                                    
+                                    //Table from 0 to 5
+                                    cout<<endl;
+                                    cout<<"Part-2:"<<endl;
+                                    int num_1=1;
+                                    int num2=2;
+                                    int num3=3;
+                                    int num4=4;
+                                    int num5=5;
+                                  cout<<"Integer"<<"\t"<<"Square"<<"\t"<<"Cube"<<endl;
+                                  cout<<"1"<<"\t"<<pow(num_1,2)<<"\t"<<pow(num_1,3)<<endl;
+                                  cout<<"2"<<"\t"<<pow(num2,2)<<"\t"<<pow(num2,3)<<endl;
+                                  cout<<"3"<<"\t"<<pow(num3,2)<<"\t"<<pow(num3,3)<<endl;
+                                  cout<<"4"<<"\t"<<pow(num4,2)<<"\t"<<pow(num4,3)<<endl;
+                                  cout<<"5"<<"\t"<<pow(num5,2)<<"\t"<<pow(num5,3)<<endl;
+                                    
+                                    return 0;
+                                }
                         </xmp>
                     </code></pre>
                 </div>
@@ -204,42 +283,52 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 3. Write a program that displays sum, subtractions, multiplication and division of two float 
-                    numbers. Take any float numbers i.e. float f1 = 5.4, f2 = 7.8;</h3>
+                <h3>Task 3.(Car-Pool Savings Calculator) Research several car-pooling websites. Create an application that <br>
+                    calculates your daily driving cost, so that you can estimate how much money could be saved by <br>
+                    car-pooling, which also has other advantages such as reducing carbon emissions and reducing<br> 
+                    traffic congestion. The application should input the following information and display the user’s <br>
+                    cost per day of driving to work: <br>
+                    a) Total miles driven per day.<br> 
+                    b) Cost per gallon of gasoline<br>
+                    c) Average miles per gallon. <br>
+                    d) Parking fees per day.<br> 
+                     e) Tolls per day</h3>
                 <div class="code4">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*This is a program that dispaly the sum,subtraction ,multiplication and division 
-                            of the two "Float_numbers"*/
-                           #include<iostream>
-                           using namespace std;
-                           int main()
-                           {
-                               
-                               float num1=5.4;
-                               float num2=7.2;
-                               float sum=0;//Initilaize to zero to overwrite the garbage values
-                               float sub=0;
-                               float multiplay=0;
-                               double division=0;//Take is double because its a chance to get the point values greater than float range
-                               cout<<"we have two numbers:"<<endl;
-                               cout<<"Number_1=5.4 \n";
-                               cout<<"Number_2=7.2 \n";
-                               cout<<endl;
-                               cout<<"The arthematic_operations on these floating point numbers:"<<endl;
-                               cout<<endl;
-                               //Araathematic Operations on it
-                               sum=num1+num2;
-                               sub=num1-num2;
-                               multiplay=num1*num2;
-                               division=num1/num2;
-                               cout<<"The Addition of these two floating numbers = "<<sum<<endl;
-                               cout<<"The Subtraction of these two floating numbers = "<<sub<<endl;
-                               cout<<"The Multiplication of these two floating numbers = "<<multiplay<<endl;
-                               cout<<"The division of these two floating numbers = "<<division<<endl;
-                           
-                               return 0;
-                           }
+                            #include<iostream>
+                                using namespace std;
+                                int main()
+                                {
+                                    
+                                    
+                                    float total_miles=0.0;
+                                    float cost_per_gallon=0.0;
+                                    float average_miles_per_gallon=0.0;
+                                    int parking_fees=0;
+                                    int tolls_per_day=0;
+                                    double cost_per_day_of_driving=0.0;
+                                    cout<<"-----------------------------------------------------------------"<<endl;
+                                    cout<<"_______________________CAR-POOLING-CALCULATOR____________________"<<endl;
+                                    cout<<"-----------------------------------------------------------------"<<endl;
+                                    cout<<"Enter Total miles driven per day:"<<endl;
+                                    cin>>total_miles;
+                                    cout<<"Enter Cost per gallon of gasoline:"<<endl;
+                                    cin>>cost_per_gallon;
+                                    cout<<"Enter Average miles per gallon:"<<endl;
+                                    cin>>average_miles_per_gallon;
+                                    cout<<"Enter Parking fees per day:"<<endl;
+                                    cin>>parking_fees;
+                                    cout<<"Enter Tolls per day:"<<endl;
+                                    cin>>tolls_per_day;
+                                    cout<<endl;
+                                    //Now calcualte cost_per_day_of_driving
+                                    cost_per_day_of_driving=((total_miles/average_miles_per_gallon)*cost_per_gallon)+parking_fees+tolls_per_day;
+                                    cout<<"The cost per day of driving to work = "<<cost_per_day_of_driving<<endl;                      
+                                                             
+                                
+                                    return 0;
+                                }
                         </xmp>
                     </code></pre>
                 </div>
@@ -249,50 +338,43 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 4. Write reasons for errors in following codes:
+                <h3>Task 4. Male and Female Percentages) Write a program that asks the user for the number of males and 
                     <br>
-                     int number = 10;
+                    the number of females registered in a class. 
                     <br>
-                    cout << number;
+                    The program should display the percentage of males and females in the class.
                     <br>
-                    cout << number2;
-                    <br>
-                    int number2 = 50;
-                    <br>
-                    char ch = 'Programming Fundamental ';
-                    <br>
-                    cout << ch ;
                     </h3>
                 <div class="code5">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*
-                            Errors in the code*/
-                          #include<iostream>
-                          using namespace std;
-                          int main()
-                          {
-                              cout<<"we have a code as:"<<endl<<endl<<"int number = 10"
-                              <<endl<<"cout << number;"<<endl<<"cout << number2;"<<endl
-                              <<"int number2 = 50;"<<endl<<"char ch = 'Programming Fundamental;"
-                              <<endl<<"cout << ch ;";
-                              cout<<endl;
-                              cout<<"The errors in the code are as follows;"<<endl<<endl;
-                              cout<<endl;
-                              
-                              cout<<"First ERROR:"<<endl;
-                              cout<<"In the third line we cout the number2 first and decalre and initlize it later.Its scope is invalid because C++ compilers compile it line by line "<<endl
-                              <<"The error is \" SCOPE_Invalid : a variable cannot be used in any part of the program before the definition\" "<<endl;
-                              cout<<endl;
-                              
-                              cout<<"Second_ERROR:"<<endl;
-                              cout<<"IN fifth_line we initiliaze the char datatype with a string but char dataType has store only one ASCII character and size of its is only one bit"<<endl
-                              <<"The error is \"  Strings are consecutive sequences of characters that occupy consecutive bytes of memory \" "<<endl
-                              <<"Characters normally occupy a single byte of memory:"<<endl; 
-                              cout<<endl;
-                              
-                              return 0;
-                          }
+                            #include<iostream>
+                                using namespace std;
+                                int main()
+                                {
+                                    
+                                    int male=0;
+                                    int female=0;
+                                    int total=0;
+                                    float male_per=0.0;
+                                    float female_per=0.0;
+                                    cout<<"Class male and female percentage:"<<endl;
+                                    cout<<"_________________________________"<<endl;
+                                    cout<<"Enter the number of males in your class:"<<endl;
+                                    cin>>male;
+                                    cout<<"Enter the number of females in your class:"<<endl;
+                                    cin>>female;
+                                    //Percentage Calculation
+                                    total=male+female;
+                                    male_per=((float)male/total)*100;
+                                    female_per=((float)female/total)*100;
+                                    cout<<"The total number of students in your classroom = "<<total<<endl;
+                                    cout<<"The percentage of males = "<<male_per<<endl;
+                                    cout<<"The percentage of females = "<<female_per<<endl;
+                                    
+                                    
+                                    return 0;
+                                }
                         </xmp>
                     </code></pre>
                 </div>
@@ -303,36 +385,46 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 5. Write a program that converts Fahrenheit temperature to Celsius temperature. Initialize a 
-                    variable with Fahrenheit temperature value i.e float Fahrenheit = 35; And convert it into Celsius 
+                <h3>Task 5. Ingredient Adjuster) A cookie recipe calls for the following ingredients: 
                     <br>
-                    temperature. Hint: Celsius = (Fahrenheit - 32) * 5/9
+                    • l.5 cups of sugar
                     <br>
-                    Sample Output:
+                    • 1 cup of butter 
                     <br>
-                    Temperature in Fahrenheit : 212
-                    <br>
-                    Temperature in Celsius : 100</h3>
+                    • 2. 75 cups of flour
+                <br>
+                The recipe produces 48 cookies with this amount of the ingredients. 
+                Write a program that asks the user how many cookies he or she wants to make, then displays the 
+                number of cups of each ingredient needed for the specified number of cookies.</h3>
                 <div class="code6">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*This is program to display the Celsius to fanheit temparature
-                            Key point:
-                                  celsius=(farnheit-32)*5/9;
-                           */
-                           #include<iostream>
-                           using namespace std;
-                           int main()
-                           {
-                               
-                               double farnheit=212;
-                               double celsius=0;//Intiliaze to zero to overwrite the garbage value
-                               celsius=(farnheit-32)*5/9;//Parantesis are used to discarge the priority order of division
-                               cout<<"The temperature in Farnheit = "<<farnheit<<endl;
-                               cout<<"The temperature in Celsius = "<<celsius<<endl;
-                               return 0;
-                               
-                           }
+                            #include<iostream>
+                                #include<iomanip>
+                                using namespace std;
+                                int main()
+                                {
+                                    float cups_of_sugar=1.5;
+                                    int cups_of_butter=1;
+                                    float cups_of_flour=2.75;
+                                    int total_cookies=48;
+                                    int cookies=0;
+                                    cout<<"Ingrediant_Calculator:"<<endl;
+                                    cout<<"______________________"<<endl;
+                                    cout<<"Enter the number of cookies that you want to make:"<<endl;
+                                    cin>>cookies;
+                                    //Ingrediants_Calculation
+                                    cups_of_sugar=(cups_of_sugar*cookies)/total_cookies;
+                                    cups_of_butter=((float)cups_of_butter*cookies)/total_cookies;
+                                    cups_of_flour=(cups_of_flour*cookies)/total_cookies;
+                                    cout<<"The ingrediants you need to make the "<<cookies<<" number of cookies :"<<endl;
+                                    cout<<"You need "<<setprecision(3)<<cups_of_sugar<<" cups_of_sugar"<<endl;
+                                    cout<<"You need "<<cups_of_butter<<setprecision(3)<<" cups_of_butter"<<endl;
+                                    cout<<"You need "<<cups_of_flour<<setprecision(3)<<" cups_of_flour"<<endl;
+                                    
+                                
+                                    return 0;
+                                }
                         </xmp>
                     </code></pre>
                 </div>
@@ -343,56 +435,63 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 6. Write a program that swaps value of two integer. Display values before and after swapping. 
-                    Hint: Take help from third variable.
+                <h3>Task 6.(Box Office) A movie cheater only keeps a percentage of the revenue earned from ticket sales. 
+                    The remainder goes to the movie distributor. <br>
+                    Write a program that calculates a theater's gross and net box office profit for a night. 
+                    The program should ask for the name of the movie, and how many adult and child tickets were 
+                    sold. 
                     <br>
-                    Sample Output:
+                    (The price of an adult ticket is $10.00 and a child's ticket is $6.00.)
                     <br>
-                    Before Swapping:
+                    It should display a report similar to: 
                     <br>
-                    Value of no1 = 5
-                    <br>
-                    Value of no2 = 10
-                    <br>
-                    After Swapping:
-                    <br>
-                    Value of no1 = 10
-                    <br>
-                    Value of no2 = 5</h3>
+                    Assume the theater keeps 20 percent of the gross box office profit
+                    <br>.</h3>
+                    <h3>
+                        The output is as follows:
+                        <pre><code class="language-cpp">
+                            <xmp>
+                                Ingrediant_Calculator:
+______________________
+Enter the number of cookies that you want to make:
+700
+The ingrediants you need to make the 700 number of cookies :
+You need 21.9 cups_of_sugar
+You need 14 cups_of_butter
+You need 40.1 cups_of_flour
+                            </xmp>
+                            </code></pre>
+                    </h3>
                 <div class="code7">
+                    
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*This is a program to Swap the values
-                            key_Point:
-                               {
-                                 int a,b,temp;
-                                 temp=a;
-                                 a=b;
-                                b=temp;
-                            }    
-                          */
-                          #include<iostream>
-                          using namespace std;
-                          int main()
-                          {
-                              int num1=5;
-                              int num2=10;
-                              int temp=0;//used the third variable for help
-                              cout<<"The Numbers before swaping are written as:"<<endl;
-                              cout<<"The number_1 = "<<num1<<endl;
-                              cout<<"The number_2 = "<<num2<<endl;
-                              cout<<endl;
-                              //Now Swap the Values
-                              temp=num1;
-                              num1=num2;
-                              num2=temp;
-                              cout<<"The Numbers After swaping are written as:"<<endl;
-                              cout<<"The number_1 = "<<num1<<endl;
-                              cout<<"The number_2 = "<<num2<<endl;
-                              cout<<endl;
-                              
-                              return 0;
-                          }
+                            #include<iostream>
+                                #include<iomanip>
+                                using namespace std;
+                                int main()
+                                {
+                                    float cups_of_sugar=1.5;
+                                    int cups_of_butter=1;
+                                    float cups_of_flour=2.75;
+                                    int total_cookies=48;
+                                    int cookies=0;
+                                    cout<<"Ingrediant_Calculator:"<<endl;
+                                    cout<<"______________________"<<endl;
+                                    cout<<"Enter the number of cookies that you want to make:"<<endl;
+                                    cin>>cookies;
+                                    //Ingrediants_Calculation
+                                    cups_of_sugar=(cups_of_sugar*cookies)/total_cookies;
+                                    cups_of_butter=((float)cups_of_butter*cookies)/total_cookies;
+                                    cups_of_flour=(cups_of_flour*cookies)/total_cookies;
+                                    cout<<"The ingrediants you need to make the "<<cookies<<" number of cookies :"<<endl;
+                                    cout<<"You need "<<setprecision(3)<<cups_of_sugar<<" cups_of_sugar"<<endl;
+                                    cout<<"You need "<<cups_of_butter<<setprecision(3)<<" cups_of_butter"<<endl;
+                                    cout<<"You need "<<cups_of_flour<<setprecision(3)<<" cups_of_flour"<<endl;
+                                    
+                                
+                                    return 0;
+                                }
                         </xmp>
                     </code></pre>
                 </div>
@@ -403,32 +502,67 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 7. Write a program that stores your name, rollno, age and degree in valid data type variables. And 
-                    displays in following format:
+                <h3>Task 7.If you have two fractions, a/b and c/d, their sum can be obtained from the formula 
+                    Thier output as:
+                    <pre><code class="language-cpp">
+                        <xmp>
+                            -----------Fraction_Sum-----------
+___________________________________
+Enter the fraction 1:
+1/2
+Enter the fraction 2:
+2/5
+The sum of these two fractions = 9/10
+                        </xmp>
+                    </code></pre>
+                    Write a program that encourages the user to enter two fractions, and then displays their sum in 
+                    fractional form.
+                    <br> (You don’t need to reduce it to lowest terms.) The interaction with the user might 
+                    look like this: 
                     <br>
-                    Hi, my name is ------- having roll number ------- and enrolled in -------. My age is -----</h3>
+                    Enter first fraction: 1/2 
+                    <br>
+                    Enter second fraction: 2/5
+                    <br>
+                    Sum = 9/10 
+                    <br>
+                    You can take advantage of the fact that the extraction operator (>>) can be chained to read in 
+                    more than one quantity at once: 
+                    <br>
+                    cin >> a >> dummychar >> b;
+                <br></h3>
                 <div class="code8">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*Program to display the Information
-                            Key_point:
-                                 we use the string library and strimg dataType to store the stings*/
-                          #include<iostream>
-                          #include<string>
-                          using namespace std;
-                          int main()
-                          {
-                              //use the string dataType because we cannot store the more than one 
-                              //letter in char dataType so to store the complete string we use the string dataType in 
-                              //string libraray
-                              string name="Muhib Arshad";
-                              string roll_no="BSEF21M540";
-                              string enrolled="FCIT(New_Campus) BSSE";
-                              int age=19;
-                              cout<<"My name is "<<name<<" having roll number "<<roll_no<<" and enrolled in "<<enrolled<<". My age is "<<age<<endl;
-                              return 0;
-                              
-                          }
+                            #include<iostream>
+                                using namespace std;
+                                int main()
+                                {
+                                    char dummy_char;
+                                    int num1_N=0;
+                                    int num1_D=0;
+                                    int num2_N=0;
+                                    int num2_D=0;
+                                    int num1_to=0;
+                                    int num2_to=0;
+                                    int denominator=0;
+                                    int numinator=0;
+                                    cout<<"-----------Fraction_Sum-----------"<<endl;
+                                    cout<<"___________________________________"<<endl;
+                                    cout<<"Enter the fraction 1:"<<endl;
+                                    cin>>num1_N>>dummy_char>>num1_D;
+                                    cout<<"Enter the fraction 2:"<<endl;
+                                    cin>>num2_N>>dummy_char>>num2_D;	
+                                    //calculations
+                                    num1_to=num1_N*num2_D;
+                                    num2_to=num2_N*num1_D;
+                                    numinator=num1_to+num2_to;
+                                    denominator=num1_D*num2_D;
+                                    //Display
+                                    cout<<"The sum of these two fractions = "<<numinator<<"/"<<denominator<<endl;
+                                    
+                                    return 0;
+                                }
                           
                         </xmp>
                     </code></pre>
@@ -443,28 +577,28 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 8. Write a program that displays average of three numbers. Hardcode values of variables</h3>
+                <h3>Task 8. You can convert temperature from degrees Celsius to degrees Fahrenheit by multiplying by 9/5 
+                    and adding 32. Write a program that allows the user to enter a floating-point number 
+                    representing degrees Celsius, and then displays the corresponding degrees Fahrenheit.</h3>
                 <div class="code9">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*Program to display the Average of three variables*/
                             #include<iostream>
-                            using namespace std;
-                            int main()
-                            {
-                                
-                                int num1=5;
-                                float num2=8.9;
-                                double num3=9.888;
-                                double average=0;//Intiliaze to zero to overwrite the garbage value
-                                average=(num1+num2+num3)/3;//Parantesis are used to discarge the priority order of division
-                                cout<<"Number 1 = "<<num1<<endl;
-                                cout<<"Number 2 = "<<num2<<endl;
-                                cout<<"Number 3 = "<<num3<<endl;
-                                cout<<"The average of these three numbers = "<<average<<endl;
-                                return 0;
-                                
-                            }
+                                using namespace std;
+                                int main()
+                                {
+                                    const float constant=1.8;
+                                    float celsius=0.0;
+                                    float farhnheit=0.0;
+                                    cout<<"-------------Celsius to farhenheit--------"<<endl;
+                                    cout<<"___________________________________________"<<endl;
+                                    cout<<"Enter the temparature in celsius:"<<endl;
+                                    cin>>celsius;
+                                    farhnheit=(celsius*constant)+32;
+                                    cout<<"The temperature in the farhenheit = "<<farhnheit<<endl;
+                                    
+                                    return 0;
+                                }
                         </xmp>
                     </code></pre>
                 </div>
@@ -476,28 +610,56 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 9. Write a program in which you store float value in int variable. Explain the output.</h3>
+                <h3>Task 9. By default, output is right-justified in its field. You can left-justify text output using the 
+                    manipulator setiosflags(ios::left). (For now, don’t worry about what this new notation means.) 
+                    Use this manipulator, along with setw(), to help generate the following output:
+                  <pre><code class="language-cpp">
+                      <xmp>
+                        last Name      First Name   Street_Address   Town        State
+                        -------------------------------------------------------------       
+                        Jones          Bernard      109 Pine Lance   Littletown   MI        
+                        O'Brian        Coleen       42 E. 99th Ave.  Bigcity      NY        
+                        Wong           Harry        121-A Alabama St.Lakeville    IL 
+                      </xmp>
+                  </code></pre>
+                </h3>
                 <div class="code10">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*Program to check float in int*/
                             #include<iostream>
-                            using namespace std;
-                            int main()
-                            {
-                                int num1=7.98;
-                                cout<<"The number_1 is equal to = "<<num1<<endl;
-                                cout<<endl;
+                                #include<iomanip>
+                                using namespace std;
+                                int main()
+                                {
+                                    
+                                    cout<<setiosflags(ios::left)<<setw(12)<<"last Name"
+                                    <<setiosflags(ios::right)<<setw(13)<<"First Name"
+                                    <<setiosflags(ios::right)<<setw(17)<<"Street_Address"
+                                    <<setiosflags(ios::right)<<setw(7)<<"Town"
+                                    <<setiosflags(ios::right)<<setw(13)<<"State"<<endl;
+                                    cout<<"-------------------------------------------------------------"<<endl;
+                                    //First
+                                    cout<<setiosflags(ios::left)<<setw(0)<<"Jones"
+                                    <<setiosflags(ios::right)<<setw(17)<<"Bernard"
+                                    <<setiosflags(ios::right)<<setw(20)<<"109 Pine Lance"
+                                    <<setiosflags(ios::right)<<setw(13)<<"Littletown"
+                                    <<setiosflags(ios::right)<<setw(5)<<"MI"<<endl;
+                                    //Second
+                                    cout<<setiosflags(ios::left)<<setw(0)<<"O'Brian"
+                                    <<setiosflags(ios::right)<<setw(14)<<"Coleen"
+                                    <<setiosflags(ios::right)<<setw(22)<<"42 E. 99th Ave."
+                                    <<setiosflags(ios::right)<<setw(9)<<"Bigcity"
+                                    <<setiosflags(ios::right)<<setw(8)<<"NY"<<endl;
+                                    //Third
+                                    cout<<setiosflags(ios::left)<<setw(0)<<"Wong"
+                                    <<setiosflags(ios::right)<<setw(16)<<"Harry"
+                                    <<setiosflags(ios::right)<<setw(25)<<"121-A Alabama St."
+                                    <<setiosflags(ios::right)<<setw(7)<<"Lakeville"
+                                    <<setiosflags(ios::right)<<setw(6)<<"IL"<<endl;
+                                    
                                 
-                                cout<<"Explanation:"<<endl;
-                                cout<<"I store the varible in int as 7.98 in source code but in console answer is 7"<<endl
-                                <<"Beacuse when we store the floating point variable in int dataType it ignores the values after the(.)"<<endl
-                                <<"Integer dataType only stores the integer values without point values"<<endl
-                                <<"To store the variable with the point_values we use the float dataType properly"<<endl;
-                                
-                                return 0;
-                                
-                            }
+                                    return 0;
+                                }
                         </xmp>
                     </code></pre>
                 </div>
@@ -509,129 +671,45 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 10. Suppose an employee gets paid every month and earns 2000 each pay period. In a year the 
-                    employee gets paid 12 times. Write a program that defines the following variables:
-                    <br>
-                    payAmount; this variable will hold the amount of pay the employee earns each pay period.
-                    <br>
-                    payPeriods; this variable will hold the number of pay periods in a year.
-                    <br>
-                    annualPay; this variable will hold the employee’s total annual pay, which will be calculated.
-                    <br>
-                    Display the value of annualPay variable.
-                    <br>
-                    Hint: Employee’s total annual pay can be calculated by multiplying employee’s pay amount by number 
-        
-                    of pay periods in a year </h3>
+                <h3>Task 10.A serial transmission line can transmit 960 characters a second. Write a program that will 
+                    calculate how long it will take to send a file, given the file's size. Try it on a 400MB (419,430,400 
+                    byte) file. Use appropriate units. (A 400MB file takes days.)</h3>
                 <div class="code11">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*Program to display the anual_pay of user income */
                             #include<iostream>
-                            using namespace std;
-                            int main()
-                            {
-                                
-                                int pay_Amount=2000;
-                                int pay_Periods=12;
-                                int annual_Pay=0;//Intiliaze to zero to overwrite the garbage value
-                                cout<<"The amount of pay the employee earns each pay period = "<<pay_Amount<<endl;
-                                cout<<"The number of pay periods in a year = "<<pay_Periods<<endl;
-                                annual_Pay=pay_Amount*pay_Periods;
-                                cout<<"The employee\'s total annual pay, which will be calculated = "<<annual_Pay<<endl;
-                                
-                                return 0;
-                            }
+                                #include<iomanip>
+                                using namespace std;
+                                iint main()
+                                {
+                                    
+                                    const int characters_per_second=960;
+                                    const int sizeOfCharacter_per_byte=1;
+                                    long long int file_bytes=419430400;
+                                    long double days=0.0;
+                                    cout<<"------------File Sendig Time/400MB--------"<<endl;
+                                    cout<<"___________________________________________"<<endl;
+                                    cout<<"The size of the file is 400MB and sending speed is 960 characters_per_second:"<<endl;
+                                    //calculation
+                                    days=(double)file_bytes/characters_per_second;//gives seconds
+                                    days=days/60;//gives minutes
+                                    days=days/60;//gives hours
+                                    days=days/24;//gives days
+                                    //Display
+                                    cout<<"The number of days that it would take = "<<setprecision(2)<<days<<" days"<<endl;
+                                    
+                                    return 0;
+                                }
                         </xmp>
                     </code></pre>
                 </div>
             </div>
          </div>
-
-
 
 
      </div>
 
 
-        <div class="container-3">
-            <div class="heading-2">
-                <h1>Whats make this website differents from others?</h1>
-            </div>
-            <div class="row-3">
-
-                <div class="amazing">
-                    <div class="amazing-header">
-                        <h1>Amazing Feature That Increase your Productivity</h1>
-                    </div>
-                    <div class="amazing-body">
-                        <p>
-                            If you don't find any problem,in this website and if you have a very difficult assignment
-                            question that
-                            is not present on internet ,then you dont bother yourself,we are here to solve every problem
-                            of
-                            your
-                            life you just click on the Problem asking button and write your problem we slove the code of
-                            your
-                            problem and sent you on your email addres that you put in the sin up form.
-                        </p>
-                        <a href="contact.html"><button class="btn2">Write your Problem here</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer>
-            <div class="contanier-4">
-                <div class="row-4">
-    
-    
-    
-                    <div class="footer-col" id="about_us">
-                        <h4>About_us</h4>
-                        <p>
-                            We are the students from different well knowned UNiversities like PUCIT,FAST,NUST and COMSATS.
-                            Our main goal is to provide good CGPA with Skills to our Begginer programmers.We solve problems
-                            and help our juniors to understand the basice concepts .
-                        </p>
-                    </div>
-    
-    
-    
-                    <div class="footer-col">
-                        <h4>Contact_us</h4>
-                        <ul>
-                            <li><a href="https://pucit.edu.pk/" target="=blank">PUCIT(New_Campus)</a></li>
-                            <li><a href="https://www.whatsapp.com/" target="=blank">phone:03259615088</a></li>
-                            <li><a href="https://gmail.com/" target="=blank">email:bsef21m540@pucit.edu.pk</a></li>
-                            <li><a href="https://www.google.com/maps/place/Punjab+University+Hostel+Rd,+Quaid-i-Azam+Campus,+Lahore,+Punjab/@31.4958087,74.3057684,17z/data=!3m1!4b1!4m5!3m4!1s0x39190477c811e4e9:0x9c8824758d8549ae!8m2!3d31.4958087!4d74.3079571" target="=blank">Punjab,hostel #09 ,Lahore</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Quick_links</h4>
-                        <ul>
-                            <li><a href="https://www.facebook.com/profile.php?id=100039337088172" target="=blank"><i class="fab fa-facebook-f" id="face"></i>محمد محب الله</a></li>
-                            <li><a href="https://www.instagram.com/muhib7353/" target="=blank"><i class="fab fa-instagram" id="insta"></i>muhib7353</a></li>
-                            <li><a href="https://www.whatsapp.com/" target="=blank"><i class="fab fa-whatsapp" id="whats"></i>+923259615088</a></li>
-                            <li><a href="https://twitter.com/muhib7353" target="=blank"><i class="fab fa-twitter" id="twit"></i>muhib7353</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Quick_Access</h4>
-                        <ul>
-                            <li><a href="codesheets.html">Code_sheets</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="sinup.html">Sin_Up</a></li>
-                            <li><a href="home.html">Home</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <div class="container-5">
-            <div class="footer-2">
-                <h1>Copyright &copy;www.muhib_codes.ezyro.com</h1>
-            </div>
-        </div>
 
         <script>
             var menu_list = document.getElementById("menu_list");
@@ -648,4 +726,4 @@
         <script src="./Prism/prism-final.js" ></script>
 </body>
 
-</html> -->
+</html>
