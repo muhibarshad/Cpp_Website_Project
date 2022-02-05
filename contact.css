@@ -436,61 +436,49 @@ footer
     width: 100%;
     background-color:rgb(221, 221, 221)
 }
-.row-6-1 .formdiv
-{  
-    margin-top: 45px;
-    margin-left: 150px;
-}
-.submit input
+form input
 {
-    border: 2px solid rgb(3, 119, 155);
-    margin-top: 45px;
-    margin-left: 10px;
-    font-size: 30px;
-    font-weight: bold;
-    background: #00798f;
-    outline: none;
-
+    border-radius: 10px;
+    border: #e9ebf1;
+    margin-top: 50px;
+    margin-left: 200px;
+    padding-left: 120px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-right: 120px;
+}
+form textarea
+{
+    margin-top: 40px;
+    margin-left: 200px;
+    padding-left: 120px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 120px;
+}
+form button
+{
+    border: 2px solid  #fb5283; ;
+    border-radius: 20px;
+    margin-top: 180px;
+    margin-left: 200px;
+    padding-left: 120px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 120px;   
+    background-color: #fb5283;
     color: white;
+    font-size: 17px;
 }
-.submit input:hover
+form button:hover
 {
- background: #69dbdb;
- cursor: pointer;
- color: rgb(12, 11, 11);
-}
-.formdiv input 
-{
-    border: 2px solid rgb(3, 119, 155);
-    padding: 12px 200px;
-    border-radius: 0px;
-    outline: none;
-   
-}
-.formdiv h1
-{
-    margin-bottom: 20px;
-    margin-left: 10px;
-    margin-right: 270px;
-    margin-bottom: 40px;
-    color: #dfad08;   
-}
-.formdiv .textarea
-{
-    margin-right: 300px;
-
-}
-
- .Ask 
-{
-    width: 100%;
-    height: 40vh;
+    background-color: #fb6f97;
+    color: black;
+    padding-left: 140px;
+    font-size: 20px;
+    cursor: pointer;
 }
 .conatct-us-side
-{
-    display: none;
-}
-.responsive
 {
     display: none;
 }
@@ -498,6 +486,7 @@ footer
 {
     display: none;
 }
+
 @media only screen and (max-width:700px)
 {
  .contanier-6
@@ -517,72 +506,79 @@ footer
     margin-top: 55px;
     margin-left: 40px;
 }
-.submit input
-{
-    border: 2px solid rgb(3, 119, 155);
-    margin-top: 45px;
-    margin-left: 20px;
-    font-size: 30px;
-    font-weight: bold;
-    background: #00798f;
-    outline: none;
 
+form input
+{
+    border-radius: 10px;
+    border: #e9ebf1;
+    margin-top: 40px;
+    margin-left: 10px;
+    padding-left: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 70px;
+}
+form textarea
+{
+    margin-top: 30px;
+    margin-left: 10px;
+    padding-left: 0px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-right: 30px;
+}
+form button
+{
+    border: 2px solid  #fb5283; ;
+    border-radius: 20px;
+    margin-top: 180px;
+    margin-left: 20px;
+    padding-left: 120px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 120px;   
+    background-color: #fb5283;
     color: white;
+    font-size: 17px;
 }
-.submit input:hover
+form button:hover
 {
- background: #69dbdb;
- cursor: pointer;
- color: rgb(12, 11, 11);
+    background-color: #fb6f97;
+    color: black;
+    padding-left: 140px;
+    font-size: 20px;
+    cursor: pointer;
 }
-.formdiv input 
-{
-    border: 2px solid rgb(3, 119, 155);
-    padding: 12px 100px;
-    border-radius: 0px;
-    outline: none;
-}
-.formdiv h1
-{
-    margin-bottom: 20px;
-    margin-left: 0px;
-    margin-right: 270px;
-    margin-bottom: 40px;
-    color: #dfad08; 
-    font-size: 25px;  
-}
-.formdiv .textarea
-{
-    margin-right: 0px;
-}
+
+
+
 .row-6-1
 {
     height: 100vh;
     width: 100%;
     background-color:rgb(221, 221, 221)
 }
+
 .conatct-us-side
 {
     display: block;
-    position: relative;
-    top:130px;
-    right: 50px;
-    font-size: 15px;
-    text-align: center;
+    position: absolute;
+    right: 40px;
+    top: 300px;
+
     z-index: -1;
-}
- .conatct-us-side h1
-{
-  font-size: 30px;
 }
 .formsubmit
 {
     display: block;
-    position: relative;
-    left: 70px;
-    top: 140px;
-    padding-top: 30px;
-    font-size: 15px;
+    position: absolute;
+    top: 800px;
+    left: 110px;
+    font-size: 13px;
+    z-index: -1;
 }
+
+
+
 
 }

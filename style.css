@@ -133,6 +133,32 @@ nav ul li a:hover
     width: 160px;
     font-size: 24px;
 }
+/*Code-sheets button*/
+.codesheetsbutton
+{
+    position: absolute;
+    left: 380px;
+    top: 407px;
+    font-size: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: #fff;
+    transition: width 0.5s;
+
+   
+}
+.codesheetsbutton:hover
+{
+   color: black;
+    cursor:pointer;
+    width: 160px;
+    font-size: 24px;
+}
+/*Ends here button of codesheets*/
 .col-2
 {
     position: relative;
@@ -189,6 +215,23 @@ nav ul li a:hover
    .col-1 h1 
    {
        font-size: 20px;
+   }
+   .codesheetsbutton
+   {
+       position: absolute;
+       left: -10px;
+       top: 677px;
+       font-size: 20px;
+       border-radius: 6px;
+       cursor: pointer;
+       width: 140px;
+       border: 0;
+       padding: 12px 10px;
+       outline: none;
+       color: #fff;
+       transition: width 0.5s;
+   
+      
    }
 
 }
