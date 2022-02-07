@@ -608,7 +608,7 @@ footer
 }
 
 /*All code CSS  code sheets are written here are WRITTEN As*/
-/* .contanier-6
+.contanier-6
 {
     width: 100%;
     height: 1610vh;
@@ -643,11 +643,20 @@ footer
     {
         height: 1250vh;
     }
-} */
+}
+
+
+
+
+
+
+
+
+
 
 
 /*The Alert part start here*/
-.comingsoon
+/* .comingsoon
 {
     position: absolute;
     top: 330px;
@@ -746,7 +755,7 @@ footer
     background-color: #10ac97;
     border: 2px solid #10ac97;
 }
-}
+} */
 
 
 
