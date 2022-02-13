@@ -1,53 +1,12 @@
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assignments3.css">
-    <title>Assignment-3</title>
-</head>
-
-<body>
-    <div class="Alert">
-        <a href="assignments.html" class="access"><button>Go back</button></a>
-        <div class="contanier">
-            <div class="img">
-                <h1>No,Access</h1>
-                <img src="./images/alert2.png" alt="Alert">
-            </div>
-            <div class="heading">
-                It is not assigned yet,
-                <br>
-                When it is assigned to the class,
-                <br>
-                then we uploaded it imediately
-                <br>
-                If you find any problem in c++ in concepts then you must check the blog
-                and also contact us
-            </div>
-
-        </div>
-        <div class="blog">
-            <a href="blog.html"><button>Blog</button></a>
-            <a href="contact.html"><button>Contact</button></a>
-
-        </div>
-        </div>
-</body>
-
-</html>
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -88,7 +47,7 @@
         <div class="contanier-2">
             <div class="heading">
                 <h1>PF-PUCIT(NEW-CAMPUS)</h1>
-                <h2>ASSIGNMENT 01:</h2>
+                <h2>ASSIGNMENT 03:</h2>
             </div>
             <div class="row-1">
                 <div class="col-1">
@@ -109,22 +68,21 @@
                 </div>
                 <div class="col-2">
                     <div class="basics">
-                      <h2>Sample:Sum_Of_Two_Numbers</h2>
+                      <h2>Sample:Random_Numbers Between 1---9</h2>
                        <div class="code">
                         <pre class="cpp"><code class="language-cpp">
                             <xmp>
                                 #include<iostream>
-                                    using namespace std;
+                                #include<cstdlib>
+                                #include<ctime>
+                                using namespace std;
                                     int main()
-                                    {
-                                        int num_1=50;
-                                        int num_2=100;
-                                        int sum;
-                                        sum=num_1+num_2;
-                                        cout<<"The sum of these two numbers = "<<sum<<endl;
-                                        return 0;
-                                    }
-                                    
+                                    { int x=time(0);
+                                        int random;
+                                        srand(x);
+                                        random=rand()%10+1;
+                                        cout<<random<<endl;
+                                        return 0;}
                             </xmp>
                         </code></pre>
                        </div>
@@ -138,30 +96,86 @@
      <div class="contanier-6">
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 1. Write a program that displays size of int, float, double, char and bool data types, use sizeof() 
-                    function.
+                <h3>Task 1.Software Sales
+                    A software company sells a package that retails for $99. Quantity discounts are given<br>
+                    according to the following table. Quantity<br>
+                    Discount<br>
+                    10–19 20%<br>
+                    20–49 30%<br>
+                    50–99 40%<br>
+                    100 or more 50%<br>
+                    Write a program that asks for the number of units sold and computes the total cost of<br>
+                    the purchase.<br>
+                    Input Validation: Make sure the number of units is greater than 0.
                     </h3>
                 <div class="code2">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /* This Program is used to display the size of different dataTypes 
-                            Key_point:
-                                 We use the function sizeof(dataTypes) :
-                          */
-                          #include<iostream>
-                          using namespace std;
-                          int main()
-                          {
-                              
-                              cout<<"The size of Int_data_Type  is "<<sizeof(int)<<" Bytes \n";
-                              cout<<"The size of Float_data_Type  is "<<sizeof(float)<<" Bytes \n";
-                              cout<<"The size of Double_data_Type  is "<<sizeof(double)<<" Bytes \n";
-                              cout<<"The size of Char_data_Type is  "<<sizeof(char)<<" Bytes \n";
-                              cout<<"The size of Bool_data_Type is  "<<sizeof(bool)<<" Bytes \n";
-                          
-                              return 0;
-                          }
-                          
+                            #include <iostream>
+                                using namespace std;
+                                int main()
+                                {
+                                
+                                    const int retail_price = 99;
+                                    int num;
+                                    int cost;
+                                    float discount;
+                                    float purchase;
+                                    cout << "_____________________________________________________" << endl;
+                                    cout << "-------------------Software Sales--------------------" << endl;
+                                    cout << "_____________________________________________________" << endl;
+                                    cout << "The retail price = " << retail_price << endl;
+                                    cout << "Enter the number of units sold:" << endl;
+                                    cin >> num;
+                                    if (num > 0)
+                                    {
+                                        if (num >= 10)
+                                        {
+                                            if (num < 20)
+                                            {
+                                                cost = retail_price * num;
+                                                discount = (cost * 0.2);
+                                                purchase = cost - discount;
+                                                cout << "The total cost of the purchase with 20% discount = $" << purchase << endl;
+                                            }
+                                        }
+                                        if (num >= 20)
+                                        {
+                                            if (num < 50)
+                                            {
+                                                cost = retail_price * num;
+                                                discount = (cost * 0.3);
+                                                purchase = cost - discount;
+                                                cout << "The total cost of the purchase with 30% discount = $" << purchase << endl;
+                                            }
+                                        }
+                                        if (num >= 50)
+                                        {
+                                            if (num < 99)
+                                            {
+                                                cost = retail_price * num;
+                                                discount = (cost * 0.4);
+                                                purchase = cost - discount;
+                                                cout << "The total cost of the purchase with 40% discount = $" << purchase << endl;
+                                            }
+                                        }
+                                        if (num >= 100)
+                                        {
+                                            cost = retail_price * num;
+                                            discount = (cost * 0.5);
+                                            purchase = cost - discount;
+                                            cout << "The total cost of the purchase with 50% discount = $" << purchase << endl;
+                                        }
+                                    }
+                                    // for invalid input
+                                    else
+                                    {
+                                        cout << "Invalid:input!" << endl;
+                                        cout << "Please Enter the number greater than zero :" << endl;
+                                    }
+                                
+                                    return 0;
+                                }
                         </xmp>
                     </code></pre>
                 </div>
@@ -170,31 +184,57 @@
          </div>
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 2. Write a program that compute area of a rectangle, whose height if 9m and width is 5m.Display 
-                    its area.</h3>
+                <h3>Task 2. Palindromes) A palindrome is a number or a text phrase that reads the same backward as
+                    forward. For example, each of the following five-digit integers is a palindrome: 12321, 55555, 45554 and 11611. Write a program that reads in a five-digit integer and determines whether it’s
+                    a palindrome. [Hint: Use the division and modulus operators to separate the number into its individual digits</h3>
                 <div class="code3">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*This is a Program to display the area of arectangle
-                            Key_point:
-                               area=height*Width;
-                         */
-                         #include<iostream>
-                         using namespace std;
-                         int main()
-                         {
-                             
-                             int height=9;
-                             int width=5;
-                             int area=0;//Intiliaze to zero to overwrite the garbage value
-                             cout<<"Calculate the area of a rectangle:"<<endl;
-                             cout<<"height=9m"<<endl;
-                             cout<<"width=5m"<<endl;
-                             area=height*width;
-                             cout<<"The area of a rectangle = "<<area<<"m^2"<<endl;
-                             
-                             return 0;
-                         }
+                            #include <iostream>
+                                using namespace std;
+                                int main()
+                                {
+                                    // Digits of a number
+                                    int num1 = 0;
+                                    int rem1 = 0; /*All values are initialize to zero to overwrite the garbage value*/
+                                    int rem2 = 0;
+                                    int rem3 = 0;
+                                    int rem4 = 0;
+                                    int rem5 = 0;
+                                    cout << "_____________________________________________________" << endl;
+                                    cout << "-------------------Palindrome Validation--------------------" << endl;
+                                    cout << "_____________________________________________________" << endl;
+                                    cout << "Enter the five-digit number:" << endl;
+                                    cin >> num1;
+                                    // Reminder 5
+                                    rem5 = num1 % 10;
+                                    // Reminder 4
+                                    num1 = num1 / 10;
+                                    rem4 = num1 % 10;
+                                    // Reminder 3
+                                    num1 = num1 / 10;
+                                    rem3 = num1 % 10;
+                                    // Reminder 2
+                                    num1 = num1 / 10;
+                                    rem2 = num1 % 10;
+                                    // Reminder 1
+                                    num1 = num1 / 10;
+                                    rem1 = num1 % 10;
+                                    // decisoions
+                                    if (rem1 == rem5)
+                                    {
+                                        if (rem2 == rem4)
+                                        {
+                                            cout << "It is a palindrome number:" << endl;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        cout << "It is not a palindrome number:" << endl;
+                                    }
+                                
+                                    return 0;
+                                }
                         </xmp>
                     </code></pre>
                 </div>
@@ -204,42 +244,44 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 3. Write a program that displays sum, subtractions, multiplication and division of two float 
-                    numbers. Take any float numbers i.e. float f1 = 5.4, f2 = 7.8;</h3>
+                <h3>Task 3. (Printing the Decimal Equivalent of a Binary Number) Input an integer containing only 0s
+                    and 1s (i.e., a “binary” integer) and print its decimal equivalent. Use the modulus and division
+                    operators to pick off the “binary” number’s digits one at a time from right to left. Much as in
+                    the decimal number system, where the rightmost digit has a positional value of 1, the next digit
+                    left has a positional value of 10, then 100, then 1000, and so on, in the binary number system
+                    the rightmost digit has a positional value of 1, the next digit left has a positional value of 2, then
+                    4, then 8, and so on. Thus the decimal number 234 can be interpreted as2* 100 +3* 10 + 4 * 1. The decimal 
+                    equivalent of binary 1101 is 1 * 1+0* 2+1* 4+1* 8 or 1 +0+ 4+8, or 13</h3>
                 <div class="code4">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*This is a program that dispaly the sum,subtraction ,multiplication and division 
-                            of the two "Float_numbers"*/
-                           #include<iostream>
-                           using namespace std;
-                           int main()
-                           {
-                               
-                               float num1=5.4;
-                               float num2=7.2;
-                               float sum=0;//Initilaize to zero to overwrite the garbage values
-                               float sub=0;
-                               float multiplay=0;
-                               double division=0;//Take is double because its a chance to get the point values greater than float range
-                               cout<<"we have two numbers:"<<endl;
-                               cout<<"Number_1=5.4 \n";
-                               cout<<"Number_2=7.2 \n";
-                               cout<<endl;
-                               cout<<"The arthematic_operations on these floating point numbers:"<<endl;
-                               cout<<endl;
-                               //Araathematic Operations on it
-                               sum=num1+num2;
-                               sub=num1-num2;
-                               multiplay=num1*num2;
-                               division=num1/num2;
-                               cout<<"The Addition of these two floating numbers = "<<sum<<endl;
-                               cout<<"The Subtraction of these two floating numbers = "<<sub<<endl;
-                               cout<<"The Multiplication of these two floating numbers = "<<multiplay<<endl;
-                               cout<<"The division of these two floating numbers = "<<division<<endl;
-                           
-                               return 0;
-                           }
+                            #include<iostream>
+                                #include<cmath>
+                                using namespace std;
+                                int main()
+                                {
+                                
+                                    int binary;
+                                    int rem;
+                                    int cal;
+                                    int n=0;
+                                    cout << "_____________________________________________________" << endl;
+                                    cout << "-------------(Binary to decimal Calculator)----------" << endl;
+                                    cout << "_____________________________________________________" << endl;
+                                    cout<<"Enter the number in binary form:"<<endl;
+                                    cin>>binary;
+                                    //calculations
+                                    while(binary!=0)
+                                    {
+                                        rem=binary%10;
+                                        cal+=rem*(pow(2,n));
+                                        binary=binary/10;
+                                        n++;
+                                    }
+                                    //Display
+                                    cout<<"The binary to decial conversion = "<<cal<<endl;
+                                    return 0;
+                                }
                         </xmp>
                     </code></pre>
                 </div>
@@ -249,50 +291,45 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 4. Write reasons for errors in following codes:
-                    <br>
-                     int number = 10;
-                    <br>
-                    cout << number;
-                    <br>
-                    cout << number2;
-                    <br>
-                    int number2 = 50;
-                    <br>
-                    char ch = 'Programming Fundamental ';
-                    <br>
-                    cout << ch ;
+                <h3>Task 4.The date June 10, 1960 is special because when it is written as 10/6/60, the month times the
+                    day equals the year. Design a program that asks the user to enter a month (in numeric form), a
+                    day, and a two digit year. The program should then determine whether the month times the
+                    day equals the year. If so, it should display a message saying the date is magic. Otherwise, it
+                    should display a message saying the date is not magic.
                     </h3>
                 <div class="code5">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*
-                            Errors in the code*/
-                          #include<iostream>
-                          using namespace std;
-                          int main()
-                          {
-                              cout<<"we have a code as:"<<endl<<endl<<"int number = 10"
-                              <<endl<<"cout << number;"<<endl<<"cout << number2;"<<endl
-                              <<"int number2 = 50;"<<endl<<"char ch = 'Programming Fundamental;"
-                              <<endl<<"cout << ch ;";
-                              cout<<endl;
-                              cout<<"The errors in the code are as follows;"<<endl<<endl;
-                              cout<<endl;
-                              
-                              cout<<"First ERROR:"<<endl;
-                              cout<<"In the third line we cout the number2 first and decalre and initlize it later.Its scope is invalid because C++ compilers compile it line by line "<<endl
-                              <<"The error is \" SCOPE_Invalid : a variable cannot be used in any part of the program before the definition\" "<<endl;
-                              cout<<endl;
-                              
-                              cout<<"Second_ERROR:"<<endl;
-                              cout<<"IN fifth_line we initiliaze the char datatype with a string but char dataType has store only one ASCII character and size of its is only one bit"<<endl
-                              <<"The error is \"  Strings are consecutive sequences of characters that occupy consecutive bytes of memory \" "<<endl
-                              <<"Characters normally occupy a single byte of memory:"<<endl; 
-                              cout<<endl;
-                              
-                              return 0;
-                          }
+                            #include <iostream>
+                                using namespace std;
+                                int main()
+                                {
+                                    int days;
+                                    int month;
+                                    int year;
+                                    int times;
+                                    cout << "_____________________________________________________" << endl;
+                                    cout << "-------------------Magic_Year_Validation-------------" << endl;
+                                    cout << "_____________________________________________________" << endl;
+                                    cout << "Enter the days:" << endl;
+                                    cin >> days;
+                                    cout << "Enter the month in numeric form like as june input as \"6\": etc:" << endl;
+                                    cin >> month;
+                                    cout << "Enter the last two digits of the year like as 1960 input as \"60\" etc:" << endl;
+                                    cin >> year;
+                                    // calculatios
+                                    times = month * days;
+                                    // Decisions
+                                    if (times == year)
+                                    {
+                                        cout << "WOW!.Its amazing the year is a magic year:" << endl;
+                                    }
+                                    else
+                                    {
+                                        cout << "Ops! The enter year is not a magic year:" << endl;
+                                    }
+                                    return 0;
+                                }
                         </xmp>
                     </code></pre>
                 </div>
@@ -303,36 +340,58 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 5. Write a program that converts Fahrenheit temperature to Celsius temperature. Initialize a 
-                    variable with Fahrenheit temperature value i.e float Fahrenheit = 35; And convert it into Celsius 
-                    <br>
-                    temperature. Hint: Celsius = (Fahrenheit - 32) * 5/9
-                    <br>
-                    Sample Output:
-                    <br>
-                    Temperature in Fahrenheit : 212
-                    <br>
-                    Temperature in Celsius : 100</h3>
+                <h3>Task 5. Create a change-counting game that gets the user to enter the number of coins required to
+                    make exactly one dollar. The program should prompt the user to enter the number of pennies
+                    (1/100 dollars), nickels (1/20 dollars), dimes (1/10 dollars), and quarters (1/4 dollars). If the
+                    total value of the coins entered is equal to one dollar, the program should congratulate the user
+                    for winning the game. Otherwise, the program should display a message indicating whether the
+                    amount entered was more than or less than one dollar.</h3>
                 <div class="code6">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*This is program to display the Celsius to fanheit temparature
-                            Key point:
-                                  celsius=(farnheit-32)*5/9;
-                           */
-                           #include<iostream>
-                           using namespace std;
-                           int main()
-                           {
-                               
-                               double farnheit=212;
-                               double celsius=0;//Intiliaze to zero to overwrite the garbage value
-                               celsius=(farnheit-32)*5/9;//Parantesis are used to discarge the priority order of division
-                               cout<<"The temperature in Farnheit = "<<farnheit<<endl;
-                               cout<<"The temperature in Celsius = "<<celsius<<endl;
-                               return 0;
-                               
-                           }
+                            #include <iostream>
+                                using namespace std;
+                                int main()
+                                {
+                                
+                                    float pennies;
+                                    float nickles;
+                                    float dimes;
+                                    float quarters;
+                                    float total;
+                                    cout << "_____________________________________________________" << endl;
+                                    cout << "-------------------Count Changing game---------------" << endl;
+                                    cout << "_____________________________________________________" << endl;
+                                    cout << "Enter the coins required exactly to make the one doller:" << endl;
+                                    cout << "Enter the pennies :" << endl;
+                                    cin >> pennies;
+                                    cout << "Enter the nickles :" << endl;
+                                    cin >> nickles;
+                                    cout << "Enter the dimes:" << endl;
+                                    cin >> dimes;
+                                    cout << "Enter the quarters :" << endl;
+                                    cin >> quarters;
+                                    // Calculations
+                                    pennies = (pennies * 0.01);
+                                    nickles = (nickles * 0.05);
+                                    dimes = (dimes * 0.1);
+                                    quarters = (quarters * 0.25);
+                                    total = pennies + nickles + dimes + quarters;
+                                    // Decisions
+                                    if (total == 1)
+                                    {
+                                        cout << "Congratulations! you won the game : It is equal to the one dollar:" << endl;
+                                    }
+                                    else if (total > 1)
+                                    {
+                                        cout << "The coins entered are greater than 1 dollar:" << endl;
+                                    }
+                                    else
+                                    {
+                                        cout << "The coins entered are less than 1 dollar:" << endl;
+                                    }
+                                    return 0;
+                                }
                         </xmp>
                     </code></pre>
                 </div>
@@ -343,56 +402,116 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 6. Write a program that swaps value of two integer. Display values before and after swapping. 
-                    Hint: Take help from third variable.
-                    <br>
-                    Sample Output:
-                    <br>
-                    Before Swapping:
-                    <br>
-                    Value of no1 = 5
-                    <br>
-                    Value of no2 = 10
-                    <br>
-                    After Swapping:
-                    <br>
-                    Value of no1 = 10
-                    <br>
-                    Value of no2 = 5</h3>
+                <h3>Task 6. Write a program that asks for the names of three runners and the time it took each of them to
+                    finish a race. The program should display who came in first, second, and third place. Input
+                    Validation: Only accept positive numbers for the times</h3>
                 <div class="code7">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*This is a program to Swap the values
-                            key_Point:
-                               {
-                                 int a,b,temp;
-                                 temp=a;
-                                 a=b;
-                                b=temp;
-                            }    
-                          */
-                          #include<iostream>
-                          using namespace std;
-                          int main()
-                          {
-                              int num1=5;
-                              int num2=10;
-                              int temp=0;//used the third variable for help
-                              cout<<"The Numbers before swaping are written as:"<<endl;
-                              cout<<"The number_1 = "<<num1<<endl;
-                              cout<<"The number_2 = "<<num2<<endl;
-                              cout<<endl;
-                              //Now Swap the Values
-                              temp=num1;
-                              num1=num2;
-                              num2=temp;
-                              cout<<"The Numbers After swaping are written as:"<<endl;
-                              cout<<"The number_1 = "<<num1<<endl;
-                              cout<<"The number_2 = "<<num2<<endl;
-                              cout<<endl;
-                              
-                              return 0;
-                          }
+                            #include <iostream>
+                                #include <string>
+                                using namespace std;
+                                int main()
+                                {
+                                
+                                    string string1, string2, string3;
+                                    int time1, time2, time3;
+                                    cout << "_____________________________________________________" << endl;
+                                    cout << "-------------------Running race----------------------" << endl;
+                                    cout << "_____________________________________________________" << endl;
+                                    cout << "Enter the name of the Player 1:" << endl;
+                                    cin >> string1;
+                                    cout << "Enter the time that took by player 1 to complete the race:" << endl;
+                                    cin >> time1;
+                                    cout << "Enter the name of the Player 2:" << endl;
+                                    cin >> string2;
+                                    cout << "Enter the time that took by player 2 to complete the race:" << endl;
+                                    cin >> time2;
+                                    cout << "Enter the name of the Player 3:" << endl;
+                                    cin >> string3;
+                                    cout << "Enter the time that took by player 3 to complete the race:" << endl;
+                                    cin >> time3;
+                                    // decisions
+                                    if (time1 > 0)
+                                    {
+                                        if (time2 > 0)
+                                        {
+                                            if (time3 > 0)
+                                            {
+                                                // Condition--1
+                                                if (time1 > time2)
+                                                {
+                                                    if (time1 > time3)
+                                                    {
+                                                        cout << string1 << " comes first with in a time of " << time1 << endl;
+                                                        if (time2 > time3)
+                                                        {
+                                                            cout << string2 << " comes second with in a time of " << time2 << endl;
+                                                            cout << string3 << " comes third  with in a time of " << time3 << endl;
+                                                        }
+                                                        if (time3 > time2)
+                                                        {
+                                                            cout << string3 << " comes second with in a time of " << time3 << endl;
+                                                            cout << string2 << " comes third  with in a time of " << time2 << endl;
+                                                        }
+                                                    }
+                                                }
+                                                // Condition--2
+                                                if (time2 > time1)
+                                                {
+                                                    if (time2 > time3)
+                                                    {
+                                                        cout << string2 << " comes first with in a time of " << time2 << endl;
+                                                        if (time1 > time3)
+                                                        {
+                                                            cout << string1 << " comes second with in a time of " << time1 << endl;
+                                                            cout << string3 << " comes third  with in a time of " << time3 << endl;
+                                                        }
+                                                        if (time3 > time1)
+                                                        {
+                                                            cout << string3 << " comes second with in a time of " << time3 << endl;
+                                                            cout << string1 << " comes third  with in a time of " << time1 << endl;
+                                                        }
+                                                    }
+                                                }
+                                                // Condition--3
+                                                if (time3 > time1)
+                                                {
+                                                    if (time3 > time2)
+                                                    {
+                                                        cout << string3 << " comes first with in a time of " << time3 << endl;
+                                                        if (time1 > time2)
+                                                        {
+                                                            cout << string1 << " comes second with in a time of " << time1 << endl;
+                                                            cout << string2 << " comes third  with in a time of " << time2 << endl;
+                                                        }
+                                                        if (time2 > time1)
+                                                        {
+                                                            cout << string2 << " comes second with in a time of " << time2 << endl;
+                                                            cout << string1 << " comes third  with in a time of " << time1 << endl;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                cout << "invalid input: The Time of " << string3 << " is in negative" << endl;
+                                                cout << "Please enter the correct input!(Time is always in positive):" << endl;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            cout << "invalid input: The Time of " << string2 << " is in negative" << endl;
+                                            cout << "Please enter the correct input!(Time is always in positive):" << endl;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        cout << "invalid input: The Time of " << string1 << " is in negative" << endl;
+                                        cout << "Please enter the correct input!(Time is always in positive):" << endl;
+                                    }
+                                    return 0;
+                                }
                         </xmp>
                     </code></pre>
                 </div>
@@ -403,32 +522,83 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 7. Write a program that stores your name, rollno, age and degree in valid data type variables. And 
-                    displays in following format:
-                    <br>
-                    Hi, my name is ------- having roll number ------- and enrolled in -------. My age is -----</h3>
+                <h3>Task 7. A long-distance carrier charges the following rates for telephone calls:
+
+                    Write a program that asks for the starting time and the number of minutes of the call, and displays the charges. The program should ask for the time to be entered as a floating- point number in the form HH.MM. For example, 07:00 hours will be entered as 07.00, and 16:28 hours will be entered as 16.28.
+                    
+                    Input Validation: The program should not accept times that are greater than 23:59. Also, no number whose last two digits are greater than 59 should be accepted. Hint: Assuming num is a floating-point variable, the following expression will give you its fractional part:-</h3>
                 <div class="code8">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*Program to display the Information
-                            Key_point:
-                                 we use the string library and strimg dataType to store the stings*/
-                          #include<iostream>
-                          #include<string>
-                          using namespace std;
-                          int main()
-                          {
-                              //use the string dataType because we cannot store the more than one 
-                              //letter in char dataType so to store the complete string we use the string dataType in 
-                              //string libraray
-                              string name="Muhib Arshad";
-                              string roll_no="BSEF21M540";
-                              string enrolled="FCIT(New_Campus) BSSE";
-                              int age=19;
-                              cout<<"My name is "<<name<<" having roll number "<<roll_no<<" and enrolled in "<<enrolled<<". My age is "<<age<<endl;
-                              return 0;
-                              
-                          }
+                            #include <iostream>
+                                #include <iomanip>
+                                using namespace std;
+                                int main()
+                                {
+                                    float time_start;
+                                    float minutes;
+                                    cout << "_____________________________________________________" << endl;
+                                    cout << "-------------Long Distance Charge Carriers-----------" << endl;
+                                    cout << "_____________________________________________________" << endl;
+                                    cout << "Enter the started time of the call in the form HH.MM. as 07:45 :" << endl;
+                                    cin >> time_start;
+                                    // floating pointt get calculation
+                                    int x;
+                                    float y;
+                                    x = time_start;
+                                    y = time_start - x;
+                                    cout << setprecision(2) << fixed;
+                                    // Checkouts
+                                    if (time_start > 23.59)
+                                    {
+                                        cout << "Invalid:input." << endl;
+                                    }
+                                    else if (y > 0.59)
+                                    {
+                                        cout << "Invalid:input." << endl;
+                                    }
+                                    else
+                                    {
+                                        //Input minutes long call from the user
+                                        cout << "Enter the number of minutes the call long out:" << endl;
+                                        cin >> minutes;
+                                        //Check minutes validation
+                                        cout << setprecision(2) << fixed;
+                                        if (minutes - static_cast<int>(minutes) > 0.59)
+                                        {
+                                            cout << "Invalid:Input." << endl;
+                                        }
+                                        else
+                                        {
+                                            //Packages range decisions
+                                            if (time_start >= 00.00)
+                                            {
+                                                if (time_start < 7.00)
+                                                {
+                                                    cout << "Total call charges = $" << minutes * 0.05 << endl;
+                                                }
+                                            }
+                                
+                                            if (time_start >= 07.00)
+                                            {
+                                                if (time_start <= 19.00)
+                                                {
+                                                    cout << "Total call charges = $" << minutes * 0.45 << endl;
+                                                }
+                                            }
+                                
+                                            if (time_start >= 19.01)
+                                            {
+                                                if (time_start <= 23.59)
+                                                {
+                                                    cout << "Total call charges = $" << minutes * 0.20 << endl;
+                                                }
+                                            }
+                                        }
+                                    }
+                                
+                                    return 0;
+                                }
                           
                         </xmp>
                     </code></pre>
@@ -443,28 +613,86 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 8. Write a program that displays average of three numbers. Hardcode values of variables</h3>
+                <h3>Task 8.A mobile phone service provider has three different subscription packages for its customers:<br>
+                    Package A: For $39.99 per month 450 minutes are provided. Additional minutes are
+                    $0.45 per minute. Package B: For $59.99 per month 900 minutes are provided. Additional minutes are<br>
+                    $0.40 per minute. Package C: For $69.99 per month unlimited minutes provided. Write a program that calculates a customer’s monthly bill. It should ask which package the
+                    customer has purchased and how many minutes were used. It should then display the total
+                    amount due.<br>
+                    Input Validation: Be sure the user only selects package A, B, or C</h3>
                 <div class="code9">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*Program to display the Average of three variables*/
-                            #include<iostream>
-                            using namespace std;
-                            int main()
-                            {
+                            #include <iostream>
+                                using namespace std;
+                                int main()
+                                {
                                 
-                                int num1=5;
-                                float num2=8.9;
-                                double num3=9.888;
-                                double average=0;//Intiliaze to zero to overwrite the garbage value
-                                average=(num1+num2+num3)/3;//Parantesis are used to discarge the priority order of division
-                                cout<<"Number 1 = "<<num1<<endl;
-                                cout<<"Number 2 = "<<num2<<endl;
-                                cout<<"Number 3 = "<<num3<<endl;
-                                cout<<"The average of these three numbers = "<<average<<endl;
-                                return 0;
-                                
-                            }
+                                    char ch;
+                                    int minutes;
+                                    float extra_minutes;
+                                    float extra_cost;
+                                    float due_amount;
+                                    cout << "_____________________________________________________" << endl;
+                                    cout << "---------------Mobile Service Provider---------------" << endl;
+                                    cout << "_____________________________________________________" << endl;
+                                    cout << "Here are some packages for you:" << endl;
+                                    cout << "\tPackage A: For $39.99 per month 450 minutes are provided." << endl
+                                         << "\tAdditional minutes are $0.45 per minute." << endl;
+                                    cout << endl;
+                                    cout << "\tPackage B: For $59.99 per month 900 minutes are provided." << endl
+                                         << "\tAdditional minutes are $0.40 per minute." << endl;
+                                    cout << endl;
+                                    cout << "\tPackage C: For $69.99 per month unlimited minutes provided." << endl;
+                                    cout << endl;
+                                    cout << "Now choose any one of the package that you want to apply:" << endl;
+                                    cin >> ch;
+                                    if (ch == 'A' || ch == 'a')
+                                    {
+                                        cout << "Enter the minutes you used:" << endl;
+                                        cin >> minutes;
+                                        if (minutes > 450)
+                                        {
+                                            extra_minutes = minutes - 450;
+                                            extra_cost = extra_minutes * 0.45;
+                                            due_amount = 39.99 + extra_cost;
+                                            cout << "The due amount for the " << minutes << " minutes = $" << due_amount << endl;
+                                        }
+                                        else
+                                        {
+                                            cout << "The due amount for the " << minutes << " minutes = $39.99" << endl;
+                                        }
+                                    }
+                                    else if (ch == 'B' || ch == 'b')
+                                    {
+                                        cout << "Enter the minutes you used:" << endl;
+                                        cin >> minutes;
+                                        if (minutes > 900)
+                                        {
+                                            extra_minutes = minutes - 900;
+                                            extra_cost = extra_minutes * 0.40;
+                                            due_amount = 59.99 + extra_cost;
+                                            cout << "The due amount for the " << minutes << " minutes = $" << due_amount << endl;
+                                        }
+                                        else
+                                        {
+                                            cout << "The due amount for the " << minutes << " minutes = $59.99" << endl;
+                                        }
+                                    }
+                                    else if (ch == 'C' || ch == 'c')
+                                    {
+                                        cout << "You have provided the unlimited minutes :" << endl;
+                                        cout << "The due amount for the unlimited minutes = $69.99" << endl;
+                                    }
+                                    else
+                                    {
+                                        cout << "Invalid:input." << endl;
+                                    }
+                                    
+                                    
+                                    return 0;
+                                    
+                                }
                         </xmp>
                     </code></pre>
                 </div>
@@ -476,28 +704,37 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 9. Write a program in which you store float value in int variable. Explain the output.</h3>
+                <h3>Task 9.A county collects property taxes on the assessment value of property, which is 60 percent of
+                    the property's actual value. If an acre of land is valued at $10,000, its assessment value is
+                    $6,000. The property tax is then 75¢ for each $100 of the assessment value. The tax for the acre
+                    assessed at $6,000 will be $45. Write a program that asks for the actual value of a piece of
+                    property, then displays the assessment value and property tax.</h3>
                 <div class="code10">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*Program to check float in int*/
                             #include<iostream>
-                            using namespace std;
-                            int main()
-                            {
-                                int num1=7.98;
-                                cout<<"The number_1 is equal to = "<<num1<<endl;
-                                cout<<endl;
+                                using namespace std;
+                                int main()
+                                {
+                                    int actual_value;
+                                    float assesment;
+                                    float tax;
+                                    cout << "_____________________________________________________" << endl;
+                                    cout << "---------------------Property Tax--------------------" << endl;
+                                    cout << "_____________________________________________________" << endl;
+                                    cout<<"Entered the actual value of a piece of a property:"<<endl;
+                                    cout<<"$";
+                                    cin>>actual_value;
+                                    //Calculations
+                                    assesment=actual_value*0.6;
+                                    tax=(assesment/100)*0.75;
+                                    //Display
+                                    cout<<"The assesment of the property = $"<<assesment<<endl;
+                                    cout<<"The tax on the property = $"<<tax<<endl;
                                 
-                                cout<<"Explanation:"<<endl;
-                                cout<<"I store the varible in int as 7.98 in source code but in console answer is 7"<<endl
-                                <<"Beacuse when we store the floating point variable in int dataType it ignores the values after the(.)"<<endl
-                                <<"Integer dataType only stores the integer values without point values"<<endl
-                                <<"To store the variable with the point_values we use the float dataType properly"<<endl;
                                 
-                                return 0;
-                                
-                            }
+                                    return 0;
+                                }
                         </xmp>
                     </code></pre>
                 </div>
@@ -509,39 +746,69 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 10. Suppose an employee gets paid every month and earns 2000 each pay period. In a year the 
-                    employee gets paid 12 times. Write a program that defines the following variables:
-                    <br>
-                    payAmount; this variable will hold the amount of pay the employee earns each pay period.
-                    <br>
-                    payPeriods; this variable will hold the number of pay periods in a year.
-                    <br>
-                    annualPay; this variable will hold the employee’s total annual pay, which will be calculated.
-                    <br>
-                    Display the value of annualPay variable.
-                    <br>
-                    Hint: Employee’s total annual pay can be calculated by multiplying employee’s pay amount by number 
-        
-                    of pay periods in a year </h3>
+                <h3>Task 10.While exercising, you can use a heart-rate monitor to see that your heart rate stays within a
+                    safe range suggested by your trainers and doctors. According to the American Heart Association
+                    (AHA), the formula for calculating your maximum heart rate in beats per minute is 220 minus
+                    your age in years. Your target heart rate is a range that’s 50–85% of your maximum heart rate. [Note: These formulas are estimates provided by the AHA. Maximum and target heart rates
+                    may vary based on the health, fitness and gender of the individual. Always consult a physician
+                    or qualified health-care professional before beginning or modifying an exercise program.]
+                    Create a program that reads the user’s birthday and the current day (each consisting of the
+                    month, day and year). Your program should calculate and display the person’s age (in years), the person’s maximum heart rate and the person’s target-heart-rate range </h3>
                 <div class="code11">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*Program to display the anual_pay of user income */
                             #include<iostream>
-                            using namespace std;
-                            int main()
-                            {
+                                #include<iomanip>
+                                using namespace std;
+                                int main()
+                                {
+                                    
+                                    int year,month,date;
+                                    int current_year,current_month,current_date;
+                                    int maximum_heartRate;
+                                    float target_heartRange;
+                                    int age;
+                                    cout << "_____________________________________________________" << endl;
+                                    cout << "-------------(Target-Heart-Rate Calculator)----------" << endl;
+                                    cout << "_____________________________________________________" << endl;
+                                    cout<<"Enter the year of your birth:"<<endl;
+                                    cin>>year;
+                                    cout<<"Enter the month of your birth:"<<endl;
+                                    cin>>month;    
+                                    cout<<"Enter the date of your birth:"<<endl;
+                                    cin>>date;
+                                    cout<<endl;
+                                    cout<<endl;
+                                    cout<<endl;
+                                    cout<<"Enter the current year:"<<endl;
+                                    cin>>current_year;
+                                    cout<<"Enter the current month:"<<endl;
+                                    cin>>current_month;
+                                    cout<<"Enter the current date:"<<endl;
+                                    cin>>current_date;
+                                    //Age calculate
+                                    if(current_month>=month && current_date>=date)
+                                    {
+                                        age=current_year-year;
+                                        cout<<"You are "<<age<<" years old:"<<endl;
+                                    }
+                                    else
+                                    {
+                                        age=(current_year-year)-1;
+                                        cout<<"You are "<<age<<" years old:"<<endl;
+                                    }
+                                    //Maximum-Heart-rate
+                                    maximum_heartRate=220-age;
+                                    cout<<"The maximum Heart Rate of your Heart = "<<maximum_heartRate<<" beats/minute"<<endl;
+                                    //Target-Haert-Range
+                                    //average_heartRate=(50+85)/2==67.5%
+                                    //67.5/100==0.675%
+                                    cout<<setprecision(2)<<fixed;
+                                    target_heartRange=(float)(maximum_heartRate*0.675);
+                                    cout<<"The Target Heart Range = "<<target_heartRange<<endl;	
                                 
-                                int pay_Amount=2000;
-                                int pay_Periods=12;
-                                int annual_Pay=0;//Intiliaze to zero to overwrite the garbage value
-                                cout<<"The amount of pay the employee earns each pay period = "<<pay_Amount<<endl;
-                                cout<<"The number of pay periods in a year = "<<pay_Periods<<endl;
-                                annual_Pay=pay_Amount*pay_Periods;
-                                cout<<"The employee\'s total annual pay, which will be calculated = "<<annual_Pay<<endl;
-                                
-                                return 0;
-                            }
+                                    return 0;
+                                }
                         </xmp>
                     </code></pre>
                 </div>
@@ -554,84 +821,7 @@
      </div>
 
 
-        <div class="container-3">
-            <div class="heading-2">
-                <h1>Whats make this website differents from others?</h1>
-            </div>
-            <div class="row-3">
 
-                <div class="amazing">
-                    <div class="amazing-header">
-                        <h1>Amazing Feature That Increase your Productivity</h1>
-                    </div>
-                    <div class="amazing-body">
-                        <p>
-                            If you don't find any problem,in this website and if you have a very difficult assignment
-                            question that
-                            is not present on internet ,then you dont bother yourself,we are here to solve every problem
-                            of
-                            your
-                            life you just click on the Problem asking button and write your problem we slove the code of
-                            your
-                            problem and sent you on your email addres that you put in the sin up form.
-                        </p>
-                        <a href="contact.html"><button class="btn2">Write your Problem here</button></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer>
-            <div class="contanier-4">
-                <div class="row-4">
-    
-    
-    
-                    <div class="footer-col" id="about_us">
-                        <h4>About_us</h4>
-                        <p>
-                            We are the students from different well knowned UNiversities like PUCIT,FAST,NUST and COMSATS.
-                            Our main goal is to provide good CGPA with Skills to our Begginer programmers.We solve problems
-                            and help our juniors to understand the basice concepts .
-                        </p>
-                    </div>
-    
-    
-    
-                    <div class="footer-col">
-                        <h4>Contact_us</h4>
-                        <ul>
-                            <li><a href="https://pucit.edu.pk/" target="=blank">PUCIT(New_Campus)</a></li>
-                            <li><a href="https://www.whatsapp.com/" target="=blank">phone:03259615088</a></li>
-                            <li><a href="https://gmail.com/" target="=blank">email:bsef21m540@pucit.edu.pk</a></li>
-                            <li><a href="https://www.google.com/maps/place/Punjab+University+Hostel+Rd,+Quaid-i-Azam+Campus,+Lahore,+Punjab/@31.4958087,74.3057684,17z/data=!3m1!4b1!4m5!3m4!1s0x39190477c811e4e9:0x9c8824758d8549ae!8m2!3d31.4958087!4d74.3079571" target="=blank">Punjab,hostel #09 ,Lahore</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Quick_links</h4>
-                        <ul>
-                            <li><a href="https://www.facebook.com/profile.php?id=100039337088172" target="=blank"><i class="fab fa-facebook-f" id="face"></i>محمد محب الله</a></li>
-                            <li><a href="https://www.instagram.com/muhib7353/" target="=blank"><i class="fab fa-instagram" id="insta"></i>muhib7353</a></li>
-                            <li><a href="https://www.whatsapp.com/" target="=blank"><i class="fab fa-whatsapp" id="whats"></i>+923259615088</a></li>
-                            <li><a href="https://twitter.com/muhib7353" target="=blank"><i class="fab fa-twitter" id="twit"></i>muhib7353</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Quick_Access</h4>
-                        <ul>
-                            <li><a href="codesheets.html">Code_sheets</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="sinup.html">Sin_Up</a></li>
-                            <li><a href="home.html">Home</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <div class="container-5">
-            <div class="footer-2">
-                <h1>Copyright &copy;https://muhib-codes.netlify.app/</h1>
-            </div>
-        </div>
 
         <script>
             var menu_list = document.getElementById("menu_list");
@@ -648,4 +838,4 @@
         <script src="./Prism/prism-final.js" ></script>
 </body>
 
-</html> -->
+</html>

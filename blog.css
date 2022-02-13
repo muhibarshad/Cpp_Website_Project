@@ -608,19 +608,140 @@ footer
 
 }
 
-/*Soory part*/
-.sorry
+/*Website start here for the blog*/
+/*Binary to Decimal converter*/
+.contanier-6
 {
-    text-align: center;
-    width: 40%;
-    height: 50%;
+    width:90%;
+    height: 490vh;
+    padding-left:4% ;
+    padding-right: 4%;
+    box-sizing: border-box;
+    /* background-color:rgb(160, 186, 192); */
+    margin-left: 90px;
+    position: relative;
+    bottom: 380px;    
+}
+.row-6-1
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-left: 50px;
+    height: 70vh;
+    background-color:rgb(135, 228, 208);
+    border: 20px solid rgb(2, 103, 110);
     border-radius: 20px;
-    padding: 0px 20px;
-    position: absolute;
-    top: 380px;
-    left: 380px;
-    background-color: #fdc304;
-    color: rgb(3, 3, 3);
+}
+.contanier-6 h1
+{
+    position: relative;
+    left: 170px;
+    top: 70px;
     z-index: -1;
+}
+.form
+{
+    padding-left: 200px;
+    padding-top: 70px;
+}
+.form input
+{
+    margin-top: 20px;
+    padding: 0.6rem 15vh;
+    border-radius: 20px;
+    border: 2px solid rgb(135, 228, 208);
+}
+.form h2
+{
+    margin-top: 20px;
+}
+#btn
+{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    background-color: #e28b00;
+    color: white;
+    font-size: 18px;
+}
+#btn:hover
+{
+
+    background-color: #493ac8;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding-left: 17vh;
+    cursor: pointer;
+}
+.chupa-rustum
+{
+    display: none;
+}
+.row-6-2 h1
+{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+@media only screen and (max-width:700px)
+{
+ .chupa-rustum
+{
+    display: inline-block;
+    position: absolute;
+    top: 400px;
+    left: 120px;
+    z-index: -1;
+}
+.contanier-6
+{
+    width:50%;
+    height: 320vh;
+    padding-left:0% ;
+    padding-right: 0%;
+    box-sizing: border-box;
+    /* background-color:rgb(160, 186, 192); */
+    margin-top: 00px;
+    margin-left: 0px;
+    margin-right: 800px;
+    position: relative;
+    bottom: 0px;    
+}
+.row-6-1
+{
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    margin-top: 50px;
+    margin-left: 0px;
+    height: 60vh;
+    width: 192%;
+    background-color:rgb(0, 181, 236);
+    border: 4px solid rgb(110, 2, 2);
+    border-radius: 20px;
+}
+.contanier-6 h1
+{
+    position: relative;
+    left: 10px;
+    top: 50px;
+}
+.form
+{
+    padding-left: 20px;
+    padding-top: 50px;
+}
+.form input
+{
+    margin-top: 20px;
+    padding: 0.6rem 7vh;
+    border-radius: 20px;
+    border: 2px solid rgb(0, 181, 236);
+}
+.row-6-2
+{
+    width: 200%;
+}
 
 }
