@@ -881,7 +881,7 @@ footer
     .source_code
     {
         position:absolute;
-        top: 5500px;
+        top: 5200px;
         left: 50px;
         text-align:left;
     }
@@ -909,12 +909,12 @@ footer
  border: 1px solid ;
  border-radius: 0px;
  position: relative;
- top:320px;
+ top:220px;
 }
 .contanier-gpa-2 h1
 {
     position: relative;
-    top:310px;
+    top:210px;
     background-color: rgb(168, 180, 1);
     border-radius: 10px;
     font-size: 18px;
