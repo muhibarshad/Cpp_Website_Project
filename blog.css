@@ -702,7 +702,7 @@ footer
     padding-right: 0%;
     box-sizing: border-box;
     /* background-color:rgb(160, 186, 192); */
-    margin-top: 00px;
+    margin-top: 100px;
     margin-left: 0px;
     margin-right: 800px;
     position: relative;
@@ -745,9 +745,8 @@ footer
 }
 
 }
-/*GPA calculator*/
-
-
+/*GPA calculator*//*GPA calculator*/
+}
 .contanier-gpa
 {
     height: 300vh;
@@ -777,13 +776,20 @@ footer
 {
     position: relative;
     bottom: 260px;
-    margin-top: 0px;
+    margin-top: 200px;
     background-color:rgb(4, 160, 165) ;
     margin-left: 50px;
     border-radius: 70px;
 }
 .form-gpa h4
 {
+    text-align: center;
+    background-color: rgb(4, 160, 165) ;
+}
+.form-gpa h1
+{
+    margin-top: 20px;
+    margin-left: 20px;
     text-align: center;
     background-color: rgb(4, 160, 165) ;
 }
@@ -818,7 +824,7 @@ footer
 {
     text-align: center;
     position: absolute;
-    top:4890px;
+    top:4800px;
     left: 590px;
     padding: 4px 0px;
     background-color: rgb(4, 160, 165) ;
@@ -827,35 +833,19 @@ footer
 {
     display: none;
 }
-.contanier-gpa-2 input
-{
- padding: 2vh 5vh;
- border: 2px solid ;
- border-radius: 20px;
-}
-.contanier-gpa-2 h1
-{
-    background-color: rgb(168, 180, 1);
-    border-radius: 10px;
-    border: 2px solid rgb(168, 180, 1);;
-}
-.source_code button
+.form-gpa button
 {
     width: 25vh;
     height: 7vh;
+    margin-left: 170px;
     border-radius: 20px;
     color: white;
     background-color: rgb(233, 93, 238);
     border: 2px solid rgb(233, 93, 238);
     font-size: 20px;
 }
-.source_code
-{
-    position:absolute;
-    top: 5190px;
-    left: 260px
-}
-.source_code button:hover
+
+.form-gpa button:hover
 {
     width: 25vh;
     height: 7vh;
@@ -868,7 +858,7 @@ footer
 }
 @media only screen and (max-width:700px)
 {
-    .source_code button
+    .form-gpa button
     {
         width: 15vh;
         height: 5vh;
@@ -877,13 +867,7 @@ footer
         background-color: rgb(233, 93, 238);
         border: 2px solid rgb(233, 93, 238);
         font-size: 20px;
-    }
-    .source_code
-    {
-        position:absolute;
-        top: 5280px;
-        left: 50px;
-        text-align:left;
+        margin-left: 10px;
     }
     .source_code button:hover
     {
@@ -899,27 +883,12 @@ footer
     .pucit-gpa{
         display: block;
         position: relative;
-        top: 1080px;
+        top: 1000px;
         text-align: center;
         
     }
- .contanier-gpa-2 input
-{
- padding: 1vh 4vh;
- border: 1px solid ;
- border-radius: 0px;
- position: relative;
- top:260px;
-}
-.contanier-gpa-2 h1
-{
-    position: relative;
-    top:250px;
-    background-color: rgb(168, 180, 1);
-    border-radius: 10px;
-    font-size: 18px;
-    border: 2px solid rgb(168, 180, 1);;
-}
+
+
     .contanier-gpa
     {
         height: 200vh;
