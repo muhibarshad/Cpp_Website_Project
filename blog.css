@@ -899,7 +899,7 @@ footer
     .pucit-gpa{
         display: block;
         position: relative;
-        top: 1050px;
+        top: 1080px;
         text-align: center;
         
     }
@@ -909,12 +909,12 @@ footer
  border: 1px solid ;
  border-radius: 0px;
  position: relative;
- top:220px;
+ top:260px;
 }
 .contanier-gpa-2 h1
 {
     position: relative;
-    top:210px;
+    top:250px;
     background-color: rgb(168, 180, 1);
     border-radius: 10px;
     font-size: 18px;
