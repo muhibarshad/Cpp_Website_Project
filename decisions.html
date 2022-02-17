@@ -497,22 +497,191 @@
 
 
 
+
+
+
+
+
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Following codes are coming soon :(probably 16 feb 2022) </h2>
+                <h2> Write a program to check whether the triangle is equilateral, isosceles or scalene triangle.</h2>
+                <div class="code12">
+                    <pre><code class="language-cpp">
+                        <xmp>
+                            //To check triangle is osscoles and equliteral andscalance
+                            #include<iostream>
+                            using namespace std;
+                            int main()
+                            {
+                                
+                                float side1;
+                                float side2;
+                                float side3;
+                                bool flag=false;
+                                cout<<"Enter the value of side1:"<<endl;
+                                cin>>side1;
+                                cout<<"Enter the value of side2:"<<endl;
+                                cin>>side2;
+                                cout<<"Enter the value of side3:"<<endl;
+                                cin>>side3;
+                                if(side1==side2 &&side2==side3)
+                                {
+                                    cout<<"It is an equiliteral triangle:"<<endl;
+                                }
+                                else if(side1==side2 ||side1==side3 ||side2==side3)
+                                {
+                                    cout<<"It is an isosolces triangle:"<<endl;
+                                }
+                                else 
+                                {
+                                    cout<<"It is an scalance triangle:"<<endl;
+                                }
+                                
+                                return 0;
+                            }
+                        </xmp>
+                    </code></pre>
+                </div>
+            </div>
+         </div>
+
+
+
+
+
+
+         <div class="col-6">
+            <div class="row-6-1">
+                <h2>Write a program to input all sides of a triangle and check whether triangle is valid or not.</h2>
+                <div class="code13">
+                    <pre><code class="language-cpp">
+                        <xmp>
+                            //Check triangle is valid or not by input of its sides
+                            #include<iostream>
+                            #include<cmath>
+                            using namespace std;
+                            int main()
+                            {
+                                float side1;
+                                float side2;
+                                float side3;
+                                bool flag=false;
+                                cout<<"Enter the value of side1:"<<endl;
+                                cin>>side1;
+                                cout<<"Enter the value of side2:"<<endl;
+                                cin>>side2;
+                                cout<<"Enter the value of side3:"<<endl;
+                                cin>>side3;
+                                //a^2=b^2+c^2
+                                if(side1==sqrt(pow(side2,2)+pow(side3,2)))
+                                {
+                                     flag=true;
+                                }
+                                else if(side2==sqrt(pow(side1,2)+pow(side3,2)))
+                                {
+                                    flag=true;
+                                }
+                                else if(side3==sqrt(pow(side2,2)+pow(side1,2)))
+                                {
+                                    flag=true;
+                                }
+                                if(flag==false)
+                                {
+                                    cout<<"It is not a triangle:"<<endl;
+                                }
+                                else if(flag==true)
+                                {
+                                    cout<<"It is a triangle:"<<endl;
+                                }
+                                    
+                                return 0;
+                                
+                            }
+                        </xmp>
+                    </code></pre>
+                </div>
+            </div>
+         </div>
+
+
+
+
+
+         <div class="col-6">
+            <div class="row-6-1">
+                <h2> Write a program to find all roots of a quadratic equation. And also find th nature of the roots as ,equal ,distant and imaginary</h2>
+                <div class="code14">
+                    <pre><code class="language-cpp">
+                        <xmp>
+                            //Roots of the qudratic equation
+                            #include<iostream>
+                            #include<cmath>
+                            using namespace std;
+                            int main()
+                            {
+                                
+                                int a;
+                                int b;
+                                int c;
+                                double disc;
+                                double root1;
+                                double root2;
+                                cout<<"Quadratic equation is writtten as \"ax^2+bx+c\""<<endl;
+                                cout<<"Enter the value of ax^2:"<<endl;
+                                cin>>a;
+                                cout<<"Enter the value of bx:"<<endl;
+                                cin>>b;
+                                cout<<"Enter the value of c:"<<endl;
+                                cin>>c;
+                                //calculations
+                                disc=((pow(b,2))-4*(a*c));
+                                root1=((-b+(sqrt(disc)))/2*a); 
+                                root2=((-b-(sqrt(disc)))/2*a);
+                                if(disc==0)
+                                {
+                                    cout<<"The roots of the quadratic equation "<<a<<"x^2"<<"+"<<b<<"x"<<"+"<<c<<"are given as:"<<endl;
+                                    cout<<"\t( "<<root1<<" , "<<root2<<" )"<<endl;
+                                    cout<<"The nature of the roots is \"equal\" and real:"<<endl;
+                                }
+                                else if(disc>0)
+                                {
+                                    cout<<"The roots of the quadratic equation "<<a<<"x^2"<<"+"<<b<<"x"<<"+"<<c<<"are given as:"<<endl;
+                                    cout<<"\t( "<<root1<<" , "<<root2<<" )"<<endl;
+                                    
+                                    cout<<"The nature of the roots is \"distant\" and real:"<<endl;
+                                }
+                                else
+                                {
+                                    cout<<"The roots of the quadratic equation "<<a<<"x^2"<<"+"<<b<<"x"<<"+"<<c<<"are given as:"<<endl;
+                                    cout<<"\t( "<<root1<<" , "<<root2<<" )"<<endl;
+                                    cout<<"NAN means it is an complex imaginary number:"<<endl;
+                                    cout<<"The nature of the roots is \"Imaginary roots\":"<<endl;	
+                                }
+                            
+                                return 0;
+                            }
+                            
+                        </xmp>
+                    </code></pre>
+                </div>
+            </div>
+         </div>
+
+
+
+         
+         <div class="col-6">
+            <div class="row-6-1">
+                <h2>These are some quiz for you to try yourself .></h2>
                 <div class="code11">
                     <pre><code class="language-cpp">
                         <xmp>
-                       1- Write a program to input all sides of a triangle and check whether triangle is valid or not.
-                       2- Write a program to check whether the triangle is equilateral, isosceles or scalene triangle.
-                       3- Write a program to calculate profit or loss
-                       4- Write a program to find all roots of a quadratic equation.
-                       5- Write a program to input basic salary of an employee and calculate its Gross salary according to
+                       *- Write a program to input basic salary of an employee and calculate its Gross salary according to
                             following:
                             Basic Salary <= 10000 : HRA = 20%, DA = 80%
                             Basic Salary <= 20000 : HRA = 25%, DA = 90%
                             Basic Salary > 20000 : HRA = 30%, DA = 95%
-                        9. Write a program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and
+                        *. Write a program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and
                             Computer. Calculate percentage and grade according to following:
                             Percentage >= 90% : Grade A
                             Percentage >= 80% : Grade B
@@ -526,123 +695,22 @@
             </div>
          </div>
 
-
-<!-- 
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h2>Land Calculation</h2>
-                <div class="code12">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            #include <iostream>
-                                using namespace std;
-                                int main()
-                                {
-                                    int one_acre = 43560;
-                                    long int tract = 391876;
-                                    float numberOfAcresInTract = 0;
-                                    numberOfAcresInTract = (float)tract / one_acre;
-                                    cout << "The number of acres in a tract of land with 391,876 square feet = " << numberOfAcresInTract << endl;
-                                
-                                    return 0;
-                                }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
+      
 
 
 
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2> Circuit Board Price</h2>
-                <div class="code13">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            #include <iostream>
-                                using namespace std;
-                                int main()
-                                {
-                                    int profit_percent = 35;
-                                    float costs = 14.95;
-                                    float total = 0;
-                                    total = (float)35 / 100;
-                                    total = total * costs;
-                                    total = total + costs;
-                                    cout << "The total cost of the circuit_board = " << total << endl;
-                                
-                                    return 0;
-                                }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h2>Personal Information </h2>
-                <div class="code14">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            #include <iostream>
-                                using namespace std;
-                                int main()
-                                {
-                                    cout << "Muhib Arshad" << endl;
-                                    cout << "Raheem_town street #01 canal_road Tehsil Kabirwala District khanewal Country Pakistan and Zip code is +92" << endl;
-                                    cout << "03006373841" << endl;
-                                    cout << "Software_Engeenering" << endl;
-                                
-                                    return 0;
-                                }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-
-
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h2>Triangle Pattern</h2>
+                <h2>I am going on the <strong> Ejtama Rivand💖 </strong>  after that i a launching the some amazing project🙀 in the <a href="blog.html"><strong>BLOG</strong></a>,tab tak ka ly Allah HAFIZ GYUZ😊</h2>
                 <div class="code15">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            #include <iostream>
-                                using namespace std;
-                                int main()
-                                {
-                                    cout << "   *   " << endl;
-                                    cout << "  ***  " << endl;
-                                    cout << " ***** " << endl;
-                                    cout << "*******" << endl;
-                                
-                                    return 0;
-                                }
-                        </xmp>
-                    </code></pre>
                 </div>
             </div>
          </div>
 
 
 
-
+<!--
 
          <div class="col-6">
             <div class="row-6-1">
