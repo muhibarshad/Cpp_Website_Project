@@ -208,85 +208,85 @@
                                 }
                                 
                       output as:
-           
+                      ___________________________________________________________________
+                      Shadow of revtangle:
+                      How many stars to print: as a triangle 6
+                      Following are 6 stars
+                      ******
+                      *****
+                      ****
+                      ***
+                      **
+                      *
+                      #include <iostream>
+                          using namespace std;
+                          int main()
+                          {
+                              cout << "How many stars to print: as a triangle ";
+                              int howMany;
+                              cin >> howMany;
+                              cout << "Following are " << howMany << " stars" << endl;
+                              int i = howMany;
+                              while (i >= 1)
+                              {
+                                  int j = 1;
+                                  while (j <= i)
+                                  {
+                                      cout << "*";
+                                      j++;
+                                  }
+                                  cout << endl;
+                                  i--;
+                              }
+                              cout << endl;
+                          
+                              return 0;
+                          }
+                      ___________________________________________________________________________
+                      Horizontal Image of triangle
+                      How many stars to print: as a triangle 7
+                      Following are 7 stars
+                      *******
+                       ******
+                        *****
+                         ****
+                          ***
+                           **
+                            *
+                            #include <iostream>
+                              using namespace std;
+                              int main()
+                              {
+                                  cout << "How many stars to print: as a triangle ";
+                                  int howMany;
+                                  cin >> howMany;
+                                  cout << "Following are " << howMany << " stars" << endl;
+                                  int i = 0;
+                                  while (i < howMany)
+                                  {
+                                      int j = 1;
+                                      while (j <= howMany)
+                                      {
+                                          if (j <= i)
+                                          {
+                                              cout << " ";
+                                          }
+                                          else
+                                          {
+                                              cout << "*";
+                                          }
+                                          j++;
+                                      }
+                                      cout << endl;
+                                      i++;
+                                  }
+                                  cout << endl;
+                              
+                                  return 0;
+                              }
+                             ___________________________________________________________________________
+                      
 
-___________________________________________________________________
-Shadow of revtangle:
-How many stars to print: as a triangle 6
-Following are 6 stars
-******
-*****
-****
-***
-**
-*
-#include <iostream>
-    using namespace std;
-    int main()
-    {
-        cout << "How many stars to print: as a triangle ";
-        int howMany;
-        cin >> howMany;
-        cout << "Following are " << howMany << " stars" << endl;
-        int i = howMany;
-        while (i >= 1)
-        {
-            int j = 1;
-            while (j <= i)
-            {
-                cout << "*";
-                j++;
-            }
-            cout << endl;
-            i--;
-        }
-        cout << endl;
-    
-        return 0;
-    }
-___________________________________________________________________________
-Horizontal Image of triangle
-How many stars to print: as a triangle 7
-Following are 7 stars
-*******
- ******
-  *****
-   ****
-    ***
-     **
-      *
-      #include <iostream>
-        using namespace std;
-        int main()
-        {
-            cout << "How many stars to print: as a triangle ";
-            int howMany;
-            cin >> howMany;
-            cout << "Following are " << howMany << " stars" << endl;
-            int i = 0;
-            while (i < howMany)
-            {
-                int j = 1;
-                while (j <= howMany)
-                {
-                    if (j <= i)
-                    {
-                        cout << " ";
-                    }
-                    else
-                    {
-                        cout << "*";
-                    }
-                    j++;
-                }
-                cout << endl;
-                i++;
-            }
-            cout << endl;
-        
-            return 0;
-        }
-___________________________________________________________________________
 
                         </xmp>
                     </code></pre>
@@ -551,7 +551,6 @@ ___________________________________________________________________________
 
 
 
-        </div>
 
 
             <div class="col-6">
