@@ -1,53 +1,5 @@
+
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assignments4.css">
-    <title>Assignment-4</title>
-</head>
-
-<body>
-    <div class="Alert">
-        <a href="assignments.html" class="access"><button>Go back</button></a>
-        <div class="contanier">
-            <div class="img">
-                <h1>No,Access</h1>
-                <img src="./images/alert2.png" alt="Alert">
-            </div>
-            <div class="heading">
-                It is not assigned yet,
-                <br>
-                When it is assigned to the class,
-                <br>
-                then we uploaded it imediately
-                <br>
-                If you find any problem in c++ in concepts then you must check the blog
-                and also contact us
-            </div>
-
-        </div>
-        <div class="blog">
-            <a href="blog.html"><button>Blog</button></a>
-            <a href="contact.html"><button>Contact</button></a>
-
-        </div>
-        </div>
-</body>
-
-</html>
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -107,60 +59,2388 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-2">
-                    <div class="basics">
-                      <h2>Sample:Sum_Of_Two_Numbers</h2>
-                       <div class="code">
-                        <pre class="cpp"><code class="language-cpp">
-                            <xmp>
-                                #include<iostream>
-                                    using namespace std;
-                                    int main()
-                                    {
-                                        int num_1=50;
-                                        int num_2=100;
-                                        int sum;
-                                        sum=num_1+num_2;
-                                        cout<<"The sum of these two numbers = "<<sum<<endl;
-                                        return 0;
-                                    }
-                                    
-                            </xmp>
-                        </code></pre>
-                       </div>
-
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
+               
 
      <div class="contanier-6">
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 1. Write a program that displays size of int, float, double, char and bool data types, use sizeof() 
-                    function.
+                <h3>Task-01:
+                    Convert a given number into words in C++.
+                    <br>
+                    Take and integer input from user and display the number in words.
+                    <br>
+                    Example :
+                    <br>
+                    123 to One Hundred Twenty Three.
+                    <br>
+                    Input: 8237764
+                    <br>
+                    Output: Eighty two lac thirty seven thousand seven hundred and
+                    <br>
+                    sixty four.
                     </h3>
                 <div class="code2">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /* This Program is used to display the size of different dataTypes 
-                            Key_point:
-                                 We use the function sizeof(dataTypes) :
-                          */
-                          #include<iostream>
-                          using namespace std;
-                          int main()
-                          {
-                              
-                              cout<<"The size of Int_data_Type  is "<<sizeof(int)<<" Bytes \n";
-                              cout<<"The size of Float_data_Type  is "<<sizeof(float)<<" Bytes \n";
-                              cout<<"The size of Double_data_Type  is "<<sizeof(double)<<" Bytes \n";
-                              cout<<"The size of Char_data_Type is  "<<sizeof(char)<<" Bytes \n";
-                              cout<<"The size of Bool_data_Type is  "<<sizeof(bool)<<" Bytes \n";
-                          
-                              return 0;
-                          }
+                            #include <iostream>
+                                #include <cmath>
+                                using namespace std;
+                                int main()
+                                {
+                                    int num;
+                                    int temp, temp2, temp3;
+                                    int length;
+                                    int check;
+                                    int rem1, rem2, rem3, rem4, rem5, rem6, rem7, rem8, th_rem, lac_rem;
+                                    cout << "_________________________________________________________________" << endl;
+                                    cout << "----------------------Number to Words Converter------------------" << endl;
+                                    cout << "_________________________________________________________________" << endl;
+                                    cout << "Enter the number:" << endl;
+                                    cout << "Number length should be less than equal to 7 digits :" << endl;
+                                    cin >> num;
+                                    // get length of a number
+                                    length = log10(num) + 1;
+                                    temp = num;
+                                    temp2 = num;
+                                    check=num;
+                                    temp3 = num;
+                                    // Get all reminders
+                                    rem6 = num % 10;
+                                    num = num / 10;
+                                    rem5 = num % 10;
+                                    num = num / 10;
+                                    rem4 = num % 10;
+                                    num = num / 10;
+                                    rem3 = num % 10;
+                                    num = num / 10;
+                                    rem2 = num % 10;
+                                    num = num / 10;
+                                    rem1 = num % 10;
+                                    num = num / 10;
+                                    rem8 = num % 10;
+                                    // get last two digits
+                                    rem7 = temp % 100;
+                                    temp2 = temp2 % 100000;
+                                    th_rem = temp2 / 1000;
+                                    temp3 = temp3 % 10000000;
+                                    lac_rem = temp3 / 100000;
+                                    // check for the less tha n six digits
+                                    if (check< 9999999)
+                                    {
+                                
+                                        if (length == 1)
+                                        {
+                                
+                                            switch (rem6)
+                                            {
+                                            case 0:
+                                            {
+                                                cout << "zero";
+                                                break;
+                                            }
+                                            case 1:
+                                            {
+                                                cout << "one";
+                                                break;
+                                            }
+                                            case 2:
+                                            {
+                                                cout << "two";
+                                                break;
+                                            }
+                                            case 3:
+                                            {
+                                                cout << "three";
+                                                break;
+                                            }
+                                            case 4:
+                                            {
+                                                cout << "four";
+                                                break;
+                                            }
+                                            case 5:
+                                            {
+                                                cout << "five";
+                                                break;
+                                            }
+                                            case 6:
+                                            {
+                                                cout << "six";
+                                                break;
+                                            }
+                                            case 7:
+                                            {
+                                                cout << "seven";
+                                                break;
+                                            }
+                                            case 8:
+                                            {
+                                                cout << "eight";
+                                                break;
+                                            }
+                                            case 9:
+                                            {
+                                                cout << "nine";
+                                                break;
+                                            }
+                                            }
+                                        }
+                                        else if (length == 2)
+                                        {
+                                
+                                            if (rem7 < 20 && rem7 >= 10)
+                                            {
+                                                switch (rem6)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << "ten";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "eleven";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "twelve";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "thirteen";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "fourteen";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "fifteen";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "sixteen";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "seventeen";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "eighteen";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "nineteen";
+                                                    break;
+                                                }
+                                                }
+                                            }
+                                
+                                            else
+                                            {
+                                
+                                                switch (rem5)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << " ";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "ten ";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "twenty ";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "thirty ";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "fourty ";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "fifty ";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "sixty ";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "seventy ";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "eighty ";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "ninty ";
+                                                    break;
+                                                }
+                                                }
+                                
+                                                switch (rem6)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << " ";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "one";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "two";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "three";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "four";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "five";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "six";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "seven";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "eight";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "nine";
+                                                    break;
+                                                }
+                                                }
+                                            }
+                                        }
+                                        else if (length == 3)
+                                        {
+                                            switch (rem4)
+                                            {
+                                            case 0:
+                                            {
+                                                cout << " ";
+                                                break;
+                                            }
+                                            case 1:
+                                            {
+                                                cout << " One hundred ";
+                                                break;
+                                            }
+                                            case 2:
+                                            {
+                                                cout << "Two hundred ";
+                                                break;
+                                            }
+                                            case 3:
+                                            {
+                                                cout << "Three hundred ";
+                                                break;
+                                            }
+                                            case 4:
+                                            {
+                                                cout << "Four hundred ";
+                                                break;
+                                            }
+                                            case 5:
+                                            {
+                                                cout << "Five hundred ";
+                                                break;
+                                            }
+                                            case 6:
+                                            {
+                                                cout << "Six hundred ";
+                                                break;
+                                            }
+                                            case 7:
+                                            {
+                                                cout << "Seven hundred ";
+                                                break;
+                                            }
+                                            case 8:
+                                            {
+                                                cout << "Eight hundred ";
+                                                break;
+                                            }
+                                            case 9:
+                                            {
+                                                cout << "Nine hundred ";
+                                            }
+                                            }
+                                            if (rem7 < 20 && rem7 >= 10)
+                                            {
+                                                switch (rem6)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << "ten";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "eleven";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "twelve";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "thirteen";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "fourteen";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "fifteen";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "sixteen";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "seventeen";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "eighteen";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "nineteen";
+                                                    break;
+                                                }
+                                                }
+                                            }
+                                            else
+                                            {
+                                
+                                                switch (rem5)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << " ";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "ten ";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "twenty ";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "thirty ";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "fourty ";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "fifty ";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "sixty ";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "seventy ";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "eighty ";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "ninty ";
+                                                    break;
+                                                }
+                                                }
+                                                switch (rem6)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << " ";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "one";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "two";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "three";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "four";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "five";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "six";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "seven";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "eight";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "nine";
+                                                    break;
+                                                }
+                                                }
+                                            }
+                                        }
+                                
+                                        else if (length == 4)
+                                        {
+                                            switch (rem3)
+                                            {
+                                            case 0:
+                                            {
+                                                cout << " ";
+                                            }
+                                            case 1:
+                                            {
+                                                cout << "One thousand ";
+                                                break;
+                                            }
+                                            case 2:
+                                            {
+                                                cout << "Two thousand ";
+                                                break;
+                                            }
+                                            case 3:
+                                            {
+                                                cout << "Three thousand ";
+                                                break;
+                                            }
+                                            case 4:
+                                            {
+                                                cout << "Four thousand ";
+                                                break;
+                                            }
+                                            case 5:
+                                            {
+                                                cout << "Five thousand ";
+                                                break;
+                                            }
+                                            case 6:
+                                            {
+                                                cout << "Six thousand ";
+                                                break;
+                                            }
+                                            case 7:
+                                            {
+                                                cout << "Seven thousand ";
+                                                break;
+                                            }
+                                            case 8:
+                                            {
+                                                cout << "Eight thousand ";
+                                                break;
+                                            }
+                                            case 9:
+                                            {
+                                                cout << "Nine thousand ";
+                                                break;
+                                            }
+                                            }
+                                
+                                            switch (rem4)
+                                            {
+                                            case 0:
+                                            {
+                                                cout << " ";
+                                                break;
+                                            }
+                                            case 1:
+                                            {
+                                                cout << " One hundred ";
+                                                break;
+                                            }
+                                            case 2:
+                                            {
+                                                cout << "Two hundred ";
+                                                break;
+                                            }
+                                            case 3:
+                                            {
+                                                cout << "Three hundred ";
+                                                break;
+                                            }
+                                            case 4:
+                                            {
+                                                cout << "Four hundred ";
+                                                break;
+                                            }
+                                            case 5:
+                                            {
+                                                cout << "Five hundred ";
+                                                break;
+                                            }
+                                            case 6:
+                                            {
+                                                cout << "Six hundred ";
+                                                break;
+                                            }
+                                            case 7:
+                                            {
+                                                cout << "Seven hundred ";
+                                                break;
+                                            }
+                                            case 8:
+                                            {
+                                                cout << "Eight hundred ";
+                                                break;
+                                            }
+                                            case 9:
+                                            {
+                                                cout << "Nine hundred ";
+                                            }
+                                            }
+                                            if (rem7 < 20 && rem7 >= 10)
+                                            {
+                                                switch (rem6)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << "ten";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "eleven";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "twelve";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "thirteen";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "fourteen";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "fifteen";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "sixteen";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "seventeen";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "eighteen";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "nineteen";
+                                                    break;
+                                                }
+                                                }
+                                            }
+                                            else
+                                            {
+                                
+                                                switch (rem5)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << " ";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "ten ";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "twenty ";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "thirty ";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "fourty ";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "fifty ";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "sixty ";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "seventy ";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "eighty ";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "ninty ";
+                                                    break;
+                                                }
+                                                }
+                                                switch (rem6)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << " ";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "one";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "two";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "three";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "four";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "five";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "six";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "seven";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "eight";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "nine";
+                                                    break;
+                                                }
+                                                }
+                                            }
+                                        }
+                                        else if (length == 5)
+                                        {
+                                            if (rem3 == 0)
+                                            {
+                                                switch (rem2)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << " ";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "Ten thousand ";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "Twenty thousand ";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "Thirty thousand ";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "Fourty thousand ";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "Fifty thousand ";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "Sixty thousand ";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "Seventy thousand ";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "Eighty thousand ";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "Ninty thousand ";
+                                                    break;
+                                                }
+                                                }
+                                            }
+                                
+                                            else
+                                            {
+                                                if (th_rem > 10 && th_rem < 20)
+                                                {
+                                                    switch (rem3)
+                                                    {
+                                                    case 1:
+                                                    {
+                                                        cout << "eleven thousand ";
+                                                        break;
+                                                    }
+                                                    case 2:
+                                                    {
+                                                        cout << "twelve thousand ";
+                                                        break;
+                                                    }
+                                                    case 3:
+                                                    {
+                                                        cout << "thirteen thousand ";
+                                                        break;
+                                                    }
+                                                    case 4:
+                                                    {
+                                                        cout << "fourteen thousand ";
+                                                        break;
+                                                    }
+                                                    case 5:
+                                                    {
+                                                        cout << "fifteen thousand ";
+                                                        break;
+                                                    }
+                                                    case 6:
+                                                    {
+                                                        cout << "sixteen thousand ";
+                                                        break;
+                                                    }
+                                                    case 7:
+                                                    {
+                                                        cout << "seventeen thousand ";
+                                                        break;
+                                                    }
+                                                    case 8:
+                                                    {
+                                                        cout << "eighteen thousand ";
+                                                        break;
+                                                    }
+                                                    case 9:
+                                                    {
+                                                        cout << "nineteen thousand ";
+                                                        break;
+                                                    }
+                                                    }
+                                                }
+                                
+                                                else
+                                                {
+                                                    switch (rem2)
+                                                    {
+                                                    case 0:
+                                                    {
+                                                        cout << " ";
+                                                        break;
+                                                    }
+                                                    case 1:
+                                                    {
+                                                        cout << "Ten ";
+                                                        break;
+                                                    }
+                                                    case 2:
+                                                    {
+                                                        cout << "Twenty ";
+                                                        break;
+                                                    }
+                                                    case 3:
+                                                    {
+                                                        cout << "Thirty ";
+                                                        break;
+                                                    }
+                                                    case 4:
+                                                    {
+                                                        cout << "Fourty ";
+                                                        break;
+                                                    }
+                                                    case 5:
+                                                    {
+                                                        cout << "Fifty ";
+                                                        break;
+                                                    }
+                                                    case 6:
+                                                    {
+                                                        cout << "Sixty ";
+                                                        break;
+                                                    }
+                                                    case 7:
+                                                    {
+                                                        cout << "Seventy ";
+                                                        break;
+                                                    }
+                                                    case 8:
+                                                    {
+                                                        cout << "Eighty ";
+                                                        break;
+                                                    }
+                                                    case 9:
+                                                    {
+                                                        cout << "Ninty ";
+                                                        break;
+                                                    }
+                                                    }
+                                                    switch (rem3)
+                                                    {
+                                                    case 1:
+                                                    {
+                                                        cout << "One thousand ";
+                                                        break;
+                                                    }
+                                                    case 2:
+                                                    {
+                                                        cout << "Two thousand ";
+                                                        break;
+                                                    }
+                                                    case 3:
+                                                    {
+                                                        cout << "Three thousand ";
+                                                        break;
+                                                    }
+                                                    case 4:
+                                                    {
+                                                        cout << "Four thousand ";
+                                                        break;
+                                                    }
+                                                    case 5:
+                                                    {
+                                                        cout << "Five thousand ";
+                                                        break;
+                                                    }
+                                                    case 6:
+                                                    {
+                                                        cout << "Six thousand ";
+                                                        break;
+                                                    }
+                                                    case 7:
+                                                    {
+                                                        cout << "Seven thousand ";
+                                                        break;
+                                                    }
+                                                    case 8:
+                                                    {
+                                                        cout << "Eight thousand ";
+                                                        break;
+                                                    }
+                                                    case 9:
+                                                    {
+                                                        cout << "Nine thousand ";
+                                                        break;
+                                                    }
+                                                    }
+                                                }
+                                            }
+                                            switch (rem4)
+                                            {
+                                            case 0:
+                                            {
+                                                cout << " ";
+                                                break;
+                                            }
+                                            case 1:
+                                            {
+                                                cout << " One hundred ";
+                                                break;
+                                            }
+                                            case 2:
+                                            {
+                                                cout << "Two hundred ";
+                                                break;
+                                            }
+                                            case 3:
+                                            {
+                                                cout << "Three hundred ";
+                                                break;
+                                            }
+                                            case 4:
+                                            {
+                                                cout << "Four hundred ";
+                                                break;
+                                            }
+                                            case 5:
+                                            {
+                                                cout << "Five hundred ";
+                                                break;
+                                            }
+                                            case 6:
+                                            {
+                                                cout << "Six hundred ";
+                                                break;
+                                            }
+                                            case 7:
+                                            {
+                                                cout << "Seven hundred ";
+                                                break;
+                                            }
+                                            case 8:
+                                            {
+                                                cout << "Eight hundred ";
+                                                break;
+                                            }
+                                            case 9:
+                                            {
+                                                cout << "Nine hundred ";
+                                            }
+                                            }
+                                            if (rem7 < 20 && rem7 >= 10)
+                                            {
+                                                switch (rem6)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << "ten";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "eleven ";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "twelve ";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "thirteen ";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "fourteen ";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "fifteen ";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "sixteen ";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "seventeen ";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "eighteen ";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "nineteen ";
+                                                    break;
+                                                }
+                                                }
+                                            }
+                                            else
+                                            {
+                                
+                                                switch (rem5)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << " ";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "ten ";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "twenty ";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "thirty ";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "fourty ";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "fifty ";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "sixty ";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "seventy ";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "eighty ";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "ninty ";
+                                                    break;
+                                                }
+                                                }
+                                                switch (rem6)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << " ";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "one";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "two";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "three";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "four";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "five";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "six";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "seven";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "eight";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "nine";
+                                                    break;
+                                                }
+                                                }
+                                            }
+                                        }
+                                
+                                        else if (length == 6)
+                                        {
+                                            switch (rem1)
+                                            {
+                                            case 0:
+                                            {
+                                                cout << " ";
+                                                break;
+                                            }
+                                            case 1:
+                                            {
+                                                cout << "One lac ";
+                                                break;
+                                            }
+                                            case 2:
+                                            {
+                                                cout << "Two lac ";
+                                                break;
+                                            }
+                                            case 3:
+                                            {
+                                                cout << "Three lac ";
+                                            }
+                                            case 4:
+                                            {
+                                                cout << "Four lac ";
+                                                break;
+                                            }
+                                            case 5:
+                                            {
+                                                cout << "Five lac ";
+                                                break;
+                                            }
+                                            case 6:
+                                            {
+                                                cout << "Six lac ";
+                                                break;
+                                            }
+                                            case 7:
+                                            {
+                                                cout << "Seven lac ";
+                                                break;
+                                            }
+                                            case 8:
+                                            {
+                                                cout << "Eight lac ";
+                                                break;
+                                            }
+                                            case 9:
+                                            {
+                                                cout << "Nine lac ";
+                                                break;
+                                            }
+                                            }
+                                
+                                            if (rem3 == 0)
+                                            {
+                                                switch (rem2)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << " ";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "Ten thousand ";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "Twenty thousand ";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "Thirty thousand ";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "Fourty thousand ";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "Fifty thousand ";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "Sixty thousand ";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "Seventy thousand ";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "Eighty thousand ";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "Ninty thousand ";
+                                                    break;
+                                                }
+                                                }
+                                            }
+                                
+                                            else
+                                            {
+                                                if (th_rem > 10 && th_rem < 20)
+                                                {
+                                                    switch (rem3)
+                                                    {
+                                                    case 1:
+                                                    {
+                                                        cout << "eleven thousand ";
+                                                        break;
+                                                    }
+                                                    case 2:
+                                                    {
+                                                        cout << "twelve thousand ";
+                                                        break;
+                                                    }
+                                                    case 3:
+                                                    {
+                                                        cout << "thirteen thousand ";
+                                                        break;
+                                                    }
+                                                    case 4:
+                                                    {
+                                                        cout << "fourteen thousand ";
+                                                        break;
+                                                    }
+                                                    case 5:
+                                                    {
+                                                        cout << "fifteen thousand ";
+                                                        break;
+                                                    }
+                                                    case 6:
+                                                    {
+                                                        cout << "sixteen thousand ";
+                                                        break;
+                                                    }
+                                                    case 7:
+                                                    {
+                                                        cout << "seventeen thousand ";
+                                                        break;
+                                                    }
+                                                    case 8:
+                                                    {
+                                                        cout << "eighteen thousand ";
+                                                        break;
+                                                    }
+                                                    case 9:
+                                                    {
+                                                        cout << "nineteen thousand ";
+                                                        break;
+                                                    }
+                                                    }
+                                                }
+                                
+                                                else
+                                                {
+                                                    switch (rem2)
+                                                    {
+                                                    case 0:
+                                                    {
+                                                        cout << " ";
+                                                        break;
+                                                    }
+                                                    case 1:
+                                                    {
+                                                        cout << "Ten ";
+                                                        break;
+                                                    }
+                                                    case 2:
+                                                    {
+                                                        cout << "Twenty ";
+                                                        break;
+                                                    }
+                                                    case 3:
+                                                    {
+                                                        cout << "Thirty ";
+                                                        break;
+                                                    }
+                                                    case 4:
+                                                    {
+                                                        cout << "Fourty ";
+                                                        break;
+                                                    }
+                                                    case 5:
+                                                    {
+                                                        cout << "Fifty ";
+                                                        break;
+                                                    }
+                                                    case 6:
+                                                    {
+                                                        cout << "Sixty ";
+                                                        break;
+                                                    }
+                                                    case 7:
+                                                    {
+                                                        cout << "Seventy ";
+                                                        break;
+                                                    }
+                                                    case 8:
+                                                    {
+                                                        cout << "Eighty ";
+                                                        break;
+                                                    }
+                                                    case 9:
+                                                    {
+                                                        cout << "Ninty ";
+                                                        break;
+                                                    }
+                                                    }
+                                                    switch (rem3)
+                                                    {
+                                                    case 1:
+                                                    {
+                                                        cout << "One thousand ";
+                                                        break;
+                                                    }
+                                                    case 2:
+                                                    {
+                                                        cout << "Two thousand ";
+                                                        break;
+                                                    }
+                                                    case 3:
+                                                    {
+                                                        cout << "Three thousand ";
+                                                        break;
+                                                    }
+                                                    case 4:
+                                                    {
+                                                        cout << "Four thousand ";
+                                                        break;
+                                                    }
+                                                    case 5:
+                                                    {
+                                                        cout << "Five thousand ";
+                                                        break;
+                                                    }
+                                                    case 6:
+                                                    {
+                                                        cout << "Six thousand ";
+                                                        break;
+                                                    }
+                                                    case 7:
+                                                    {
+                                                        cout << "Seven thousand ";
+                                                        break;
+                                                    }
+                                                    case 8:
+                                                    {
+                                                        cout << "Eight thousand ";
+                                                        break;
+                                                    }
+                                                    case 9:
+                                                    {
+                                                        cout << "Nine thousand ";
+                                                        break;
+                                                    }
+                                                    }
+                                                }
+                                            }
+                                            switch (rem4)
+                                            {
+                                            case 0:
+                                            {
+                                                cout << " ";
+                                                break;
+                                            }
+                                            case 1:
+                                            {
+                                                cout << " One hundred ";
+                                                break;
+                                            }
+                                            case 2:
+                                            {
+                                                cout << "Two hundred ";
+                                                break;
+                                            }
+                                            case 3:
+                                            {
+                                                cout << "Three hundred ";
+                                                break;
+                                            }
+                                            case 4:
+                                            {
+                                                cout << "Four hundred ";
+                                                break;
+                                            }
+                                            case 5:
+                                            {
+                                                cout << "Five hundred ";
+                                                break;
+                                            }
+                                            case 6:
+                                            {
+                                                cout << "Six hundred ";
+                                                break;
+                                            }
+                                            case 7:
+                                            {
+                                                cout << "Seven hundred ";
+                                                break;
+                                            }
+                                            case 8:
+                                            {
+                                                cout << "Eight hundred ";
+                                                break;
+                                            }
+                                            case 9:
+                                            {
+                                                cout << "Nine hundred ";
+                                            }
+                                            }
+                                            if (rem7 < 20 && rem7 >= 10)
+                                            {
+                                                switch (rem6)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << "ten";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "eleven ";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "twelve ";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "thirteen ";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "fourteen ";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "fifteen ";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "sixteen ";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "seventeen ";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "eighteen ";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "nineteen ";
+                                                    break;
+                                                }
+                                                }
+                                            }
+                                            else
+                                            {
+                                
+                                                switch (rem5)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << " ";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "ten ";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "twenty ";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "thirty ";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "fourty ";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "fifty ";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "sixty ";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "seventy ";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "eighty ";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "ninty ";
+                                                    break;
+                                                }
+                                                }
+                                                switch (rem6)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << " ";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "one";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "two";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "three";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "four";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "five";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "six";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "seven";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "eight";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "nine";
+                                                    break;
+                                                }
+                                                }
+                                            }
+                                        }
+                                        else if (length == 7)
+                                        {
+                                            if (rem1 == 0)
+                                            {
+                                                switch (rem8)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << " ";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "Ten Lac ";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "Twenty lac ";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "Thirty lac ";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "Fourty lac ";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "Fifty lac ";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "Sixty lac ";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "Seventy lac ";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "Eighty lac ";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "Ninty lac ";
+                                                    break;
+                                                }
+                                                }
+                                            }
+                                            else if (rem1 != 0)
+                                            {
+                                                if (lac_rem > 10)
+                                                {
+                                                    if (lac_rem < 20)
+                                                    {
+                                
+                                                        switch (rem1)
+                                                        {
+                                                        case 1:
+                                                        {
+                                                            cout << "eleven lac ";
+                                                            break;
+                                                        }
+                                                        case 2:
+                                                        {
+                                                            cout << "twelve lac ";
+                                                            break;
+                                                        }
+                                                        case 3:
+                                                        {
+                                                            cout << "thirteen lac ";
+                                                            break;
+                                                        }
+                                                        case 4:
+                                                        {
+                                                            cout << "fourteen lac ";
+                                                            break;
+                                                        }
+                                                        case 5:
+                                                        {
+                                                            cout << "fifteen lac ";
+                                                            break;
+                                                        }
+                                                        case 6:
+                                                        {
+                                                            cout << "sixteen lac ";
+                                                            break;
+                                                        }
+                                                        case 7:
+                                                        {
+                                                            cout << "seventeen lac ";
+                                                            break;
+                                                        }
+                                                        case 8:
+                                                        {
+                                                            cout << "eighteen lac ";
+                                                            break;
+                                                        }
+                                                        case 9:
+                                                        {
+                                                            cout << "nineteen lac ";
+                                                            break;
+                                                        }
+                                                        }
+                                                    }
+                                                }
+                                                if (rem8 != 1)
+                                                {
+                                                    switch (rem8)
+                                                    {
+                                
+                                                    case 2:
+                                                    {
+                                                        cout << "twenty ";
+                                                        break;
+                                                    }
+                                                    case 3:
+                                                    {
+                                                        cout << "thirty ";
+                                                        break;
+                                                    }
+                                                    case 4:
+                                                    {
+                                                        cout << "fourty ";
+                                                        break;
+                                                    }
+                                                    case 5:
+                                                    {
+                                                        cout << "fifty ";
+                                                        break;
+                                                    }
+                                                    case 6:
+                                                    {
+                                                        cout << "sixty ";
+                                                        break;
+                                                    }
+                                                    case 7:
+                                                    {
+                                                        cout << "seventy ";
+                                                        break;
+                                                    }
+                                                    case 8:
+                                                    {
+                                                        cout << "eighty ";
+                                                        break;
+                                                    }
+                                                    case 9:
+                                                    {
+                                                        cout << "ninty ";
+                                                        break;
+                                                    }
+                                                    }
+                                
+                                                    switch (rem1)
+                                                    {
+                                                    case 0:
+                                                    {
+                                                        cout << " ";
+                                                        break;
+                                                    }
+                                                    case 1:
+                                                    {
+                                                        cout << "One lac ";
+                                                        break;
+                                                    }
+                                                    case 2:
+                                                    {
+                                                        cout << "Two lac ";
+                                                        break;
+                                                    }
+                                                    case 3:
+                                                    {
+                                                        cout << "Three lac ";
+                                                        break;
+                                                    }
+                                                    case 4:
+                                                    {
+                                                        cout << "Four lac ";
+                                                        break;
+                                                    }
+                                                    case 5:
+                                                    {
+                                                        cout << "Five lac ";
+                                                        break;
+                                                    }
+                                                    case 6:
+                                                    {
+                                                        cout << "Six lac ";
+                                                        break;
+                                                    }
+                                                    case 7:
+                                                    {
+                                                        cout << "Seven lac ";
+                                                        break;
+                                                    }
+                                                    case 8:
+                                                    {
+                                                        cout << "Eight lac ";
+                                                        break;
+                                                    }
+                                                    case 9:
+                                                    {
+                                                        cout << "Nine lac ";
+                                                        break;
+                                                    }
+                                                    }
+                                                }
+                                            }
+                                            if (rem3 == 0)
+                                            {
+                                                switch (rem2)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << " ";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "Ten thousand ";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "Twenty thousand ";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "Thirty thousand ";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "Fourty thousand ";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "Fifty thousand ";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "Sixty thousand ";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "Seventy thousand ";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "Eighty thousand ";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "Ninty thousand ";
+                                                    break;
+                                                }
+                                                }
+                                            }
+                                
+                                            else
+                                            {
+                                                if (th_rem > 10 && th_rem < 20)
+                                                {
+                                                    switch (rem3)
+                                                    {
+                                                    case 1:
+                                                    {
+                                                        cout << "eleven thousand ";
+                                                        break;
+                                                    }
+                                                    case 2:
+                                                    {
+                                                        cout << "twelve thousand ";
+                                                        break;
+                                                    }
+                                                    case 3:
+                                                    {
+                                                        cout << "thirteen thousand ";
+                                                        break;
+                                                    }
+                                                    case 4:
+                                                    {
+                                                        cout << "fourteen thousand ";
+                                                        break;
+                                                    }
+                                                    case 5:
+                                                    {
+                                                        cout << "fifteen thousand ";
+                                                        break;
+                                                    }
+                                                    case 6:
+                                                    {
+                                                        cout << "sixteen thousand ";
+                                                        break;
+                                                    }
+                                                    case 7:
+                                                    {
+                                                        cout << "seventeen thousand ";
+                                                        break;
+                                                    }
+                                                    case 8:
+                                                    {
+                                                        cout << "eighteen thousand ";
+                                                        break;
+                                                    }
+                                                    case 9:
+                                                    {
+                                                        cout << "nineteen thousand ";
+                                                        break;
+                                                    }
+                                                    }
+                                                }
+                                
+                                                else
+                                                {
+                                                    switch (rem2)
+                                                    {
+                                                    case 0:
+                                                    {
+                                                        cout << " ";
+                                                        break;
+                                                    }
+                                                    case 1:
+                                                    {
+                                                        cout << "Ten ";
+                                                        break;
+                                                    }
+                                                    case 2:
+                                                    {
+                                                        cout << "Twenty ";
+                                                        break;
+                                                    }
+                                                    case 3:
+                                                    {
+                                                        cout << "Thirty ";
+                                                        break;
+                                                    }
+                                                    case 4:
+                                                    {
+                                                        cout << "Fourty ";
+                                                        break;
+                                                    }
+                                                    case 5:
+                                                    {
+                                                        cout << "Fifty ";
+                                                        break;
+                                                    }
+                                                    case 6:
+                                                    {
+                                                        cout << "Sixty ";
+                                                        break;
+                                                    }
+                                                    case 7:
+                                                    {
+                                                        cout << "Seventy ";
+                                                        break;
+                                                    }
+                                                    case 8:
+                                                    {
+                                                        cout << "Eighty ";
+                                                        break;
+                                                    }
+                                                    case 9:
+                                                    {
+                                                        cout << "Ninty ";
+                                                        break;
+                                                    }
+                                                    }
+                                                    switch (rem3)
+                                                    {
+                                                    case 1:
+                                                    {
+                                                        cout << "One thousand ";
+                                                        break;
+                                                    }
+                                                    case 2:
+                                                    {
+                                                        cout << "Two thousand ";
+                                                        break;
+                                                    }
+                                                    case 3:
+                                                    {
+                                                        cout << "Three thousand ";
+                                                        break;
+                                                    }
+                                                    case 4:
+                                                    {
+                                                        cout << "Four thousand ";
+                                                        break;
+                                                    }
+                                                    case 5:
+                                                    {
+                                                        cout << "Five thousand ";
+                                                        break;
+                                                    }
+                                                    case 6:
+                                                    {
+                                                        cout << "Six thousand ";
+                                                        break;
+                                                    }
+                                                    case 7:
+                                                    {
+                                                        cout << "Seven thousand ";
+                                                        break;
+                                                    }
+                                                    case 8:
+                                                    {
+                                                        cout << "Eight thousand ";
+                                                        break;
+                                                    }
+                                                    case 9:
+                                                    {
+                                                        cout << "Nine thousand ";
+                                                        break;
+                                                    }
+                                                    }
+                                                }
+                                            }
+                                            switch (rem4)
+                                            {
+                                            case 0:
+                                            {
+                                                cout << " ";
+                                                break;
+                                            }
+                                            case 1:
+                                            {
+                                                cout << " One hundred ";
+                                                break;
+                                            }
+                                            case 2:
+                                            {
+                                                cout << "Two hundred ";
+                                                break;
+                                            }
+                                            case 3:
+                                            {
+                                                cout << "Three hundred ";
+                                                break;
+                                            }
+                                            case 4:
+                                            {
+                                                cout << "Four hundred ";
+                                                break;
+                                            }
+                                            case 5:
+                                            {
+                                                cout << "Five hundred ";
+                                                break;
+                                            }
+                                            case 6:
+                                            {
+                                                cout << "Six hundred ";
+                                                break;
+                                            }
+                                            case 7:
+                                            {
+                                                cout << "Seven hundred ";
+                                                break;
+                                            }
+                                            case 8:
+                                            {
+                                                cout << "Eight hundred ";
+                                                break;
+                                            }
+                                            case 9:
+                                            {
+                                                cout << "Nine hundred ";
+                                            }
+                                            }
+                                            if (rem7 < 20 && rem7 >= 10)
+                                            {
+                                                switch (rem6)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << "ten";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "eleven ";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "twelve ";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "thirteen ";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "fourteen ";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "fifteen ";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "sixteen ";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "seventeen ";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "eighteen ";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "nineteen ";
+                                                    break;
+                                                }
+                                                }
+                                            }
+                                            else
+                                            {
+                                
+                                                switch (rem5)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << " ";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "ten ";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "twenty ";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "thirty ";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "fourty ";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "fifty ";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "sixty ";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "seventy ";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "eighty ";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "ninty ";
+                                                    break;
+                                                }
+                                                }
+                                                switch (rem6)
+                                                {
+                                                case 0:
+                                                {
+                                                    cout << " ";
+                                                    break;
+                                                }
+                                                case 1:
+                                                {
+                                                    cout << "one";
+                                                    break;
+                                                }
+                                                case 2:
+                                                {
+                                                    cout << "two";
+                                                    break;
+                                                }
+                                                case 3:
+                                                {
+                                                    cout << "three";
+                                                    break;
+                                                }
+                                                case 4:
+                                                {
+                                                    cout << "four";
+                                                    break;
+                                                }
+                                                case 5:
+                                                {
+                                                    cout << "five";
+                                                    break;
+                                                }
+                                                case 6:
+                                                {
+                                                    cout << "six";
+                                                    break;
+                                                }
+                                                case 7:
+                                                {
+                                                    cout << "seven";
+                                                    break;
+                                                }
+                                                case 8:
+                                                {
+                                                    cout << "eight";
+                                                    break;
+                                                }
+                                                case 9:
+                                                {
+                                                    cout << "nine";
+                                                    break;
+                                                }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    else 
+                                    {
+                                        cout << "	Invalid:Input!Number should be less than equal to 7 digits " << endl;
+                                    }
+                                    return 0;
+                                }
+                                
                           
                         </xmp>
                     </code></pre>
@@ -168,390 +2448,7 @@
                 
             </div>
          </div>
-         <div class="col-6">
-            <div class="row-6-1">
-                <h3>Task 2. Write a program that compute area of a rectangle, whose height if 9m and width is 5m.Display 
-                    its area.</h3>
-                <div class="code3">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            /*This is a Program to display the area of arectangle
-                            Key_point:
-                               area=height*Width;
-                         */
-                         #include<iostream>
-                         using namespace std;
-                         int main()
-                         {
-                             
-                             int height=9;
-                             int width=5;
-                             int area=0;//Intiliaze to zero to overwrite the garbage value
-                             cout<<"Calculate the area of a rectangle:"<<endl;
-                             cout<<"height=9m"<<endl;
-                             cout<<"width=5m"<<endl;
-                             area=height*width;
-                             cout<<"The area of a rectangle = "<<area<<"m^2"<<endl;
-                             
-                             return 0;
-                         }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
 
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h3>Task 3. Write a program that displays sum, subtractions, multiplication and division of two float 
-                    numbers. Take any float numbers i.e. float f1 = 5.4, f2 = 7.8;</h3>
-                <div class="code4">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            /*This is a program that dispaly the sum,subtraction ,multiplication and division 
-                            of the two "Float_numbers"*/
-                           #include<iostream>
-                           using namespace std;
-                           int main()
-                           {
-                               
-                               float num1=5.4;
-                               float num2=7.2;
-                               float sum=0;//Initilaize to zero to overwrite the garbage values
-                               float sub=0;
-                               float multiplay=0;
-                               double division=0;//Take is double because its a chance to get the point values greater than float range
-                               cout<<"we have two numbers:"<<endl;
-                               cout<<"Number_1=5.4 \n";
-                               cout<<"Number_2=7.2 \n";
-                               cout<<endl;
-                               cout<<"The arthematic_operations on these floating point numbers:"<<endl;
-                               cout<<endl;
-                               //Araathematic Operations on it
-                               sum=num1+num2;
-                               sub=num1-num2;
-                               multiplay=num1*num2;
-                               division=num1/num2;
-                               cout<<"The Addition of these two floating numbers = "<<sum<<endl;
-                               cout<<"The Subtraction of these two floating numbers = "<<sub<<endl;
-                               cout<<"The Multiplication of these two floating numbers = "<<multiplay<<endl;
-                               cout<<"The division of these two floating numbers = "<<division<<endl;
-                           
-                               return 0;
-                           }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h3>Task 4. Write reasons for errors in following codes:
-                    <br>
-                     int number = 10;
-                    <br>
-                    cout << number;
-                    <br>
-                    cout << number2;
-                    <br>
-                    int number2 = 50;
-                    <br>
-                    char ch = 'Programming Fundamental ';
-                    <br>
-                    cout << ch ;
-                    </h3>
-                <div class="code5">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            /*
-                            Errors in the code*/
-                          #include<iostream>
-                          using namespace std;
-                          int main()
-                          {
-                              cout<<"we have a code as:"<<endl<<endl<<"int number = 10"
-                              <<endl<<"cout << number;"<<endl<<"cout << number2;"<<endl
-                              <<"int number2 = 50;"<<endl<<"char ch = 'Programming Fundamental;"
-                              <<endl<<"cout << ch ;";
-                              cout<<endl;
-                              cout<<"The errors in the code are as follows;"<<endl<<endl;
-                              cout<<endl;
-                              
-                              cout<<"First ERROR:"<<endl;
-                              cout<<"In the third line we cout the number2 first and decalre and initlize it later.Its scope is invalid because C++ compilers compile it line by line "<<endl
-                              <<"The error is \" SCOPE_Invalid : a variable cannot be used in any part of the program before the definition\" "<<endl;
-                              cout<<endl;
-                              
-                              cout<<"Second_ERROR:"<<endl;
-                              cout<<"IN fifth_line we initiliaze the char datatype with a string but char dataType has store only one ASCII character and size of its is only one bit"<<endl
-                              <<"The error is \"  Strings are consecutive sequences of characters that occupy consecutive bytes of memory \" "<<endl
-                              <<"Characters normally occupy a single byte of memory:"<<endl; 
-                              cout<<endl;
-                              
-                              return 0;
-                          }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h3>Task 5. Write a program that converts Fahrenheit temperature to Celsius temperature. Initialize a 
-                    variable with Fahrenheit temperature value i.e float Fahrenheit = 35; And convert it into Celsius 
-                    <br>
-                    temperature. Hint: Celsius = (Fahrenheit - 32) * 5/9
-                    <br>
-                    Sample Output:
-                    <br>
-                    Temperature in Fahrenheit : 212
-                    <br>
-                    Temperature in Celsius : 100</h3>
-                <div class="code6">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            /*This is program to display the Celsius to fanheit temparature
-                            Key point:
-                                  celsius=(farnheit-32)*5/9;
-                           */
-                           #include<iostream>
-                           using namespace std;
-                           int main()
-                           {
-                               
-                               double farnheit=212;
-                               double celsius=0;//Intiliaze to zero to overwrite the garbage value
-                               celsius=(farnheit-32)*5/9;//Parantesis are used to discarge the priority order of division
-                               cout<<"The temperature in Farnheit = "<<farnheit<<endl;
-                               cout<<"The temperature in Celsius = "<<celsius<<endl;
-                               return 0;
-                               
-                           }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h3>Task 6. Write a program that swaps value of two integer. Display values before and after swapping. 
-                    Hint: Take help from third variable.
-                    <br>
-                    Sample Output:
-                    <br>
-                    Before Swapping:
-                    <br>
-                    Value of no1 = 5
-                    <br>
-                    Value of no2 = 10
-                    <br>
-                    After Swapping:
-                    <br>
-                    Value of no1 = 10
-                    <br>
-                    Value of no2 = 5</h3>
-                <div class="code7">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            /*This is a program to Swap the values
-                            key_Point:
-                               {
-                                 int a,b,temp;
-                                 temp=a;
-                                 a=b;
-                                b=temp;
-                            }    
-                          */
-                          #include<iostream>
-                          using namespace std;
-                          int main()
-                          {
-                              int num1=5;
-                              int num2=10;
-                              int temp=0;//used the third variable for help
-                              cout<<"The Numbers before swaping are written as:"<<endl;
-                              cout<<"The number_1 = "<<num1<<endl;
-                              cout<<"The number_2 = "<<num2<<endl;
-                              cout<<endl;
-                              //Now Swap the Values
-                              temp=num1;
-                              num1=num2;
-                              num2=temp;
-                              cout<<"The Numbers After swaping are written as:"<<endl;
-                              cout<<"The number_1 = "<<num1<<endl;
-                              cout<<"The number_2 = "<<num2<<endl;
-                              cout<<endl;
-                              
-                              return 0;
-                          }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h3>Task 7. Write a program that stores your name, rollno, age and degree in valid data type variables. And 
-                    displays in following format:
-                    <br>
-                    Hi, my name is ------- having roll number ------- and enrolled in -------. My age is -----</h3>
-                <div class="code8">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            /*Program to display the Information
-                            Key_point:
-                                 we use the string library and strimg dataType to store the stings*/
-                          #include<iostream>
-                          #include<string>
-                          using namespace std;
-                          int main()
-                          {
-                              //use the string dataType because we cannot store the more than one 
-                              //letter in char dataType so to store the complete string we use the string dataType in 
-                              //string libraray
-                              string name="Muhib Arshad";
-                              string roll_no="BSEF21M540";
-                              string enrolled="FCIT(New_Campus) BSSE";
-                              int age=19;
-                              cout<<"My name is "<<name<<" having roll number "<<roll_no<<" and enrolled in "<<enrolled<<". My age is "<<age<<endl;
-                              return 0;
-                              
-                          }
-                          
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-
-
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h3>Task 8. Write a program that displays average of three numbers. Hardcode values of variables</h3>
-                <div class="code9">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            /*Program to display the Average of three variables*/
-                            #include<iostream>
-                            using namespace std;
-                            int main()
-                            {
-                                
-                                int num1=5;
-                                float num2=8.9;
-                                double num3=9.888;
-                                double average=0;//Intiliaze to zero to overwrite the garbage value
-                                average=(num1+num2+num3)/3;//Parantesis are used to discarge the priority order of division
-                                cout<<"Number 1 = "<<num1<<endl;
-                                cout<<"Number 2 = "<<num2<<endl;
-                                cout<<"Number 3 = "<<num3<<endl;
-                                cout<<"The average of these three numbers = "<<average<<endl;
-                                return 0;
-                                
-                            }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h3>Task 9. Write a program in which you store float value in int variable. Explain the output.</h3>
-                <div class="code10">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            /*Program to check float in int*/
-                            #include<iostream>
-                            using namespace std;
-                            int main()
-                            {
-                                int num1=7.98;
-                                cout<<"The number_1 is equal to = "<<num1<<endl;
-                                cout<<endl;
-                                
-                                cout<<"Explanation:"<<endl;
-                                cout<<"I store the varible in int as 7.98 in source code but in console answer is 7"<<endl
-                                <<"Beacuse when we store the floating point variable in int dataType it ignores the values after the(.)"<<endl
-                                <<"Integer dataType only stores the integer values without point values"<<endl
-                                <<"To store the variable with the point_values we use the float dataType properly"<<endl;
-                                
-                                return 0;
-                                
-                            }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h3>Task 10. Suppose an employee gets paid every month and earns 2000 each pay period. In a year the 
-                    employee gets paid 12 times. Write a program that defines the following variables:
-                    <br>
-                    payAmount; this variable will hold the amount of pay the employee earns each pay period.
-                    <br>
-                    payPeriods; this variable will hold the number of pay periods in a year.
-                    <br>
-                    annualPay; this variable will hold the employee’s total annual pay, which will be calculated.
-                    <br>
-                    Display the value of annualPay variable.
-                    <br>
-                    Hint: Employee’s total annual pay can be calculated by multiplying employee’s pay amount by number 
-        
-                    of pay periods in a year </h3>
-                <div class="code11">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            /*Program to display the anual_pay of user income */
-                            #include<iostream>
-                            using namespace std;
-                            int main()
-                            {
-                                
-                                int pay_Amount=2000;
-                                int pay_Periods=12;
-                                int annual_Pay=0;//Intiliaze to zero to overwrite the garbage value
-                                cout<<"The amount of pay the employee earns each pay period = "<<pay_Amount<<endl;
-                                cout<<"The number of pay periods in a year = "<<pay_Periods<<endl;
-                                annual_Pay=pay_Amount*pay_Periods;
-                                cout<<"The employee\'s total annual pay, which will be calculated = "<<annual_Pay<<endl;
-                                
-                                return 0;
-                            }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-
-
-     </div>
 
 
         <div class="container-3">
@@ -648,4 +2545,4 @@
         <script src="./Prism/prism-final.js" ></script>
 </body>
 
-</html> -->
+</html> 
