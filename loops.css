@@ -607,111 +607,42 @@ footer
 
 }
 
-
-
-
-
-
-/*The Alert part start here*/
-.comingsoon
+/* All code CSS are WRITTEN As*/
+ .contanier-6
 {
-    position: absolute;
-    top: 330px;
-    left: 700px;
-    height: 70vh;
-    width: 80vh;
-    text-align: center;
-    z-index: -1;
-    background: #f80202;
+    width: 100%;
+    height: 1610vh;
+    box-sizing: border-box;
 }
-.comingsoon h1
+.col-6
 {
-    color: white;
-}
-.alert img
-{
-    position: absolute;
-    width: 37%;
-    height: 70%;
-    right: 565px;
-    top: 330px;
-    z-index: -1;
-}
-.comingcontact
-{
-    position: absolute;
-    top: 750px;
-    right: 540px;
-}
-.comingcontact button
-{
-    height: 7vh;
-    width: 25vh;
-    font-size: 20px;
-    color: #e9ebf1;
-    background-color: #008170;
-    border: 2px solid #008170;
-    border-radius: 20px;
-}
-.comingcontact button:hover
-{
-    cursor: pointer;
-    height: 7vh;
-    width: 25vh;
-    font-size: 20px;
-    color: #000000;
-    background-color: #10ac97;
-    border: 2px solid #10ac97;
-}
-@media only screen and (max-width:700px)
-{
- .comingsoon
-{
-    position: absolute;
-    top: 650px;
-    left: 110px;
-    height: 67vh;
+    margin-top: 70px;
     width: 70%;
-    text-align: left;
-    z-index: -1;
-    background: #f80202;
-    font-size: 15px;
+    margin-left: 300px;
 }
-.alert img
+.row-6-1 h2
 {
-    position: absolute;
-    width: 70%;
-    height: 40%;
-    left: 110px;
-    top: 270px;
-    z-index: -1;
+        text-align: center;
+        font-size: 30px;
 }
-.comingcontact
+@media only screen  and (max-width:700px)
 {
-    position: absolute;
-    top: 1300px;
-    right: 40px;
+    .col-6
+    {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .contanier-6
+    {
+        height: 950vh;
+    }
 }
-.comingcontact button
+@media only screen  and (max-width:400px)
 {
-    height: 7vh;
-    width: 25vh;
-    font-size: 20px;
-    color: #e9ebf1;
-    background-color: #008170;
-    border: 2px solid #008170;
-    border-radius: 20px;
-}
-.comingcontact button:hover
-{
-    cursor: pointer;
-    height: 7vh;
-    width: 25vh;
-    font-size: 20px;
-    color: #000000;
-    background-color: #10ac97;
-    border: 2px solid #10ac97;
-}
+    .contanier-6
+    {
+        height: 1250vh;
+    }
 } 
 
 
