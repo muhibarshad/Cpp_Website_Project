@@ -1748,7 +1748,7 @@ footer
     padding-right: 0%;
     margin-left: 0px;
     /* background-color: #e9ebf1; */
-    top: 7500px;
+    top: 7650px;
     display: none;
 }
 .box
@@ -1766,7 +1766,7 @@ footer
     height: 7vh;
     position: relative;
     top: 250px;
-    left: 268px;
+    left: 272px;
     border-radius: 10px;
 }
 #croxx:hover
@@ -1801,7 +1801,7 @@ footer
     /* background-color: #85d3cd; */
     height: 40vh;
     width: 25%;
-    bottom: 270px;
+    bottom: 290px;
     left: 55px;
 }
 .box button
@@ -1844,7 +1844,7 @@ footer
 .han-cric
 {
     position: absolute;
-    top: 5525px;
+    top: 5625px;
     left: 20px;
     height: 104vh;
     border-radius: 20px;
