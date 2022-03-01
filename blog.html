@@ -287,6 +287,7 @@
                                 </div>           
 
 
+
                                 <div class="hand_cricket">
                                     <div class="contanier-7">
                                         <h1 id="hand">Hand Cricket game</h1>
@@ -296,17 +297,17 @@
                                                 <h2>First Toss</h2>
                                                 <h4>Choose head or tail:</h4>
                                                 <br>
-                                                <input type="button" value="Head" id="head" class="btnT" onclick="user_toss()">
-                                                <input type="button" value="Tail" id="tail" class="btnT" onclick="user_toss()">
+                                                <input type="button" value="Head" id="head" class="btnT" onclick="user_toss()" onmousedown="sound.play()" onmouseleave="gameSound.play()">
+                                                <input type="button" value="Tail" id="tail" class="btnT" onclick="user_toss()" onmousedown="sound.play()" onmouseleave="gameSound.play()">
                                                 <div id="toss-result"><img src="./images/coin toss2.gif" alt="computer" id="comp-pic"></div>
                                             </div>
                                             <div class="tally-mark">
-                                                <h2>Enter the TAlly Marks between 1 and 5</h2>
+                                                <h2>Enter the Tally Marks between 1 and 5</h2>
                                                 <input type="text" placeholder="Enter your Tally Mark" id="your-tally" class="tally">
                                                 <input type="text" placeholder="Computer's Tally Mark" id="computer-tally"
                                                     class="tally">
                                                 <br>
-                                                <input type="button" value="Go" id="btn-go">
+                                                <input type="button" value="Go" id="btn-go"onmousedown="sound.play()">
                                                 <div id="tally-result">
                                                     <img src="./images/counting-test-animation.gif" alt="" id="tally-pic">
                                                 </div>
@@ -320,14 +321,14 @@
                                                     <h2>Your's Turn :</h2>
                                                     <div class="row-7-3">
                                                         
-                                                        <input type="button" value="1" class="input-game" id="one" >
-                                                        <input type="button" value="2" class="input-game" id="two" onclick="">
-                                                        <input type="button" value="3" class="input-game" id="three" onclick="">
+                                                        <input type="button" value="1" class="input-game" id="one" onclick="button.play()">
+                                                        <input type="button" value="2" class="input-game" id="two" onclick="button.play()">
+                                                        <input type="button" value="3" class="input-game" id="three" onclick="button.play()">
                                                         <br>
-                                                        <input type="button" value="5" class="input-game" id="five" onclick="">
+                                                        <input type="button" value="5" class="input-game" id="five" onclick="button.play()">
                                                         <br>
-                                                        <input type="button" value="4" class="input-game" id="four" onclick="">
-                                                        <input type="button" value="6" class="input-game" id="six" onclick="">
+                                                        <input type="button" value="4" class="input-game" id="four" onclick="button.play()">
+                                                        <input type="button" value="6" class="input-game" id="six" onclick="button.play()">
                                                     </div>
                                                     <div>
                                                         <br>
@@ -339,6 +340,7 @@
                                                 <input type="button" value="0" class="total-game" id="total-your">
                                                 <div class="score" id="computer-score"></div>
                                                 <input type="button" value="0" class="total-game" id="total-computer">
+                            
                             
                                                  
                 

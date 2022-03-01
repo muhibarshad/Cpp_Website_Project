@@ -82,6 +82,7 @@ document.getElementById('btn-go').addEventListener
                                     document.getElementById('contanier-8').style.display = 'block';
                                     document.getElementById('innerhtml').innerHTML = `Congratulations!You won the match`;
                                     document.getElementById('win').style.display = 'block';
+                                    game_win(1);
                                     document.getElementById('score').innerHTML = `<h2>Your score = ${cpp}</h2>
                                     <h2>Computers score = ${comp}</h2>`
                                 }
@@ -92,6 +93,7 @@ document.getElementById('btn-go').addEventListener
                                     document.getElementById('contanier-8').style.display = 'block';
                                     document.getElementById('innerhtml').innerHTML = `MAtch is tie`;
                                     document.getElementById('lose').style.display = 'block';
+                    
                                     document.getElementById('score').innerHTML = `<h2>Your score =${cpp} </h2>
                                     <h2>Computers score = ${comp}</h2>`
                                 }
@@ -105,6 +107,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `OOPS!You lose the match and computer wins`;
                                 document.getElementById('lose').style.display = 'block';
+                                game_Over(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${cpp}</h2>
                                 <h2>Computers score = ${comp}</h2>`
                             }
@@ -159,6 +162,7 @@ document.getElementById('btn-go').addEventListener
                                     document.getElementById('contanier-8').style.display = 'block';
                                     document.getElementById('innerhtml').innerHTML = `Congratulations!You won the match`;
                                     document.getElementById('win').style.display = 'block';
+                                    game_win(1);
                                     document.getElementById('score').innerHTML = `<h2>Your score = ${cppTwo}</h2>
                                     <h2>Computers score = ${comp}</h2>`
 
@@ -182,6 +186,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `OOPS!You lose the match and computer wins`;
                                 document.getElementById('lose').style.display = 'block';
+                                game_Over(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${cppTwo}</h2>
                                 <h2>Computers score = ${comp}</h2>`                               
                             }
@@ -239,6 +244,7 @@ document.getElementById('btn-go').addEventListener
                                     document.getElementById('contanier-8').style.display='block';
                                     document.getElementById('innerhtml').innerHTML=`Congratulations!You won the match`;
                                     document.getElementById('win').style.display='block';
+                                    game_win(1);
                                     document.getElementById('score').innerHTML=`<h2>Your score = ${cpp}</h2>
                                     <h2>Computers score = ${comp}</h2>`
                                 }
@@ -260,6 +266,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `OOPS!You lose the match and computer wins`;
                                 document.getElementById('lose').style.display = 'block';
+                                game_Over(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${cpp}</h2>
                                 <h2>Computers score = ${comp}</h2>` 
                             }
@@ -315,6 +322,7 @@ document.getElementById('btn-go').addEventListener
                                     document.getElementById('contanier-8').style.display='block';
                                     document.getElementById('innerhtml').innerHTML=`Congratulations!You won the match`;
                                     document.getElementById('win').style.display='block';
+                                    game_win(1);
                                     document.getElementById('score').innerHTML=`<h2>Your score = ${cpp}</h2>
                                     <h2>Computers score = ${comp}</h2>`
                                 }
@@ -338,6 +346,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `OOPS!You lose the match and computer wins`;
                                 document.getElementById('lose').style.display = 'block';
+                                game_Over(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${cpp}</h2>
                                 <h2>Computers score = ${comp}</h2>` 
                             
@@ -392,6 +401,7 @@ document.getElementById('btn-go').addEventListener
                                     document.getElementById('contanier-8').style.display='block';
                                     document.getElementById('innerhtml').innerHTML=`Congratulations!You won the match`;
                                     document.getElementById('win').style.display='block';
+                                    game_win(1);
                                     document.getElementById('score').innerHTML=`<h2>Your score = ${cpp}</h2>
                                     <h2>Computers score = ${comp}</h2>`
                                 }
@@ -414,7 +424,8 @@ document.getElementById('btn-go').addEventListener
                                 //dialog box
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `OOPS!You lose the match and computer wins`;
-                                document.getElementById('lose').style.display = 'block';
+                                document.getElementById('lose').style.display = 'block'; game_Over(1);
+                                game_Over(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${cpp}</h2>
                                 <h2>Computers score = ${comp}</h2>`                                 
                             }
@@ -465,6 +476,7 @@ document.getElementById('btn-go').addEventListener
                                    document.getElementById('contanier-8').style.display='block';
                                    document.getElementById('innerhtml').innerHTML=`Congratulations!You won the match`;
                                    document.getElementById('win').style.display='block';
+                                   game_win(1);
                                    document.getElementById('score').innerHTML=`<h2>Your score = ${cpp}</h2>
                                    <h2>Computers score = ${comp}</h2>`                                    
                                 }
@@ -487,6 +499,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `OOPS!You lose the match and computer wins`;
                                 document.getElementById('lose').style.display = 'block';
+                                game_Over(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${cpp}</h2>
                                 <h2>Computers score = ${comp}</h2>`                                 
                             
@@ -555,6 +568,7 @@ document.getElementById('btn-go').addEventListener
                                    document.getElementById('contanier-8').style.display='block';
                                    document.getElementById('innerhtml').innerHTML=`OOPS!You lose the match,and computer wins.`;
                                    document.getElementById('lose').style.display='block';
+                                   game_Over(1);
                                    document.getElementById('score').innerHTML=`<h2>Your score = ${value_else}</h2>
                                    <h2>Computers score = ${cpp_else}</h2>`                                    
                                 }
@@ -579,6 +593,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `Congratulations ! You won the match:`;
                                 document.getElementById('win').style.display = 'block';
+                                game_win(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${value_else}</h2>
                                 <h2>Computers score = ${cpp_else}</h2>` 
                             }
@@ -633,6 +648,7 @@ document.getElementById('btn-go').addEventListener
                                    document.getElementById('contanier-8').style.display='block';
                                    document.getElementById('innerhtml').innerHTML=`OOPS!You lose the match,and computer wins.`;
                                    document.getElementById('lose').style.display='block';
+                                   game_Over(1);
                                    document.getElementById('score').innerHTML=`<h2>Your score = ${valuetwo_else}</h2>
                                    <h2>Computers score = ${cpptwo_else}</h2>` 
                                 }
@@ -657,6 +673,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `Congratulations ! You won the match:`;
                                 document.getElementById('win').style.display = 'block';
+                                game_win(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${valuetwo_else}</h2>
                                 <h2>Computers score = ${cpptwo_else}</h2>` 
                             
@@ -714,6 +731,7 @@ document.getElementById('btn-go').addEventListener
                                    document.getElementById('contanier-8').style.display='block';
                                    document.getElementById('innerhtml').innerHTML=`OOPS!You lose the match,and computer wins.`;
                                    document.getElementById('lose').style.display='block';
+                                   game_Over(1);
                                    document.getElementById('score').innerHTML=`<h2>Your score = ${valuethree_else}</h2>
                                    <h2>Computers score = ${cppthree_else}</h2>` 
                                 }
@@ -738,6 +756,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `Congratulations ! You won the match:`;
                                 document.getElementById('win').style.display = 'block';
+                                game_win(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${valuethree_else}</h2>
                                 <h2>Computers score = ${cppthree_else}</h2>`
                             }
@@ -798,6 +817,7 @@ document.getElementById('btn-go').addEventListener
                                     document.getElementById('contanier-8').style.display='block';
                                     document.getElementById('innerhtml').innerHTML=`OOPS!You lose the match,and computer wins.`;
                                     document.getElementById('lose').style.display='block';
+                                    game_Over(1);
                                     document.getElementById('score').innerHTML=`<h2>Your score = ${valuefour_else}</h2>
                                     <h2>Computers score = ${cppfour_else}</h2>`                                    
                                 }
@@ -822,6 +842,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `Congratulations ! You won the match:`;
                                 document.getElementById('win').style.display = 'block';
+                                game_win(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${valuefour_else}</h2>
                                 <h2>Computers score = ${cppfour_else}</h2>`
                             }
@@ -878,6 +899,7 @@ document.getElementById('btn-go').addEventListener
                                     document.getElementById('contanier-8').style.display='block';
                                     document.getElementById('innerhtml').innerHTML=`OOPS!You lose the match,and computer wins.`;
                                     document.getElementById('lose').style.display='block';
+                                    game_Over(1);
                                     document.getElementById('score').innerHTML=`<h2>Your score = ${valuefive_else}</h2>
                                     <h2>Computers score = ${cppfive_else}</h2>` 
                                 }
@@ -902,6 +924,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `Congratulations ! You won the match:`;
                                 document.getElementById('win').style.display = 'block';
+                                game_win(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${valuefive_else}</h2>
                                 <h2>Computers score = ${cppfive_else}</h2>`
                             }
@@ -960,6 +983,7 @@ document.getElementById('btn-go').addEventListener
                                     document.getElementById('contanier-8').style.display='block';
                                     document.getElementById('innerhtml').innerHTML=`OOPS!You lose the match,and computer wins.`;
                                     document.getElementById('lose').style.display='block';
+                                    game_Over(1);
                                     document.getElementById('score').innerHTML=`<h2>Your score = ${valuesix_else}</h2>
                                     <h2>Computers score = ${cppsix_else}</h2>`
                                 }
@@ -984,6 +1008,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `Congratulations ! You won the match:`;
                                 document.getElementById('win').style.display = 'block';
+                                game_win(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${valuesix_else}</h2>
                                 <h2>Computers score = ${cppsix_else}</h2>`
                             }
@@ -1086,6 +1111,7 @@ document.getElementById('btn-go').addEventListener
                                     document.getElementById('contanier-8').style.display = 'block';
                                     document.getElementById('innerhtml').innerHTML = `Congratulations!You won the match`;
                                     document.getElementById('win').style.display = 'block';
+                                    game_win(1);
                                     document.getElementById('score').innerHTML = `<h2>Your score = ${cpp}</h2>
                                     <h2>Computers score = ${comp}</h2>`
                                 }
@@ -1109,6 +1135,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `OOPS!You lose the match and computer wins`;
                                 document.getElementById('lose').style.display = 'block';
+                                game_Over(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${cpp}</h2>
                                 <h2>Computers score = ${comp}</h2>`
                             }
@@ -1163,6 +1190,7 @@ document.getElementById('btn-go').addEventListener
                                     document.getElementById('contanier-8').style.display = 'block';
                                     document.getElementById('innerhtml').innerHTML = `Congratulations!You won the match`;
                                     document.getElementById('win').style.display = 'block';
+                                    game_win(1);
                                     document.getElementById('score').innerHTML = `<h2>Your score = ${cppTwo}</h2>
                                     <h2>Computers score = ${comp}</h2>`
 
@@ -1186,6 +1214,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `OOPS!You lose the match and computer wins`;
                                 document.getElementById('lose').style.display = 'block';
+                                game_Over(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${cppTwo}</h2>
                                 <h2>Computers score = ${comp}</h2>`                               
                             }
@@ -1243,6 +1272,7 @@ document.getElementById('btn-go').addEventListener
                                     document.getElementById('contanier-8').style.display='block';
                                     document.getElementById('innerhtml').innerHTML=`Congratulations!You won the match`;
                                     document.getElementById('win').style.display='block';
+                                    game_win(1);
                                     document.getElementById('score').innerHTML=`<h2>Your score = ${cpp}</h2>
                                     <h2>Computers score = ${comp}</h2>`
                                 }
@@ -1264,6 +1294,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `OOPS!You lose the match and computer wins`;
                                 document.getElementById('lose').style.display = 'block';
+                                game_Over(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${cpp}</h2>
                                 <h2>Computers score = ${comp}</h2>` 
                             }
@@ -1319,6 +1350,7 @@ document.getElementById('btn-go').addEventListener
                                     document.getElementById('contanier-8').style.display='block';
                                     document.getElementById('innerhtml').innerHTML=`Congratulations!You won the match`;
                                     document.getElementById('win').style.display='block';
+                                    game_win(1);
                                     document.getElementById('score').innerHTML=`<h2>Your score = ${cpp}</h2>
                                     <h2>Computers score = ${comp}</h2>`
                                 }
@@ -1342,6 +1374,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `OOPS!You lose the match and computer wins`;
                                 document.getElementById('lose').style.display = 'block';
+                                game_Over(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${cpp}</h2>
                                 <h2>Computers score = ${comp}</h2>` 
                             
@@ -1396,6 +1429,7 @@ document.getElementById('btn-go').addEventListener
                                     document.getElementById('contanier-8').style.display='block';
                                     document.getElementById('innerhtml').innerHTML=`Congratulations!You won the match`;
                                     document.getElementById('win').style.display='block';
+                                    game_win(1);
                                     document.getElementById('score').innerHTML=`<h2>Your score = ${cpp}</h2>
                                     <h2>Computers score = ${comp}</h2>`
                                 }
@@ -1419,6 +1453,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `OOPS!You lose the match and computer wins`;
                                 document.getElementById('lose').style.display = 'block';
+                                game_Over(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${cpp}</h2>
                                 <h2>Computers score = ${comp}</h2>`                                 
                             }
@@ -1469,6 +1504,7 @@ document.getElementById('btn-go').addEventListener
                                    document.getElementById('contanier-8').style.display='block';
                                    document.getElementById('innerhtml').innerHTML=`Congratulations!You won the match`;
                                    document.getElementById('win').style.display='block';
+                                   game_win(1);
                                    document.getElementById('score').innerHTML=`<h2>Your score = ${cpp}</h2>
                                    <h2>Computers score = ${comp}</h2>`                                    
                                 }
@@ -1491,6 +1527,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `OOPS!You lose the match and computer wins`;
                                 document.getElementById('lose').style.display = 'block';
+                                game_Over(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${cpp}</h2>
                                 <h2>Computers score = ${comp}</h2>`                                 
                             
@@ -1562,6 +1599,7 @@ document.getElementById('btn-go').addEventListener
                                    document.getElementById('contanier-8').style.display='block';
                                    document.getElementById('innerhtml').innerHTML=`OOPS!You lose the match,and computer wins.`;
                                    document.getElementById('lose').style.display='block';
+                                   game_Over(1);
                                    document.getElementById('score').innerHTML=`<h2>Your score = ${value_else}</h2>
                                    <h2>Computers score = ${cpp_else}</h2>`                                    
                                 }
@@ -1586,6 +1624,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `Congratulations ! You won the match:`;
                                 document.getElementById('win').style.display = 'block';
+                                game_win(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${value_else}</h2>
                                 <h2>Computers score = ${cpp_else}</h2>` 
                             }
@@ -1640,6 +1679,7 @@ document.getElementById('btn-go').addEventListener
                                    document.getElementById('contanier-8').style.display='block';
                                    document.getElementById('innerhtml').innerHTML=`OOPS!You lose the match,and computer wins.`;
                                    document.getElementById('lose').style.display='block';
+                                   game_Over(1);
                                    document.getElementById('score').innerHTML=`<h2>Your score = ${valuetwo_else}</h2>
                                    <h2>Computers score = ${cpptwo_else}</h2>` 
                                 }
@@ -1664,6 +1704,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `Congratulations ! You won the match:`;
                                 document.getElementById('win').style.display = 'block';
+                                game_win(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${valuetwo_else}</h2>
                                 <h2>Computers score = ${cpptwo_else}</h2>` 
                             
@@ -1721,6 +1762,7 @@ document.getElementById('btn-go').addEventListener
                                    document.getElementById('contanier-8').style.display='block';
                                    document.getElementById('innerhtml').innerHTML=`OOPS!You lose the match,and computer wins.`;
                                    document.getElementById('lose').style.display='block';
+                                   game_Over(1);
                                    document.getElementById('score').innerHTML=`<h2>Your score = ${valuethree_else}</h2>
                                    <h2>Computers score = ${cppthree_else}</h2>` 
                                 }
@@ -1745,6 +1787,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `Congratulations ! You won the match:`;
                                 document.getElementById('win').style.display = 'block';
+                                game_win(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${valuethree_else}</h2>
                                 <h2>Computers score = ${cppthree_else}</h2>`
                             }
@@ -1805,6 +1848,7 @@ document.getElementById('btn-go').addEventListener
                                     document.getElementById('contanier-8').style.display='block';
                                     document.getElementById('innerhtml').innerHTML=`OOPS!You lose the match,and computer wins.`;
                                     document.getElementById('lose').style.display='block';
+                                    game_Over(1);
                                     document.getElementById('score').innerHTML=`<h2>Your score = ${valuefour_else}</h2>
                                     <h2>Computers score = ${cppfour_else}</h2>`                                    
                                 }
@@ -1829,6 +1873,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `Congratulations ! You won the match:`;
                                 document.getElementById('win').style.display = 'block';
+                                game_win(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${valuefour_else}</h2>
                                 <h2>Computers score = ${cppfour_else}</h2>`
                             }
@@ -1885,6 +1930,7 @@ document.getElementById('btn-go').addEventListener
                                     document.getElementById('contanier-8').style.display='block';
                                     document.getElementById('innerhtml').innerHTML=`OOPS!You lose the match,and computer wins.`;
                                     document.getElementById('lose').style.display='block';
+                                    game_Over(1);
                                     document.getElementById('score').innerHTML=`<h2>Your score = ${valuefive_else}</h2>
                                     <h2>Computers score = ${cppfive_else}</h2>` 
                                 }
@@ -1909,6 +1955,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `Congratulations ! You won the match:`;
                                 document.getElementById('win').style.display = 'block';
+                                game_win(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${valuefive_else}</h2>
                                 <h2>Computers score = ${cppfive_else}</h2>`
                             }
@@ -1967,6 +2014,7 @@ document.getElementById('btn-go').addEventListener
                                     document.getElementById('contanier-8').style.display='block';
                                     document.getElementById('innerhtml').innerHTML=`OOPS!You lose the match,and computer wins.`;
                                     document.getElementById('lose').style.display='block';
+                                    game_Over(1);
                                     document.getElementById('score').innerHTML=`<h2>Your score = ${valuesix_else}</h2>
                                     <h2>Computers score = ${cppsix_else}</h2>`
                                 }
@@ -1991,6 +2039,7 @@ document.getElementById('btn-go').addEventListener
                                 document.getElementById('contanier-8').style.display = 'block';
                                 document.getElementById('innerhtml').innerHTML = `Congratulations ! You won the match:`;
                                 document.getElementById('win').style.display = 'block';
+                                game_win(1);
                                 document.getElementById('score').innerHTML = `<h2>Your score = ${valuesix_else}</h2>
                                 <h2>Computers score = ${cppsix_else}</h2>`
                             }
@@ -2039,3 +2088,21 @@ document.getElementById('hand').addEventListener('mouseover', function () {
 document.getElementById('croxx').addEventListener('click', function () {
     document.getElementById('contanier-8').style.display = 'none';
 })
+let sound= new Audio();
+sound.src="./audio/click.mp3";
+let gameSound=new Audio();
+gameSound.src="./audio/gamsound1.mp3";
+let button=new Audio();
+button.src="./audio/popup.mp3";
+let gameOver=new Audio();
+gameOver.src="./audio/game over.mp3";
+function game_Over(num)
+{
+    gameOver.play();
+}
+let gameWin=new Audio();
+gameWin.src="./audio/congratulations.mp3";
+function game_win(num1)
+{
+    gameWin.play();
+}
