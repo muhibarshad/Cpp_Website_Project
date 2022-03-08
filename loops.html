@@ -584,25 +584,48 @@
 
 
 
-            <!-- 
+            
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Miles_Per_Gallion</h2>
+                <h2>For the Pyramid</h2>
                 <div class="code10">
                     <pre><code class="language-cpp">
                         <xmp>
-                            #include <iostream>
+                            #include<iostream>
                                 using namespace std;
                                 int main()
                                 {
-                                    int gallons_of_Gasoline = 15;
-                                    int car_travel_miles = 375;
-                                    float MPG;
-                                    MPG = (float)car_travel_miles / gallons_of_Gasoline;
-                                    cout << " The number of miles per gallon the car gets = " << MPG<<"m/g" << endl;
+                                   int num;
+                                   cout<<"Enter a number:"<<endl;
+                                   cin>>num;
+                                   for(int i=0;i<num;i++){
+                                       for(int j=1;j<(2*num);j++){
+                                            if(j<=num+i && j>=num-i){
+                                                cout<<"*";
+                                            }
+                                            else{
+                                                cout<<" ";
+                                            }
+                                       }
+                                       cout<<endl;
+                                   }
                                 
                                     return 0;
                                 }
+                                OUTPUT AS:
+                                Enter a number:
+                                10
+                                *
+                               ***        
+                              *****       
+                             *******      
+                            *********     
+                           ***********    
+                          *************   
+                         ***************  
+                        ***************** 
+                       *******************
+
                         </xmp>
                     </code></pre>
                 </div>
@@ -614,27 +637,67 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Distance per Tank of Gas </h2>
+                <h2>DIMAOND</h2>
                 <div class="code11">
                     <pre><code class="language-cpp">
                         <xmp>
-                            #include <iostream>
+                            #include<iostream>
                                 using namespace std;
                                 int main()
                                 {
+                                   int num;
+                                   cout<<"Enter a number:"<<endl;
+                                   cin>>num;
+                                   for(int i=0;i<num;i++){
+                                       for(int j=1;j<(2*num);j++){
+                                            if(j<=num+i && j>=num-i){
+                                                cout<<"*";
+                                            }
+                                            else{
+                                                cout<<" ";
+                                            }
+                                       }
+                                       cout<<endl;
+                                   }
+                                   
+                                   for(int i=num-2;i>=0;i--){
+                                       for(int j=1;j<(2*num);j++){
+                                            if(j<=num+i && j>=num-i){
+                                                cout<<"*";
+                                            }
+                                            else{
+                                                cout<<" ";
+                                            }
+                                       }
+                                       cout<<endl;
+                                   }
                                 
-                                    int gallon_space = 20;
-                                    float mpg_town = 23.5;
-                                    float mpg_highway = 28.9;
-                                    float distance_town;
-                                    float distance_highway;
-                                    distance_town = gallon_space * mpg_town;
-                                    distance_highway = gallon_space * mpg_highway;
-                                    cout << "The distance the car can travel on one tank of gas when driven in town = " << distance_town <<"miles"<< endl;
-                                    cout << "The distance the car can travel on one tank of gas when driven on highway = " << distance_highway <<"miles"<< endl;
                                 
                                     return 0;
                                 }
+
+                                OUTPUT AS:
+                                Enter a number:
+                                10
+                                *
+                               ***        
+                              *****       
+                             *******      
+                            *********     
+                           ***********    
+                          *************   
+                         ***************  
+                        ***************** 
+                       *******************
+                        *****************
+                         ***************
+                          *************
+                           ***********
+                            *********
+                             *******
+                              *****       
+                               ***
+                                *
                         </xmp>
                     </code></pre>
                 </div>
@@ -647,22 +710,63 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Land Calculation</h2>
+                <h2>Hollow DIAMOND</h2>
                 <div class="code12">
                     <pre><code class="language-cpp">
                         <xmp>
-                            #include <iostream>
+                            #include<iostream>
                                 using namespace std;
                                 int main()
                                 {
-                                    int one_acre = 43560;
-                                    long int tract = 391876;
-                                    float numberOfAcresInTract = 0;
-                                    numberOfAcresInTract = (float)tract / one_acre;
-                                    cout << "The number of acres in a tract of land with 391,876 square feet = " << numberOfAcresInTract << endl;
                                 
+                                   int num;
+                                   cout<<"Enter a number:"<<endl;
+                                   cin>>num;
+                                   for(int i=0;i<num;i++){
+                                       for(int j=1;j<(2*num);j++){
+                                            if(j==num+i || j==num-i){
+                                                cout<<"*";
+                                            }
+                                            else{
+                                                cout<<" ";
+                                            }
+                                       }
+                                       cout<<endl;
+                                   }
+                                   for(int i=num-2;i>=0;i--){
+                                       for(int j=1;j<(2*num);j++){
+                                            if(j==num-i || j==num+i){
+                                                cout<<"*";
+                                            }
+                                            else{
+                                                cout<<" ";
+                                            }
+                                       }
+                                       cout<<endl;
+                                   }
                                     return 0;
                                 }
+                                Enter a number: 
+                                10
+                                *
+                                * *        
+                               *   *       
+                              *     *      
+                             *       *     
+                            *         *    
+                           *           *   
+                          *             *  
+                         *               * 
+                        *                 *
+                         *               * 
+                          *             *
+                           *           *
+                            *         *
+                             *       *
+                              *     *
+                               *   *
+                                * *
+                                 *
                         </xmp>
                     </code></pre>
                 </div>
@@ -676,24 +780,64 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2> Circuit Board Price</h2>
+                <h2>ARROW</h2>
                 <div class="code13">
                     <pre><code class="language-cpp">
                         <xmp>
-                            #include <iostream>
+                            #include<iostream>
                                 using namespace std;
                                 int main()
                                 {
-                                    int profit_percent = 35;
-                                    float costs = 14.95;
-                                    float total = 0;
-                                    total = (float)35 / 100;
-                                    total = total * costs;
-                                    total = total + costs;
-                                    cout << "The total cost of the circuit_board = " << total << endl;
-                                
+                                   int num;
+                                   cout<<"Enter a number:"<<endl;
+                                   cin>>num;
+                                   for(int i=0;i<num;i++){
+                                       for(int j=1;j<(2*num);j++){
+                                            if(j==num|| (j==num+i || j==num-i)){
+                                                cout<<"*";
+                                            }
+                                            else{
+                                                cout<<" ";
+                                            }
+                                       }
+                                       cout<<endl;
+                                   }
+                                   for(int i=num-1;i>=0;i--){
+                                       for(int j=1;j<(2*num);j++){
+                                            if(j==num){
+                                                cout<<"*";
+                                            }
+                                            else{
+                                                cout<<" ";
+                                            }
+                                       }
+                                       cout<<endl;
+                                   }
                                     return 0;
                                 }
+                                Enter a number:
+                                10
+                                *
+                               ***        
+                              * * *       
+                             *  *  *      
+                            *   *   *     
+                           *    *    *    
+                          *     *     *   
+                         *      *      *  
+                        *       *       * 
+                       *        *        *
+                                *
+                                *
+                                *
+                                *
+                                *
+                                *
+                                *
+                                *
+                                *
+                                *
+
                         </xmp>
                     </code></pre>
                 </div>
@@ -706,19 +850,65 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Personal Information </h2>
+                <h2>PRINT PATTERN BE LIKE AS:</h2>
                 <div class="code14">
                     <pre><code class="language-cpp">
                         <xmp>
-                            #include <iostream>
+                            Enter a number:
+                            10
+                            ********* *********
+                            ********   ********
+                            *******     *******
+                            ******       ******
+                            *****         *****
+                            ****           ****
+                            ***             ***
+                            **               **
+                            *                 *
+                                                                  
+                            *                 *
+                            **               **
+                            ***             ***
+                            ****           ****
+                            *****         *****
+                            ******       ******
+                            *******     *******
+                            ********   ********
+                            ********* *********
+
+
+                            #include<iostream>
                                 using namespace std;
                                 int main()
                                 {
-                                    cout << "Muhib Arshad" << endl;
-                                    cout << "Raheem_town street #01 canal_road Tehsil Kabirwala District khanewal Country Pakistan and Zip code is +92" << endl;
-                                    cout << "03006373841" << endl;
-                                    cout << "Software_Engeenering" << endl;
-                                
+                                   int num;
+                                   cout<<"Enter a number:"<<endl;
+                                   cin>>num;
+                                   for(int i=0;i<num;i++){
+                                       for(int j=1;j<(2*num);j++){
+                                            if(j<=num+i && j>=num-i){
+                                                cout<<" ";
+                                            }
+                                            else{
+                                                cout<<"*";
+                                            }
+                                       }
+                                       if(i==num-1){
+                                           break;
+                                       }
+                                       cout<<endl;
+                                   }
+                                   for(int i=num-1;i>=0;i--){
+                                       for(int j=1;j<(2*num);j++){
+                                            if(j<=num+i && j>=num-i){
+                                                cout<<" ";
+                                            }
+                                            else{
+                                                cout<<"*";
+                                            }
+                                       }
+                                       cout<<endl;
+                                   }
                                     return 0;
                                 }
                         </xmp>
@@ -734,7 +924,7 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Triangle Pattern</h2>
+                <h2>HAlf DIAMOND</h2>
                 <div class="code15">
                     <pre><code class="language-cpp">
                         <xmp>
@@ -742,13 +932,52 @@
                                 using namespace std;
                                 int main()
                                 {
-                                    cout << "   *   " << endl;
-                                    cout << "  ***  " << endl;
-                                    cout << " ***** " << endl;
-                                    cout << "*******" << endl;
+                                    int num;
+                                    cout << "Enter the  number:" << endl;
+                                    cin >> num;
+                                    for (int i = 1; i <= num; i++)
+                                    {
+                                        for (int j = 0; j < i; j++)
+                                        {
+                                            cout << "*";
+                                        }
+                                        cout << endl;
+                                    }
+                                    for (int i = num - 1; i > 0; i--)
+                                    {
+                                        for (int j = 0; j < i; j++)
+                                        {
+                                            cout << "*";
+                                        }
+                                        cout << endl;
+                                    }
                                 
                                     return 0;
                                 }
+
+                                out put as:
+                                Enter the  number:
+                                10
+                                *
+                                **
+                                ***
+                                ****
+                                *****
+                                ******
+                                *******
+                                ********
+                                *********
+                                **********
+                                *********
+                                ********
+                                *******
+                                ******
+                                *****
+                                ****
+                                ***
+                                **
+                                *
+
                         </xmp>
                     </code></pre>
                 </div>
@@ -758,7 +987,7 @@
 
 
 
-
+          <!--
          <div class="col-6">
             <div class="row-6-1">
                 <h2>Diamond</h2>
