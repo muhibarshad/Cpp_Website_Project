@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="structure.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="./Prism/prism-final.css">
+    <title>Code-sheets/Strings</title>
+</head>
+
+<body>
+    <div class="contanier">
+        <div class="navbar">
+            <h2 class="logo">Muhib_Codes</h2>
+            <nav>
+                <ul id="menu_list">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="codesheets.html">Code_Sheets</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">Contact_Us</a></li>
+                </ul>
+            </nav>
+            <img src="images/menu-icon.png" alt="Menu-icon" id="menu-icon" onclick="toggle_menu()">
+        </div>
+        <div class="arrow">
+            <img src="./images/arrowdown.png" alt="arrow" class="arrowdown" >
+        </div>
+        <div class="arrowleft">
+            <img src="./images/arrowright2.png" alt="arrow" >
+        </div>
+        <div class="assignments">
+        <a href="assignments.html"><button>PF-(PUCIT_NEW-CAMPUS)
+            SOLVED ASSIGNMENTS
+        </button></a>
+
+        </div>
+        <div class="contanier-2">
+            <div class="heading">
+                <h1>Structure</h1>
+            </div>
+            <div class="row-1">
+                <div class="col-1">
+                    <div class="topic">
+                        <h2>Topics:</h2>
+                        <ul>
+                            <li><a href="codesheets.html"><button class="btnside">Basics</button></a></li>
+                            <li><a href="expressions.html"><button class="btnside">Expressions</button></a></li>
+                            <li><a href="decisions.html"><button class="btnside">Making Decisions</button></a></li>
+                            <li><a href="loops.html"><button class="btnside">Loops</button></a></li>
+                            <li><a href="functions.html"><button class="btnside">Functions</button></a></li>
+                            <li><a href="arrays.html"><button class="btnside">Arrays</button></a></li>
+                            <li><a href="sorting.html"><button class="btnside">Sorting Searching</button></a></li>
+                            <li><a href="structure.html"><button class="btnside">Structure</button></a></li>
+                            <li><a href="pointers.html"><button class="btnside">Pointers</button></a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+
+
+
+
+
+
+
+                 
+                <div class="col-2">
+                    <div class="basics">
+                      <h2>Syntax of Structure</h2>
+                       <div class="code">
+                        <pre class="cpp"><code class="language-cpp">
+                            <xmp>
+                                #include<iostream>
+                                    #include<string>
+                                    using namespace std;
+                                    struct student{
+                                       string name;
+                                       string roll;
+                                       int age;
+                                       float cgpa;
+                                    };
+                                    int main()
+                                    {
+                                        student st1;
+                                       cout<<"Enter the name ,roll #,age and cgpa of the student 1:"<<endl;
+                                       getline(cin,st1.name);
+                                       getline(cin,st1.roll);
+                                       cin>>st1.age;
+                                       cin>>st1.cgpa;
+                                    }
+                                    
+                            </xmp>
+                        </code></pre>
+                       </div>
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+     <div class="contanier-6">
+         <div class="col-6">
+            <div class="row-6-1">
+                <h2>Structure of the 5 students</h2>
+                <div class="code2">
+                    <pre><code class="language-cpp">
+                        <xmp>
+                            #include <iostream>
+                                #include <string>
+                                using namespace std;
+                                struct student
+                                {
+                                    int roll;
+                                    int age;
+                                    int marks;
+                                    string name;
+                                };
+                                int main()
+                                {
+                                    student st;
+                                    student st2;
+                                    student st3;
+                                    student st4;
+                                    student st5;
+                                    cout << "Enter the name of the student 1:" << endl;
+                                    getline(cin, st.name);
+                                    cout << "Enter the roll # of the student 1:" << endl;
+                                    cin >> st.roll;
+                                    cout << "Enter the age of the student 1:" << endl;
+                                    cin >> st.age;
+                                    cout << "Enter the marks of the student 1:" << endl;
+                                    cin >> st.marks;
+                                    cin.ignore();
+                                    cout<<endl;
+                                    cout << "Enter the name of the student 2:" << endl;
+                                    getline(cin, st2.name);
+                                    cout << "Enter the roll # of the student 2:" << endl;
+                                    cin >> st2.roll;
+                                    cout << "Enter the age of the student 2:" << endl;
+                                    cin >> st2.age;
+                                    cout << "Enter the marks of the student 2:" << endl;
+                                    cin >> st2.marks;
+                                    cin.ignore();
+                                    cout<<endl;
+                                    cout << "Enter the name of the student 3:" << endl;
+                                    getline(cin, st3.name);
+                                    cout << "Enter the roll # of the student 3:" << endl;
+                                    cin >> st3.roll;
+                                    cout << "Enter the age of the student 3:" << endl;
+                                    cin >> st3.age;
+                                    cout << "Enter the marks of the student 3:" << endl;
+                                    cin >> st3.marks;
+                                    cin.ignore();
+                                    cout<<endl;
+                                    cout << "Enter the name of the student 4:" << endl;
+                                    getline(cin, st4.name);
+                                    cout << "Enter the roll # of the student 4:" << endl;
+                                    cin >> st4.roll;
+                                    cout << "Enter the age of the student 4:" << endl;
+                                    cin >> st4.age;
+                                    cout << "Enter the marks of the student 4:" << endl;
+                                    cin >> st4.marks;
+                                    cin.ignore();
+                                    cout<<endl;
+                                    cout << "Enter the name of the student 5:" << endl;
+                                    getline(cin, st5.name);
+                                    cout << "Enter the roll # of the student 5:" << endl;
+                                    cin >> st5.roll;
+                                    cout << "Enter the age of the student 5:" << endl;
+                                    cin >> st5.age;
+                                    cout << "Enter the marks of the student 5:" << endl;
+                                    cin >> st5.marks;
+                                    cout << "_______________________________________" << endl;
+                                    cout << "The name of the student 2 = " << st2.name << endl;
+                                    cout << "The roll # of the student 2 = " << st2.roll << endl;
+                                    cout << "The age of the student 2 = " << st2.age << endl;
+                                    cout << "The marks of the student 2 = " << st2.marks << endl;
+                                    return 0;
+                                }
+                        </xmp>
+                    </code></pre>
+                </div>
+                
+            </div>
+         </div>
+         <div class="col-6">
+            <div class="row-6-1">
+                <h2>Create an array of 3 students. Hardcode the array data and
+                    ask user to ask an ID. Take ID from user and search from
+                    the students array and when the ID matches print the data
+                    of respective student.</h2>
+                <div class="code3">
+                    <pre><code class="language-cpp">
+                        <xmp>
+                            #include <iostream>
+                                #include <string>
+                                using namespace std;
+                                struct student
+                                {
+                                    string name;
+                                    string roll;
+                                    int session;
+                                    int id;
+                                };
+                                int main()
+                                {
+                                    student st[3];
+                                    st[0].name = "Muhib";
+                                    st[1].name = "Ali";
+                                    st[2].name = "Hamza";
+                                    st[0].roll = "BSEF21M540";
+                                    st[1].roll = "BSEF21M541";
+                                    st[2].roll = "BSEF21M543";
+                                    st[0].session = 2021;
+                                    st[1].session = 2021;
+                                    st[2].session = 2021;
+                                    st[0].id = 1;
+                                    st[1].id = 2;
+                                    st[2].id = 3;
+                                    int n;
+                                    cout << "Enter the id of the student that you want to know:" << endl;
+                                    cin >> n;
+                                    for (int i = 0; i < 3; i++)
+                                    {
+                                        if (st[i].id == n)
+                                        {
+                                            cout << "____________________________________" << endl;
+                                            cout << "The name of the student " << i + 1 << " =" << st[i].name << endl;
+                                            cout << "The roll # of the student " << i + 1 << " =" << st[i].roll << endl;
+                                            cout << "The session of the student " << i + 1 << " =" << st[i].session << endl;
+                                            cout << "The id of the student " << i + 1 << " =" << st[i].id << endl;
+                                        }
+                                    }
+                                
+                                
+                                    return 0;
+                                }
+                        </xmp>
+                    </code></pre>
+                </div>
+            </div>
+         </div>
+
+
+         <div class="col-6">
+            <div class="row-6-1">
+                <h2>Nested Structure</h2>
+                <div class="code4">
+                    <pre><code class="language-cpp">
+                        <xmp>
+                            #include<iostream>
+                                using namespace std;
+                                struct ra{
+                                   string hi;
+                                };
+                                struct date{
+                                    int min;
+                                    int hr;
+                                    int sec;
+                                    ra gg;
+                                };
+                                struct student{
+                                    string name;
+                                    int roll;
+                                    int sem;
+                                    float cgpa;
+                                    date dob;
+                                };
+                                int main(){
+                                  student st1;
+                                  cout<<"Enter the name of the student:"<<endl;
+                                  getline(cin,st1.name);
+                                  cout<<"Enter the Roll number of the student:"<<endl;
+                                  cin>>st1.roll;
+                                  cout<<"Enter the semister of the student:"<<endl;
+                                  cin>>st1.sem;
+                                  cout<<"Enter the cpga of the stusent:"<<endl;
+                                  cin>>st1.cgpa;
+                                  cout<<"Enter the hours:"<<endl;
+                                  cin>>st1.dob.hr;
+                                  cout<<"Enter the minutes:"<<endl;
+                                  cin>>st1.dob.min;
+                                  cout<<"Enter the seconds:"<<endl;
+                                  cin>>st1.dob.sec;
+                                  cout<<"say hi"<<endl;
+                                  cin>>st1.dob.gg.hi;
+                                  cout<<"____________________________________________________________"<<endl;
+                                  cout<<"The name of the student is :"<<st1.name<<endl;
+                                  cout<<"The Roll# of the student is :"<<st1.roll<<endl;
+                                  cout<<"The Semister of the student is :"<<st1.sem<<endl;
+                                  cout<<"The CGPA of the student is :"<<st1.cgpa<<endl;
+                                  cout<<"The Hours of the student is :"<<st1.dob.hr<<endl;
+                                  cout<<"The Minutes of the student is :"<<st1.dob.min<<endl;
+                                  cout<<"The Seconds of the student is :"<<st1.dob.sec<<endl;
+                                  cout<<"The Hi of the student is :"<<st1.dob.gg.hi<<endl;
+                                
+                                    return 0;
+                                }
+                                
+                                
+                        </xmp>
+                    </code></pre>
+                </div>
+            </div>
+         </div>
+
+
+         <div class="col-6">
+            <div class="row-6-1">
+                <h2>Struture with arrays to get the unlimited data </h2>
+                <div class="code5">
+                    <pre><code class="language-cpp">
+                        <xmp>
+                            #include <iostream>
+                                #include<cstring>
+                                using namespace std;
+                                struct address
+                                {
+                                    string country;
+                                    string division;
+                                    string district;
+                                    string city;
+                                    string postelAddress;
+                                };
+                                struct data
+                                {
+                                    char name[25];
+                                    int age;
+                                    string rollNo;
+                                    char gender[15];
+                                    int hostel_no;
+                                    int room_no;
+                                    char department[100];
+                                    int semister;
+                                    address addr;
+                                };
+                                int main()
+                                {
+                                    data st[4];
+                                    string n;
+                                    for (int i = 0; i < 4; i++)
+                                    {
+                                        cout << "Enter the name of the student no " << i + 1 << " :" << endl;
+                                        cin.getline(st[i].name, 25);
+                                        cout << "Enter the roll number of the student no " << i + 1 << " :" << endl;
+                                        getline(cin, st[i].rollNo);
+                                        cout << "Enter the gender of the student no " << i + 1 << " :" << endl;
+                                        cin.getline(st[i].gender, 15);
+                                        cout << "Enter the age of the student no " << i + 1 << " :" << endl;
+                                        cin >> st[i].age;
+                                        cin.ignore();
+                                        cout << "Enter the department of the student no " << i + 1 << " :" << endl;
+                                        cin.getline(st[i].department, 100);
+                                        cout << "Enter the semister of the student no " << i + 1 << " :" << endl;
+                                        cin >> st[i].semister;
+                                        cout << "Enter hostel number of the student no " << i + 1 << " :" << endl;
+                                        cin >> st[i].hostel_no;
+                                        cout << "Enter the room number of the student no " << i + 1 << " :" << endl;
+                                        cin >> st[i].room_no;
+                                        cin.ignore();
+                                        cout << "Enter the address as:" << endl;
+                                        cout << "Enter the country:";
+                                        getline(cin, st[i].addr.country);
+                                        cout << "Enter the division:";
+                                        getline(cin, st[i].addr.division);
+                                        cout << "Enter the district:";
+                                        getline(cin, st[i].addr.district);
+                                        cout << "Enter the city:";
+                                        getline(cin, st[i].addr.city);
+                                        cout << "Enter the postel Address:";
+                                        getline(cin, st[i].addr.postelAddress);
+                                    }
+                                
+                                
+                                cout<<endl;
+                                cout<<"Enter the roll number of the student that you want to get  the data: "<<endl;
+                                getline(cin,n);
+                                for(int i=0;i<4;i++){
+                                   if(st[i].rollNo==n){
+                                       cout<<"The name of the student = "<<st[i].name<<endl;
+                                       cout<<"The rollNo of the student = "<<st[i].rollNo<<endl;
+                                       cout<<"The age of the student = "<<st[i].age<<endl;
+                                       cout<<"The gender of the student = "<<st[i].gender<<endl;
+                                       cout<<"The department of the student = "<<st[i].department<<endl;
+                                       cout<<"The semister of the student = "<<st[i].semister<<endl;
+                                       cout<<"The hostel of the student = "<<st[i].hostel_no<<endl;
+                                       cout<<"The room_no of the student = "<<st[i].room_no<<endl;
+                                       cout<<"The country of the student = "<<st[i].addr.country<<endl;
+                                       cout<<"The division of the student = "<<st[i].addr.division<<endl;
+                                       cout<<"The district of the student = "<<st[i].addr.district<<endl;
+                                       cout<<"The city of the student = "<<st[i].addr.city<<endl;
+                                       cout<<"The postel address of the student = "<<st[i].addr.postelAddress<<endl;
+                                   }
+                                }
+                            }
+                        </xmp>
+                    </code></pre>
+                </div>
+            </div>
+         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+     </div>
+
+
+        <div class="container-3">
+            <div class="heading-2">
+                <h1>Whats make this website differents from others?</h1>
+            </div>
+            <div class="row-3">
+
+                <div class="amazing">
+                    <div class="amazing-header">
+                        <h1>Amazing Feature That Increase your Productivity</h1>
+                    </div>
+                    <div class="amazing-body">
+                        <p>
+                            If you don't find any problem,in this website and if you have a very difficult assignment
+                            question that
+                            is not present on internet ,then you dont bother yourself,we are here to solve every problem
+                            of
+                            your
+                            life you just click on the Problem asking button and write your problem we slove the code of
+                            your
+                            problem and sent you on your email addres that you put in the sin up form.
+                        </p>
+                        <a href="contact.html"><button class="btn2">Write your Problem here</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="contanier-4">
+                <div class="row-4">
+    
+    
+    
+                    <div class="footer-col" id="about_us">
+                        <h4>About_us</h4>
+                        <p>
+                            We are the students from different well knowned UNiversities like PUCIT,FAST,NUST and COMSATS.
+                            Our main goal is to provide good CGPA with Skills to our Begginer programmers.We solve problems
+                            and help our juniors to understand the basice concepts .
+                        </p>
+                    </div>
+    
+    
+    
+                    <div class="footer-col">
+                        <h4>Contact_us</h4>
+                        <ul>
+                            <li><a href="https://pucit.edu.pk/"target="blank">PUCIT(New_Campus)</a></li>
+                            <li><a href="https://www.whatsapp.com/"target="blank">phone:03259615088</a></li>
+                            <li><a href="https://gmail.com/"target="blank">email:bsef21m540@pucit.edu.pk</a></li>
+                            <li><a href="https://www.google.com/maps/place/Punjab+University+Hostel+Rd,+Quaid-i-Azam+Campus,+Lahore,+Punjab/@31.4958087,74.3057684,17z/data=!3m1!4b1!4m5!3m4!1s0x39190477c811e4e9:0x9c8824758d8549ae!8m2!3d31.4958087!4d74.3079571"target="blank">Punjab,hostel #09 ,Lahore</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Quick_links</h4>
+                        <ul>
+                            <li><a href="https://www.facebook.com/profile.php?id=100039337088172"target="blank"><i class="fab fa-facebook-f" id="face"></i>محمد محب الله</a></li>
+                            <li><a href="https://www.instagram.com/muhib7353/"target="blank"><i class="fab fa-instagram" id="insta"></i>muhib7353</a></li>
+                            <li><a href="https://www.whatsapp.com/"target="blank"><i class="fab fa-whatsapp" id="whats"></i>+923259615088</a></li>
+                            <li><a href="https://twitter.com/muhib7353"target="blank"><i class="fab fa-twitter" id="twit"></i>muhib7353</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Quick_Access</h4>
+                        <ul>
+                            <li><a href="codesheets.html">Code_sheets</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="sinup.html">Sin_Up</a></li>
+                            <li><a href="home.html">Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="container-5">
+            <div class="footer-2">
+                <h1>Copyright &copy;https://muhibcodes.netlify.app/</h1>
+            </div>
+        </div>
+
+        <script>
+            var menu_list = document.getElementById("menu_list");
+            menu_list.style.maxHeight = "0px";
+            function toggle_menu() {
+                if (menu_list.style.maxHeight == "0px") {
+                    menu_list.style.maxHeight = "130px"
+                }
+                else {
+                    menu_list.style.maxHeight = "0px"
+                }
+            }
+        </script>
+        <script src="./Prism/prism-final.js" ></script>
+</body>
+
+</html>
+
+<!-- <div class="col-6">
+    <div class="row-6-1">
+        <h2>Land Calculation</h2>
+        <div class="code12">
+            <pre><code class="language-cpp">
+                <xmp>
+                    #include <iostream>
+                        using namespace std;
+                        int main()
+                        {
+                            int one_acre = 43560;
+                            long int tract = 391876;
+                            float numberOfAcresInTract = 0;
+                            numberOfAcresInTract = (float)tract / one_acre;
+                            cout << "The number of acres in a tract of land with 391,876 square feet = " << numberOfAcresInTract << endl;
+                        
+                            return 0;
+                        }
+                </xmp>
+            </code></pre>
+        </div>
+    </div>
+ </div> -->

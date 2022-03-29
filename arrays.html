@@ -53,15 +53,15 @@
                             <li><a href="functions.html"><button class="btnside">Functions</button></a></li>
                             <li><a href="arrays.html"><button class="btnside">Arrays</button></a></li>
                             <li><a href="sorting.html"><button class="btnside">Sorting Searching</button></a></li>
-                            <li><a href="strings.html"><button class="btnside">Strings</button></a></li>
+                            <li><a href="structure.html"><button class="btnside">Structure</button></a></li>
                             <li><a href="pointers.html"><button class="btnside">Pointers</button></a></li>
                         </ul>
                     </div>
                 </div>
                 
 
-
-
+<!-- Part of the alert red zone area -->
+<!-- 
                 <div class="alert">
                     <img src="./images/alert.jpg" alt="Alert">
                 </div>
@@ -81,31 +81,36 @@
                 </div>
                 <div class="comingcontact">
                     <a href="contact.html"><button>Contact_Us</button></a>
-                </div>
+                </div> -->
 
 
 
 
 
-<!--                 
+         
                 <div class="col-2">
                     <div class="basics">
-                      <h2>Sum_Of_Two_Numbers</h2>
+                      <h2>Input and Output of the arrays</h2>
                        <div class="code">
                         <pre class="cpp"><code class="language-cpp">
                             <xmp>
                                 #include<iostream>
+                                    #include<cstdlib>
+                                    #include<ctime>
                                     using namespace std;
                                     int main()
-                                    {
-                                        int num_1=50;
-                                        int num_2=100;
-                                        int sum;
-                                        sum=num_1+num_2;
-                                        cout<<"The sum of these two numbers = "<<sum<<endl;
-                                        return 0;
-                                    }
-                                    
+                                    {  int x=time(0);
+                                        srand(x);
+                                        const int size=100;
+                                        int arr[size]={};
+                                         int max=arr[0];
+                                         int min;
+                                        for(int i=0;i<10;i++){
+                                            arr[i]=(rand()%100)+1;
+                                        }
+                                        for(int i=0;i<10;i++){
+                                            cout<<arr[i]<<" ";
+                                        }}    
                             </xmp>
                         </code></pre>
                        </div>
@@ -119,7 +124,7 @@
      <div class="contanier-6">
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Sales_Prediction</h2>
+                <h2>Write a C++ program to print all negative elements in the array. </h2>
                 <div class="code2">
                     <pre><code class="language-cpp">
                         <xmp>
@@ -127,12 +132,19 @@
                                 using namespace std;
                                 int main()
                                 {
-                                    long double sales=8.6E6;
-                                    float percentage=0.56;
-                                    long double predict_division=0;
-                                    predict_division=sales*percentage;
-                                    cout<<"The predicted sales percentage = "<<predict_division<<endl;
-                                     
+                                    const int size=10;
+                                    int arr[size];
+                                    cout<<"Enter the numbers:"<<endl;
+                                    for(int i=0;i<size;i++){
+                                        cin>>arr[i];
+                                    }
+                                    cout<<"The negative elements in the array = "<<endl;
+                                    for(int i=0;i<size;i++){
+                                        if(arr[i]<0)
+                                        {
+                                          cout<<arr[i]<<" ";
+                                        } 
+                                    }
                                     return 0;
                                 }
                         </xmp>
@@ -143,7 +155,7 @@
          </div>
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Sales_Tax</h2>
+                <h2>Write a C++ program to find sum of all elements in the array. </h2>
                 <div class="code3">
                     <pre><code class="language-cpp">
                         <xmp>
@@ -151,50 +163,17 @@
                                 using namespace std;
                                 int main()
                                 {
-                                    int purchase=95;
-                                    int stateTax=4;
-                                    int countryTax=2;
-                                    int totalTax=stateTax+countryTax;
-                                    int totalSaleTax=0;
-                                    totalSaleTax=(purchase*totalTax)/100;
-                                    totalSaleTax=totalSaleTax+purchase;
-                                    cout<<"The total sales tax is given as:"<<totalSaleTax<<endl;
-                                    return 0;
+                                    const int size=10;
+                                    int arr[size];
+                                    int sum=0;
+                                    cout<<"Enter the numbers:"<<endl;
+                                    for(int i=0;i<size;i++){
+                                        cin>>arr[i];
+                                        sum=sum+arr[i];
+                                    }
+                                    cout<<"The sum of all the elements in the array = "<<sum<<endl;
+                                 
                                     
-                                }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h2>Resturant_Bill</h2>
-                <div class="code4">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            #include<iostream>
-                                using namespace std;
-                                int main()
-                                {
-                                   float tax=6.75;
-                                   int tip=20;
-                                   float mael_cost=88.67;
-                                   float total_tax=0;
-                                   float tax_rate;
-                                   float tax_amount;
-                                   float total_bill;
-                                   cout<<"The cost of meal is = "<<mael_cost<<endl;
-                                   cout<<"The amount of tax = "<<tax<<endl;
-                                   cout<<"The amount of tip = "<<tip<<endl;
-                                   total_tax=tax+tip;
-                                   tax_rate=total_tax/100;
-                                   tax_amount=mael_cost*tax_rate;
-                                   total_bill=tax_amount+mael_cost;
-                                   cout<<"The total amount of the bill = "<<total_bill<<"$"<<endl;
-                                
                                     return 0;
                                 }
                         </xmp>
@@ -206,28 +185,55 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Average_oF_Three_Values</h2>
+                <h2>Write a C++ program to find the Second largest element in the array.</h2>
                 <div class="code5">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*Program to display the Average of three variables*/
                             #include<iostream>
-                            using namespace std;
-                            int main()
-                            {
+                                #include<cstdlib>
+                                #include<ctime>
+                                using namespace std;
+                                int  main()
+                                {
+                                  const int size=10;
+                                  int arr[size];
+                                  int firstMax;
+                                  int secondMax;
+                                  int x=time(0);
+                                  srand(x);
+                                  for(int i=0;i<size;i++){
+                                      arr[i]=(rand()%10)+1;
+                                  }
+                                  for(int i=0;i<size;i++){
+                                      cout<<arr[i]<<" ";
+                                  }
+                                  firstMax=arr[0];
+                                  secondMax=arr[0];
+                                  for(int i=0;i<size;i++){
+                                    if(firstMax<arr[i])
+                                    {
+                                        firstMax=arr[i];
+                                    }
+                                  }
+                                  for(int i=0;i<size;i++){
+                                      if(arr[i]==firstMax)
+                                      {
+                                          continue;
+                                      }
+                                      else 
+                                      {
+                                          if(secondMax<arr[i])
+                                          {
+                                              secondMax=arr[i];
+                                          }
+                                      }
+                                  }
+                                  cout<<"The second largest element in the array = "<<secondMax<<endl;
                                 
-                                int num1=5;
-                                float num2=8.9;
-                                double num3=9.888;
-                                double average=0;//Intiliaze to zero to overwrite the garbage value
-                                average=(num1+num2+num3)/3;//Parantesis are used to discarge the priority order of division
-                                cout<<"Number 1 = "<<num1<<endl;
-                                cout<<"Number 2 = "<<num2<<endl;
-                                cout<<"Number 3 = "<<num3<<endl;
-                                cout<<"The average of these three numbers = "<<average<<endl;
-                                return 0;
-                                
-                            }
+                                    return 0;
+                                }
+                                /*legal way is that firstly you sort the array and then find the 2nd largest and 2nd smallest by 
+                                by the index print 2nd */
                         </xmp>
                     </code></pre>
                 </div>
@@ -238,26 +244,39 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Annual_Pay</h2>
+                <h2>Write a c++ program to insert the element in the end of the array.</h2>
                 <div class="code6">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*Program to display the anual_pay of user income */
                             #include<iostream>
-                            using namespace std;
-                            int main()
-                            {
-                                
-                                int pay_Amount=2000;
-                                int pay_Periods=12;
-                                int annual_Pay=0;//Intiliaze to zero to overwrite the garbage value
-                                cout<<"The amount of pay the employee earns each pay period = "<<pay_Amount<<endl;
-                                cout<<"The number of pay periods in a year = "<<pay_Periods<<endl;
-                                annual_Pay=pay_Amount*pay_Periods;
-                                cout<<"The employee\'s total annual pay, which will be calculated = "<<annual_Pay<<endl;
-                                
-                                return 0;
-                            }
+                                #include<cstdlib>
+                                #include<ctime>
+                                using namespace std;
+                                int  main()
+                                {
+                                  const int size=11;
+                                  int arr[size];
+                                  int num;
+                                  int x=time(0);
+                                  srand(x);
+                                  for(int i=0;i<10;i++){
+                                      arr[i]=(rand()%10)+1;
+                                  }
+                                  for(int i=0;i<10;i++){
+                                      cout<<arr[i]<<" ";
+                                  }
+                                  cout<<endl;
+                                  cout<<"Enter the element that you want to be insert :"<<endl;
+                                  cin>>num;
+                                  for(int i=0;i<size;i++){
+                                      if(i==10)
+                                      {
+                                          arr[i]=num;
+                                      }
+                                      cout<<arr[i]<<" ";
+                                  }
+                                  return 0;
+                                }
                         </xmp>
                     </code></pre>
                 </div>
@@ -268,20 +287,44 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Ocean_Levels</h2>
+                <h2>Write a c++ program to insert the element at the specific position.</h2>
                 <div class="code7">
                     <pre><code class="language-cpp">
                         <xmp>
                             #include<iostream>
+                                #include<cstdlib>
+                                #include<ctime>
                                 using namespace std;
                                 int main()
                                 {
-                                
-                                    float rise_perYear=1.5;
-                                    cout<<"The number of millimeters higher than the current level that the ocean\'s level will be in 5 years = "<<rise_perYear*5<<endl;
-                                    cout<<"The number of millimeters higher than the current level that the ocean\'s level will be in 7 years = "<<rise_perYear*7<<endl;
-                                    cout<<"The number of millimeters higher than the current level that the ocean\'s level will be in 10 years = "<<rise_perYear*10<<endl;
-                                
+                                  const int size=11;
+                                  int arr[size];
+                                  int num;
+                                  int pos;
+                                  int x=time(0);
+                                  srand(x);
+                                  for(int i=0;i<10;i++){
+                                      arr[i]=(rand()%10)+1;
+                                  }
+                                  for(int i=0;i<10;i++){
+                                      cout<<arr[i]<<" ";
+                                  }
+                                  cout<<endl;
+                                  cout<<"Enter the element that you want to be insert :"<<endl;
+                                  cin>>num;
+                                  cout<<"Enter the specific position that you want to insert :"<<endl;
+                                  cin>>pos;
+                                  for(int i=size;i>pos-2;i--){
+                                     arr[i]=arr[i-1];
+                                    if(i==pos-1)
+                                      {
+                                          arr[i]=num;
+                                      }
+                                  }
+                                  cout<<"The inserted array at the specific position = "<<endl;
+                                  for(int i=0;i<size;i++){
+                                      cout<<arr[i]<<" ";
+                                  }
                                     return 0;
                                 }
                         </xmp>
@@ -294,37 +337,41 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Total_Purchase</h2>
+                <h2>Write a c++ program to delete the element at the specific position.</h2>
                 <div class="code8">
                     <pre><code class="language-cpp">
                         <xmp>
-                            #include <iostream>
+                            #include<iostream>
+                                #include<cstdlib>
+                                #include<ctime>
                                 using namespace std;
                                 int main()
                                 {
+                                  const int size=10;
+                                  int arr[size];
+                                  int num;
+                                  int pos;
+                                  int x=time(0);
+                                  srand(x);
+                                  for(int i=0;i<size;i++){
+                                      arr[i]=(rand()%10)+1;
+                                  }
+                                  for(int i=0;i<size;i++){
+                                      cout<<arr[i]<<" ";
+                                  }
+                                  cout<<endl;
+                                  cout<<"Enter the specific position that you want to delete :"<<endl;
+                                  cin>>pos;
+                                  for(int i=pos-1;i<size-1;i++){
+                                      arr[i]=arr[i+1];
+                                  }
+                                  cout<<"The deleted array = "<<endl;
+                                  for(int i=0;i<size-1;i++)
+                                  {
+                                      cout<<arr[i]<<" ";
+                                  }
                                 
-                                    float Pricofitem1 = 15.95;
-                                    float Priceofitem2 = 24.95;
-                                    float Priceofitem3 = 6.95;
-                                    float Priceofitem4 = 12.95;
-                                    float Priceofitem5 = 3.95;
-                                    float subTotal = Pricofitem1 + Priceofitem2 + Priceofitem3 + Priceofitem4 + Priceofitem5;
-                                    int salestax = 7;
-                                    float total_tax;
-                                    float total;
-                                    double rate=0;
-                                    cout << "Price of item 1 = $15.95 " << endl
-                                         << " Price of item 2 = $24.95 " << endl
-                                         << " Price of item 3 = $6.95 " << endl
-                                         << " Price of item 4 = $12.95 " << endl
-                                         << " Price of item 5 = $3.95 "<<endl;
-                                    cout << "The amount of subtotal = " << subTotal << endl;
-                                    cout << "The amount of sales_tax = " << salestax << endl;
-                                    rate=(float)salestax/100;//To get the anse in float it must be store as float
-                                    total_tax=rate*subTotal;
-                                    total=total_tax+subTotal;
-                                    cout<<"The total amount with tax = "<<total<<endl;
-                                    return 0;
+                                  return 0;
                                 }
                         </xmp>
                     </code></pre>
@@ -339,24 +386,54 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Cyborg Data Type Sizes</h2>
+                <h2>Write a C++ Program to count the frequncy of the elements in  the array.</h2>
                 <div class="code9">
                     <pre><code class="language-cpp">
                         <xmp>
-                            #include <iostream>
+                            #include<iostream>
                                 using namespace std;
                                 int main()
                                 {
                                 
-                                    cout << "The size of memeory of int dataType = " << sizeof(int) << " Bytes" << endl;
-                                    cout << "The size of memeory of float dataType = " << sizeof(float) << " Bytes" << endl;
-                                    cout << "The size of memeory of double dataType = " << sizeof(double) << " Bytes" << endl;
-                                    cout << "The size of memeory of char dataType = " << sizeof(char) << " Bytes" << endl;
-                                    cout << "The size of memeory of bool dataType = " << sizeof(bool) << " Bytes" << endl;
-                                    cout << "The size of memeory of long int dataType = " << sizeof(long int) << " Bytes" << endl;
-                                    cout << "The size of memeory of long long int dataType = " << sizeof(long long int) << " Bytes" << endl;
-                                    cout << "The size of memeory of long  double dataType = " << sizeof(long double) << " Bytes" << endl;
-                                
+                                  const int size=10;
+                                  int arr[size];
+                                  int freq[size]={0};//Initailize the whole array of frequency with zero
+                                  int count;
+                                  cout<<"Enter the elements of the array :"<<endl;
+                                  for(int i=0;i<size;i++){
+                                      cin>>arr[i];
+                                  }
+                                  cout<<"The elements that you want to be enter = "<<endl;
+                                  for(int i=0;i<size;i++){
+                                      cout<<arr[i]<<" ";
+                                  }
+                                  cout<<"The frequency of each element = "<<endl;
+                                  //outer loop controls the number index that frequenct can be counted
+                                  for(int i=0;i<size;i++ ){
+                                      count=1;//intitalize to 1 beacuse every number must have a minimum frequency of 1
+                                      for(int j=i+1;j<=size;j++)//inner loop starts from the i+1 to campare it with nrext index element
+                                      {
+                                           if(arr[i]==arr[j])//comparsion
+                                           {
+                                               count++;
+                                               freq[j]=-1;//this is very imporatnt concpet that if number repeats than it iniliathe the next index of freq with -1
+                                               //to not repeat the it 
+                                           }
+                                      }
+                                      if(freq[i]!=-1)//if index is not equal to -1 than its value of freq is equal to the count
+                                      {
+                                          freq[i]=count;
+                                      }
+                                  }
+                                  for(int i=0;i<size;i++)
+                                  {
+                                      //if eveery those index of freq that have not the -1 repeated index we just printed only these values
+                                      if(freq[i]!=-1)
+                                      {
+                                          cout<<"The number "<<arr[i]<<" has  frequency of "<<freq[i]<<endl;
+                                      }
+                                  }
+                             
                                     return 0;
                                 }
                         </xmp>
@@ -370,20 +447,53 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Miles_Per_Gallion</h2>
+                <h2>Write a C++ program print all unique elements in the array.</h2>
                 <div class="code10">
                     <pre><code class="language-cpp">
                         <xmp>
-                            #include <iostream>
+                            #include<iostream>
                                 using namespace std;
                                 int main()
                                 {
-                                    int gallons_of_Gasoline = 15;
-                                    int car_travel_miles = 375;
-                                    float MPG;
-                                    MPG = (float)car_travel_miles / gallons_of_Gasoline;
-                                    cout << " The number of miles per gallon the car gets = " << MPG<<"m/g" << endl;
                                 
+                                  const int size=10;
+                                  int arr[size];
+                                  int freq[size]={0};//Initailize the whole array of frequency with zero
+                                  int count;
+                                  cout<<"Enter the elements of the array :"<<endl;
+                                  for(int i=0;i<size;i++){
+                                      cin>>arr[i];
+                                  }
+                                  cout<<"The elements that you want to be enter = "<<endl;
+                                  for(int i=0;i<size;i++){
+                                      cout<<arr[i]<<" ";
+                                  }
+                                  cout<<"The unique elements are = "<<endl;
+                                  //outer loop controls the number index that frequenct can be counted
+                                  for(int i=0;i<size;i++ ){
+                                      count=1;//intitalize to 1 beacuse every number must have a minimum frequency of 1
+                                      for(int j=i+1;j<=size;j++)//inner loop starts from the i+1 to campare it with nrext index element
+                                      {
+                                           if(arr[i]==arr[j])//comparsion
+                                           {
+                                               count++;
+                                               freq[j]=-1;//this is very imporatnt concpet that if number repeats than it iniliathe the next index of freq with -1
+                                               //to not repeat the it 
+                                           }
+                                      }
+                                      if(freq[i]!=-1)//if index is not equal to -1 than its value of freq is equal to the count
+                                      {
+                                          freq[i]=count;
+                                      }
+                                  }
+                                  for(int i=0;i<size;i++)
+                                  {
+                                      //if element have frequency 1  we just printed only these values
+                                      if(freq[i]==1)
+                                      {
+                                          cout<<arr[i]<<" ";
+                                      }
+                                  }
                                     return 0;
                                 }
                         </xmp>
@@ -397,24 +507,53 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Distance per Tank of Gas </h2>
+                <h2>Write a C++ program to count number of duplicate elements in the array.</h2>
                 <div class="code11">
                     <pre><code class="language-cpp">
                         <xmp>
-                            #include <iostream>
+                            #include<iostream>
                                 using namespace std;
                                 int main()
                                 {
                                 
-                                    int gallon_space = 20;
-                                    float mpg_town = 23.5;
-                                    float mpg_highway = 28.9;
-                                    float distance_town;
-                                    float distance_highway;
-                                    distance_town = gallon_space * mpg_town;
-                                    distance_highway = gallon_space * mpg_highway;
-                                    cout << "The distance the car can travel on one tank of gas when driven in town = " << distance_town <<"miles"<< endl;
-                                    cout << "The distance the car can travel on one tank of gas when driven on highway = " << distance_highway <<"miles"<< endl;
+                                  const int size=10;
+                                  int arr[size];
+                                  int freq[size]={0};//Initailize the whole array of frequency with zero
+                                  int count;
+                                  cout<<"Enter the elements of the array :"<<endl;
+                                  for(int i=0;i<size;i++){
+                                      cin>>arr[i];
+                                  }
+                                  cout<<"The elements that you want to be enter = "<<endl;
+                                  for(int i=0;i<size;i++){
+                                      cout<<arr[i]<<" ";
+                                  }
+                                  cout<<"The unique elements are = "<<endl;
+                                  //outer loop controls the number index that frequenct can be counted
+                                  for(int i=0;i<size;i++ ){
+                                      count=1;//intitalize to 1 beacuse every number must have a minimum frequency of 1
+                                      for(int j=i+1;j<=size;j++)//inner loop starts from the i+1 to campare it with nrext index element
+                                      {
+                                           if(arr[i]==arr[j])//comparsion
+                                           {
+                                               count++;
+                                               freq[j]=-1;//this is very imporatnt concpet that if number repeats than it iniliathe the next index of freq with -1
+                                               //to not repeat the it 
+                                           }
+                                      }
+                                      if(freq[i]!=-1)//if index is not equal to -1 than its value of freq is equal to the count
+                                      {
+                                          freq[i]=count;
+                                      }
+                                  }
+                                  for(int i=0;i<size;i++)
+                                  {
+                                      //if element have frequency 2  we just printed only these values
+                                      if(freq[i]==2)
+                                      {
+                                          cout<<arr[i]<<" ";
+                                      }
+                                  }
                                 
                                     return 0;
                                 }
@@ -430,21 +569,41 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Land Calculation</h2>
+                <h2>Write a c++ progarm to copy the one array into the another array.</h2>
                 <div class="code12">
                     <pre><code class="language-cpp">
                         <xmp>
-                            #include <iostream>
+                            #include<iostream>
+                                #include<cstdlib>
+                                #include<ctime>
                                 using namespace std;
-                                int main()
+                                int  main()
                                 {
-                                    int one_acre = 43560;
-                                    long int tract = 391876;
-                                    float numberOfAcresInTract = 0;
-                                    numberOfAcresInTract = (float)tract / one_acre;
-                                    cout << "The number of acres in a tract of land with 391,876 square feet = " << numberOfAcresInTract << endl;
-                                
-                                    return 0;
+                                  const int size=10;
+                                  int arr[size];
+                                  int copy[size]={0};
+                                  int x=time(0);
+                                  srand(x);
+                                  for(int i=0;i<size;i++){
+                                      arr[i]=(rand()%10)+1;
+                                  }
+                                  for(int i=0;i<size;i++){
+                                      cout<<arr[i]<<" ";
+                                  }
+                                  cout<<endl;
+                                  cout<<"The uncopied array = ";
+                                  for(int i=0;i<size;i++){
+                                      cout<<copy[i]<<" ";
+                                  }
+                                  cout<<endl;
+                                  cout<<"The copied array = ";
+                                  for(int i=0;i<size;i++){
+                                      copy[i]=arr[i];
+                                  }
+                                  for(int i=0;i<size;i++){
+                                      cout<<copy[i]<<" ";
+                                  }
+                                  return 0;
                                 }
                         </xmp>
                     </code></pre>
@@ -455,7 +614,7 @@
 
 
 
-
+<!---
 
          <div class="col-6">
             <div class="row-6-1">
