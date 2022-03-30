@@ -183,6 +183,50 @@
          </div>
 
 
+
+
+         <div class="col-6">
+            <div class="row-6-1">
+                <h2>Write a C++ program to find the  largest and smallest element in the array.</h2>
+                <div class="code5">
+                    <pre><code class="language-cpp">
+                        <xmp>
+                            #include<iostream>
+                                using namespace std;
+                                int main()
+                                {
+                                    const int size=4;
+                                    int arr[size];
+                                    int max;
+                                    int min;
+                                    cout<<"Enter the numbers:"<<endl;
+                                    for(int i=0;i<size;i++){
+                                        cin>>arr[i];
+                                    }
+                                     max=arr[0];
+                                     min=arr[0];
+                                    for(int i=0;i<size;i++){
+                                         if(max<arr[i])
+                                         {
+                                             max=arr[i];
+                                         }
+                                         if(min>arr[i])
+                                         {
+                                             min=arr[i];
+                                         }
+                                    }
+                                    cout<<"The maximum between these numbers = "<<max<<endl;
+                                    cout<<"The minimum between these numbers = "<<min<<endl;
+                                    return 0;
+                                }
+                        </xmp>
+                    </code></pre>
+                </div>
+            </div>
+         </div>
+
+
+         
          <div class="col-6">
             <div class="row-6-1">
                 <h2>Write a C++ program to find the Second largest element in the array.</h2>
