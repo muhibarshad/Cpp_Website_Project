@@ -614,11 +614,11 @@
 
 
 
-<!---
+
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2> Circuit Board Price</h2>
+                <h2>Write a C++ program to delete all the duplicate elements in the array:</h2>
                 <div class="code13">
                     <pre><code class="language-cpp">
                         <xmp>
@@ -626,16 +626,39 @@
                                 using namespace std;
                                 int main()
                                 {
-                                    int profit_percent = 35;
-                                    float costs = 14.95;
-                                    float total = 0;
-                                    total = (float)35 / 100;
-                                    total = total * costs;
-                                    total = total + costs;
-                                    cout << "The total cost of the circuit_board = " << total << endl;
+                                    int size = 10;
+                                    int arr[size] = {};
+                                    cout << "Enter the elemnts in the array:" << endl;
+                                    for (int i = 0; i < size; i++)
+                                    {
+                                        cin >> arr[i];
+                                    }
+                                    for (int i = 0; i < size; i++)
+                                    {
+                                        cout << arr[i] << " ";
+                                    }
+                                    for (int i = 0; i < size; i++)
+                                    { // outer loop i can control the index that can be compared to be repeated or not
+                                        for (int j = i + 1; j <= size; j++)
+                                        { // innner loop j can be control the index with the i index can be compared
+                                            if (arr[i] == arr[j])
+                                            {
+                                                for (int k = j; k <= size; k++)
+                                                {                        // most inner loop k can shift the array to overwrite the repeated index with the next index element
+                                                    arr[k] = arr[k + 1]; // when we can shift the array the size of array after one iteration of k became size-1
+                                                }
+                                                size--; // so write as size-- after the shifting of an full array
+                                            }
+                                        }
+                                    }
+                                    cout << "The latest array is here:" << endl;
+                                    for (int i = 0; i < size; i++)
+                                    {
+                                        cout << arr[i] << " ";
+                                    }
                                 
                                     return 0;
-                                }
+                                }                                
                         </xmp>
                     </code></pre>
                 </div>
@@ -648,21 +671,59 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Personal Information </h2>
+                <h2>Write a C++ program to merge two arrays into the second array:</h2>
                 <div class="code14">
                     <pre><code class="language-cpp">
                         <xmp>
-                            #include <iostream>
+                            #include<iostream>
                                 using namespace std;
                                 int main()
-                                {
-                                    cout << "Muhib Arshad" << endl;
-                                    cout << "Raheem_town street #01 canal_road Tehsil Kabirwala District khanewal Country Pakistan and Zip code is +92" << endl;
-                                    cout << "03006373841" << endl;
-                                    cout << "Software_Engeenering" << endl;
+                                { 
                                 
-                                    return 0;
-                                }
+                                    int size1;
+                                    int size2;
+                                    int size3;
+                                    cout<<"Enter the size of the first array:"<<endl;
+                                    cin>>size1;
+                                    int arr1[size1];
+                                    cout<<"Enter the elements of one array:"<<endl;
+                                    for(int i=0;i<size1;i++){
+                                        cin>>arr1[i];
+                                    }
+                                    cout<<"Enter the size of the first array:"<<endl;
+                                    cin>>size2;
+                                    int arr2[size2];
+                                    cout<<"Enter the elements in the second array:"<<endl;
+                                    for(int i=0;i<size2;i++){
+                                        cin>>arr2[i];
+                                    }
+                                    size3=size1+size2;
+                                    int arr3[size3]={};
+                                    cout<<"The third array before the merging is initialized to zero as:"<<endl;
+                                    for(int i=0;i<size3;i++){
+                                        cout<<arr3[i]<<" ";
+                                    }
+                                    cout<<endl;
+                                    int j=0;
+                                    for(int i=0;i<size3;i++){
+                                        if(i<size1)
+                                        {
+                                            arr3[i]=arr1[i];
+                                        }
+                                        else{
+                                            arr3[i]=arr2[j];
+                                            j++;
+                                        }
+                                
+                                    }
+                                 cout<<"The third array after the merging is as:"<<endl;
+                                 for(int i=0;i<size3;i++)
+                                 {
+                                     cout<<arr3[i]<<" ";
+                                 }
+                                   return 0;
+                                
+                                }                                
                         </xmp>
                     </code></pre>
                 </div>
@@ -676,19 +737,38 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Triangle Pattern</h2>
+                <h2>Write a C++ program to revers the array:</h2>
                 <div class="code15">
                     <pre><code class="language-cpp">
                         <xmp>
-                            #include <iostream>
+                            #include<iostream>
+                                #include<cstdlib>
+                                #include<ctime>
                                 using namespace std;
                                 int main()
                                 {
-                                    cout << "   *   " << endl;
-                                    cout << "  ***  " << endl;
-                                    cout << " ***** " << endl;
-                                    cout << "*******" << endl;
-                                
+                                   const int size=10;
+                                   int x=time(0);
+                                   srand(x);
+                                   int arr[size];
+                                   cout<<"The array without reversed as:"<<endl;
+                                   for(int i=0;i<size;i++){
+                                       arr[i]=(rand()%10)+1;
+                                   }
+                                   for(int i=0;i<size;i++){
+                                       cout<<arr[i]<<" ";
+                                   }
+                                   cout<<endl;
+                                   for(int i=0,j=size-1;i<(size/2);i++,j--){
+                                        int temp;
+                                        temp=arr[i];
+                                        arr[i]=arr[j];
+                                        arr[j]=temp;
+                                   }
+                                   cout<<"The reversed array is as:"<<endl;
+                                   for(int i=0;i<size;i++){
+                                       cout<<arr[i]<<" ";
+                                   }
                                     return 0;
                                 }
                         </xmp>
@@ -703,24 +783,56 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Diamond</h2>
+                <h2>Write a C++ program to put the even and odd elements of an array into the two separate arrays:</h2>
                 <div class="code16">
                     <pre><code class="language-cpp">
                         <xmp>
-                            #include <iostream>
+                            #include<iostream>
                                 using namespace std;
                                 int main()
                                 {
-                                    cout << "   *   " << endl;
-                                    cout << "  ***  " << endl;
-                                    cout << " ***** " << endl;
-                                    cout << "*******" << endl;
-                                    cout << " ***** " << endl;
-                                    cout << "  ***  " << endl;
-                                    cout << "   *   " << endl;
-                                
+                                   const int size=10;
+                                   int arr3[size];
+                                   int arr_even[size]={};
+                                   int arr_odd[size]={};
+                                   int even=0;
+                                   int odd=0;
+                                   cout<<"Enter the elements in the array:"<<endl;
+                                   for(int i=0;i<size;i++)
+                                   {
+                                       cin>>arr3[i];
+                                   }
+                                   cout<<"The elements enter in the array are :"<<endl;
+                                   for(int i=0;i<size;i++)
+                                   {
+                                       cout<<arr3[i]<<" ";
+                                   }
+                                   cout<<endl;
+                                   for(int i=0,j=0,k=0;i<size;i++)
+                                   {
+                                       if(arr3[i]%2==0){
+                                           arr_even[j]=arr3[i];
+                                           even++;
+                                           j++;
+                                       }
+                                       else
+                                       {
+                                           arr_odd[k]=arr3[i];
+                                           odd++;
+                                           k++;
+                                       }
+                                   }
+                                   cout<<"The even elements in the array are as:"<<endl;
+                                   for(int i=0;i<even;i++){
+                                       cout<<arr_even[i]<<" ";
+                                   }
+                                   cout<<endl;
+                                    cout<<"The odd elements in the array are as:"<<endl;
+                                   for(int i=0;i<odd;i++){
+                                       cout<<arr_odd[i]<<" ";
+                                   }  
                                     return 0;
-                                }
+                                }                                
                         </xmp>
                     </code></pre>
                 </div>
@@ -730,7 +842,7 @@
 
 
 
-
+<!--
          <div class="col-6">
             <div class="row-6-1">
                 <h2> Stock Commission </h2>
