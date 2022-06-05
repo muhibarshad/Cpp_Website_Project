@@ -52,7 +52,7 @@
                             <li><a href="loops.html"><button class="btnside">Loops</button></a></li>
                             <li><a href="functions.html"><button class="btnside">Functions</button></a></li>
                             <li><a href="arrays.html"><button class="btnside">Arrays</button></a></li>
-                            <li><a href="sorting.html"><button class="btnside">Sorting Searching</button></a></li>
+                            <li><a href="filehandling.html"><button class="btnside">File Handling</button></a></li>
                             <li><a href="structure.html"><button class="btnside">Structure</button></a></li>
                             <li><a href="pointers.html"><button class="btnside">Pointers</button></a></li>
                         </ul>
@@ -62,49 +62,33 @@
 
 
 
-                <div class="alert">
-                    <img src="./images/alert.jpg" alt="Alert">
-                </div>
-                <div class="comingsoon">
-                    <h1>
-                       <b>No Access</b>,to these beacuse you don't studied them in class.
-                        <br>
-                        SO,when your lecture is completed about these topics then you have an access to it.
-                        <br>
-                        Please Wait until.
-                        <br>
-                        Thanks!
-                        <br>
-                        If you are interested and want to study them than you contact us !
-                        <br>
-                    </h1>
-                </div>
-                <div class="comingcontact">
-                    <a href="contact.html"><button>Contact_Us</button></a>
-                </div>
-
 
 
 
 
                 
-                <!-- <div class="col-2">
+                 <div class="col-2">
                     <div class="basics">
-                      <h2>Sum_Of_Two_Numbers</h2>
+                      <h2>How function actually works?</h2>
                        <div class="code">
                         <pre class="cpp"><code class="language-cpp">
                             <xmp>
-                                #include<iostream>
-                                    using namespace std;
-                                    int main()
-                                    {
-                                        int num_1=50;
-                                        int num_2=100;
-                                        int sum;
-                                        sum=num_1+num_2;
-                                        cout<<"The sum of these two numbers = "<<sum<<endl;
-                                        return 0;
-                                    }
+                               <p>Basically,When we call any function the control of the program shifts
+                                   towards the function and execuate the all portion in the function and
+                                   when it find the <strong>return</strong> statement the control goes to 
+                                   the main and execuate the further part of the main function.So if we write 
+                                   anyting after the return staement it does not execute so local varaibles are 
+                                   formed and removed on the function calling ,so it helps us to know how every part
+                                   of the program can execuate</p>
+                                   <h2>How Function can be write as?</h2>
+                                   dataType funationName(datatype varibaleName1,datatype varibaleName2,.....)
+                                   <h1>Types of the functions</h1>
+                                   1.Void Functions(non-return Type)
+                                   2.dataType Functions(return-Type)
+                                   3.dataType Functions(non-returnType)
+                                   4.Pass by refernce Functions (argumantatiev dependent functions)
+                                   5.Recursive Functions
+                                   ***Functions has also Prototypes***
                                     
                             </xmp>
                         </code></pre>
@@ -117,86 +101,264 @@
         </div>
 
      <div class="contanier-6">
+
+
+         <div class="col-6">
+             <div class="row-6-1">
+                 <h2>Input And Output Functions</h2>
+                 <div class="code3">
+                     <pre><code class="language-cpp">
+                        <xmp>
+                            #include <iostream>
+#include<cstdlib>
+#include<ctime>
+using namespace std;
+void input(int arr[],int size)
+{
+  for(int i=0;i<size;i++)
+  {
+      arr[i]=(rand()%10)+1;
+  }
+}
+void output(int arr[],int size)
+{
+   for(int i=0;i<size;i++)
+   {
+       cout<<arr[i]<<" ";
+   }
+}
+void random()
+{
+    int x = time(0);
+    srand(x);
+}
+int main()
+{
+    const int size=10;
+    int arr[size];
+    random();
+    input(arr,size);
+    output(arr,size);
+    return 0;
+}
+                        </xmp>
+                    </code></pre>
+                 </div>
+             </div>
+         </div>
+
+
+
+
+
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Sales_Prediction</h2>
+                <h2>For better understanding of the 2D-Character Arrays Functions understand this simple movement game.</h2>
                 <div class="code2">
                     <pre><code class="language-cpp">
                         <xmp>
-                            #include<iostream>
-                                using namespace std;
-                                int main()
-                                {
-                                    long double sales=8.6E6;
-                                    float percentage=0.56;
-                                    long double predict_division=0;
-                                    predict_division=sales*percentage;
-                                    cout<<"The predicted sales percentage = "<<predict_division<<endl;
-                                     
-                                    return 0;
-                                }
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <iomanip>
+#include <conio.h>
+using namespace std;
+const int row = 10;
+const int col = 100;
+void displaygeneral(char mat[][col], int row)
+{
+    system("cls");
+    cout << " ____________________________________________________________________________________________________" << endl;
+    for (int i = 0; i < row; i++)
+    {
+        cout << "|";
+        for (int j = 0; j < col; j++)
+        {
+
+            cout << mat[i][j];
+        }
+        cout << "|";
+        if (i != 10)
+            cout << endl;
+    }
+    cout << " ____________________________________________________________________________________________________" << endl;
+}
+void start(char mat[][col], int row)
+{
+
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            if (i == 0 && j == 0 )
+            {
+                mat[0][0] = 3;
+            }
+            else
+                mat[i][j] = ' ';
+        }
+    }
+    displaygeneral(mat, row);
+}
+void moveright(char mat[][col], int row, int &pos,int &down)
+{
+    int temp;
+    temp = mat[down][pos + 1];
+    mat[down][pos + 1] = mat[down][pos];
+    mat[down][pos] = temp;
+    pos++;
+}
+void moveleft(char mat[][col], int row, int &pos,int &down)
+{
+    int temp;
+    temp = mat[down][pos - 1];
+    mat[down][pos - 1] = mat[down][pos];
+    mat[down][pos] = temp;
+    pos--;
+}
+void movedown(char mat[][col], int row, int &pos,int &down)
+{
+    int temp;
+    temp = mat[down+1][pos];
+    mat[down+1][pos] = mat[down][pos];
+    mat[down][pos] = temp;
+    down++;
+}
+void moveup(char mat[][col], int row, int &pos, int &down)
+{
+    int temp;
+    temp = mat[down - 1][pos];
+    mat[down - 1][pos] = mat[down][pos];
+    mat[down][pos] = temp;
+    down--;
+}
+void menu(char mat[][col],int row,int rightpos,int &downpos)
+{
+    bool flag = false;
+    do
+    {
+        int ch;
+        ch = getch();
+        ch=tolower(ch);
+        while (ch != 'd' && ch != 'a' && ch != 'w' && ch != 's' && ch != 'q' )
+        {
+            cout<<"Invalid input:"<<endl;
+            cout<<"Again Enter the word:"<<endl;
+            ch=getch();
+        }
+        ch=tolower(ch);
+            switch (ch)
+            {
+            case 'd':
+            {
+                moveright(mat, row, rightpos, downpos);
+                displaygeneral(mat, row);
+                break;
+            }
+            case 'a':
+            {
+                moveleft(mat, row, rightpos, downpos);
+                displaygeneral(mat, row);
+                break;
+            }
+            case 'w':
+            {
+                moveup(mat, row, rightpos, downpos);
+                displaygeneral(mat, row);
+                break;
+            }
+            case 's':
+            {
+                movedown(mat, row, rightpos, downpos);
+                displaygeneral(mat, row);
+                break;
+            }
+            }
+    } while (flag == false);
+}
+int main()
+{
+    int rightpos = 0;
+    int downpos=0;
+    char matrix[row][col];
+    start(matrix, row);
+    menu(matrix,row,rightpos,downpos);
+
+
+    return 0;
+}
                         </xmp>
                     </code></pre>
                 </div>
                 
             </div>
          </div>
-         <div class="col-6">
-            <div class="row-6-1">
-                <h2>Sales_Tax</h2>
-                <div class="code3">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            #include<iostream>
-                                using namespace std;
-                                int main()
-                                {
-                                    int purchase=95;
-                                    int stateTax=4;
-                                    int countryTax=2;
-                                    int totalTax=stateTax+countryTax;
-                                    int totalSaleTax=0;
-                                    totalSaleTax=(purchase*totalTax)/100;
-                                    totalSaleTax=totalSaleTax+purchase;
-                                    cout<<"The total sales tax is given as:"<<totalSaleTax<<endl;
-                                    return 0;
-                                    
-                                }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
+
+
+
+
 
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Resturant_Bill</h2>
+                <h2>Sequential Search Algorithum through Functions</h2>
                 <div class="code4">
                     <pre><code class="language-cpp">
                         <xmp>
-                            #include<iostream>
-                                using namespace std;
-                                int main()
-                                {
-                                   float tax=6.75;
-                                   int tip=20;
-                                   float mael_cost=88.67;
-                                   float total_tax=0;
-                                   float tax_rate;
-                                   float tax_amount;
-                                   float total_bill;
-                                   cout<<"The cost of meal is = "<<mael_cost<<endl;
-                                   cout<<"The amount of tax = "<<tax<<endl;
-                                   cout<<"The amount of tip = "<<tip<<endl;
-                                   total_tax=tax+tip;
-                                   tax_rate=total_tax/100;
-                                   tax_amount=mael_cost*tax_rate;
-                                   total_bill=tax_amount+mael_cost;
-                                   cout<<"The total amount of the bill = "<<total_bill<<"$"<<endl;
-                                
-                                    return 0;
-                                }
+#include<iostream>
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+void input(int arr[],int size)
+{
+    for(int i=0;i<size;i++)
+    {
+        arr[i] = (rand() % 10) + 1;
+    }
+}
+void output(int arr[], int size)
+{
+    
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr[i] << " ";
+    }
+}
+int position(int num,int arr[],int size)
+{
+    int pos;
+    bool flag=false;
+   for(int i=0;i<size && flag==false;i++)
+   {
+       if(arr[i]==num)
+       {
+         pos=i+1;
+         flag=true;
+       }   
+   }
+   if (flag == true)
+   {
+       return pos;
+   }
+   else
+   {
+       cout<<" Not present! ";
+       return 0;
+   }
+}
+int main()
+{
+    const int size=10;
+    int arr[size];
+    input(arr,size);
+    output(arr,size);
+    int n;
+    cout<<"To get position the element in the array:"<<endl;
+    cin>>n;
+    cout<<"The element that is present at the "<<position(n,arr,size)<<" position:"<<endl;
+    return 0;
+}
                         </xmp>
                     </code></pre>
                 </div>
@@ -206,28 +368,66 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Average_oF_Three_Values</h2>
+                <h2>Searching Algorithum through the functions</h2>
                 <div class="code5">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*Program to display the Average of three variables*/
-                            #include<iostream>
-                            using namespace std;
-                            int main()
-                            {
-                                
-                                int num1=5;
-                                float num2=8.9;
-                                double num3=9.888;
-                                double average=0;//Intiliaze to zero to overwrite the garbage value
-                                average=(num1+num2+num3)/3;//Parantesis are used to discarge the priority order of division
-                                cout<<"Number 1 = "<<num1<<endl;
-                                cout<<"Number 2 = "<<num2<<endl;
-                                cout<<"Number 3 = "<<num3<<endl;
-                                cout<<"The average of these three numbers = "<<average<<endl;
-                                return 0;
-                                
-                            }
+#include <iostream>
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+void random()
+{
+    int x = time(0);
+    srand(x);
+}
+void input(int arr[], int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        arr[i] = (rand() % 10) + 1;
+    }
+}
+void output(int arr[], int size)
+{
+   cout<<"The usorted elements in the array:"<<endl;
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout<<endl;
+}
+void selectionSort(int arr[],int size)
+{
+    cout<<"The sorted elements in the array are :"<<endl;
+    int index;
+    for(int i=0;i<size;i++)
+    {
+        index=i;
+        for(int j=i+1;j<size;j++)
+        {
+            if(arr[j]<arr[index])
+            {
+                index=j;
+            }
+        }
+        int temp;
+        temp=arr[i];
+        arr[i]=arr[index];
+        arr[index]=temp;
+    }
+}
+int main()
+{
+    const int size = 10;
+    int arr[size];
+    random();
+    input(arr, size);
+    output(arr, size);
+    selectionSort(arr,size);
+    output(arr, size);
+}
                         </xmp>
                     </code></pre>
                 </div>
@@ -238,52 +438,121 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Annual_Pay</h2>
+                <h2>Transpose of a matrix through the Functions</h2>
                 <div class="code6">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*Program to display the anual_pay of user income */
-                            #include<iostream>
-                            using namespace std;
-                            int main()
-                            {
-                                
-                                int pay_Amount=2000;
-                                int pay_Periods=12;
-                                int annual_Pay=0;//Intiliaze to zero to overwrite the garbage value
-                                cout<<"The amount of pay the employee earns each pay period = "<<pay_Amount<<endl;
-                                cout<<"The number of pay periods in a year = "<<pay_Periods<<endl;
-                                annual_Pay=pay_Amount*pay_Periods;
-                                cout<<"The employee\'s total annual pay, which will be calculated = "<<annual_Pay<<endl;
-                                
-                                return 0;
-                            }
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include<iomanip>
+using namespace std;
+const int row=5;
+const int col=5;
+void random();
+void inputmatrix(int mat[][col],int row);
+void outputmatrix(int mat[][col],int row);
+void transpos(int trans[][col], int row, int mat[][col], int rowMat);
+void displayTranspose(int trans[][col], int row) ;
+void display();
+int main()
+{
+    display();
+}
+void random()
+{
+    int x = time(0);
+    srand(x);
+}
+void inputmatrix(int mat[][col],int row)
+{
+    for(int i=0;i<row;i++)
+    {
+        for(int j=0;j<col;j++)
+        {
+            mat[i][j]=(rand()%10)+1;
+            // cin>>mat[i][j];
+        }
+    }
+
+}
+void outputmatrix(int mat[][col], int row){
+  cout<<"The matrix as:"<<endl;
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            cout<<left;
+            cout<<setw(5)<<mat[i][j];
+        }
+        cout<<endl;
+    }
+}
+void transpos(int trans[][col], int row,int mat[][col],int rowMat){
+    for(int i=0;i<rowMat;i++)
+    {
+        for(int j=0;j<col;j++)
+        {
+            trans[j][i]=mat[i][j];
+        }
+    }
+}
+void displayTranspose(int trans[][col], int row)
+{
+    cout << "The Transpose of a matrix as:" << endl;
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            cout << left;
+            cout << setw(5) << trans[i][j];
+        }
+        cout << endl;
+    }
+}
+void display()
+{
+
+    int matrix[row][col];
+    int transpose[row][col];
+    random();
+    inputmatrix(matrix, row);
+    outputmatrix(matrix, row);
+    transpos(transpose, row, matrix, row);
+    displayTranspose(transpose, row);
+}
                         </xmp>
                     </code></pre>
                 </div>
             </div>
          </div>
 
-
+ <h1 id="under-commands">Recursive Functions</h1>
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Ocean_Levels</h2>
+                <h2>Alphabts Print</h2>
                 <div class="code7">
                     <pre><code class="language-cpp">
                         <xmp>
-                            #include<iostream>
-                                using namespace std;
-                                int main()
-                                {
-                                
-                                    float rise_perYear=1.5;
-                                    cout<<"The number of millimeters higher than the current level that the ocean\'s level will be in 5 years = "<<rise_perYear*5<<endl;
-                                    cout<<"The number of millimeters higher than the current level that the ocean\'s level will be in 7 years = "<<rise_perYear*7<<endl;
-                                    cout<<"The number of millimeters higher than the current level that the ocean\'s level will be in 10 years = "<<rise_perYear*10<<endl;
-                                
-                                    return 0;
-                                }
+#include<iostream>
+using namespace std;
+void alphabtaes(char ch)
+{
+    if(ch<=90)
+    {
+        cout<<ch<<endl;
+        ch++;
+        alphabtaes(ch);
+    }
+}
+int main()
+{
+   char ch=65;
+   alphabtaes(ch);
+
+    return 0;
+}
                         </xmp>
                     </code></pre>
                 </div>
@@ -294,38 +563,26 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Total_Purchase</h2>
+                <h2>Numbers Print through the recursive Functions</h2>
                 <div class="code8">
                     <pre><code class="language-cpp">
                         <xmp>
-                            #include <iostream>
-                                using namespace std;
-                                int main()
-                                {
-                                
-                                    float Pricofitem1 = 15.95;
-                                    float Priceofitem2 = 24.95;
-                                    float Priceofitem3 = 6.95;
-                                    float Priceofitem4 = 12.95;
-                                    float Priceofitem5 = 3.95;
-                                    float subTotal = Pricofitem1 + Priceofitem2 + Priceofitem3 + Priceofitem4 + Priceofitem5;
-                                    int salestax = 7;
-                                    float total_tax;
-                                    float total;
-                                    double rate=0;
-                                    cout << "Price of item 1 = $15.95 " << endl
-                                         << " Price of item 2 = $24.95 " << endl
-                                         << " Price of item 3 = $6.95 " << endl
-                                         << " Price of item 4 = $12.95 " << endl
-                                         << " Price of item 5 = $3.95 "<<endl;
-                                    cout << "The amount of subtotal = " << subTotal << endl;
-                                    cout << "The amount of sales_tax = " << salestax << endl;
-                                    rate=(float)salestax/100;//To get the anse in float it must be store as float
-                                    total_tax=rate*subTotal;
-                                    total=total_tax+subTotal;
-                                    cout<<"The total amount with tax = "<<total<<endl;
-                                    return 0;
-                                }
+#include<iostream>
+using namespace std;
+void print(int n)
+{
+    if(n<=50)
+    {
+        cout<<n<<" ";
+        n++;
+        print(n);
+    }
+}
+int main()
+{
+    print(1);
+    return 0;
+}
                         </xmp>
                     </code></pre>
                 </div>
@@ -339,53 +596,85 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Cyborg Data Type Sizes</h2>
+                <h2>Factorial Of a  given number through the recursive Function.</h2>
                 <div class="code9">
                     <pre><code class="language-cpp">
                         <xmp>
-                            #include <iostream>
-                                using namespace std;
-                                int main()
-                                {
-                                
-                                    cout << "The size of memeory of int dataType = " << sizeof(int) << " Bytes" << endl;
-                                    cout << "The size of memeory of float dataType = " << sizeof(float) << " Bytes" << endl;
-                                    cout << "The size of memeory of double dataType = " << sizeof(double) << " Bytes" << endl;
-                                    cout << "The size of memeory of char dataType = " << sizeof(char) << " Bytes" << endl;
-                                    cout << "The size of memeory of bool dataType = " << sizeof(bool) << " Bytes" << endl;
-                                    cout << "The size of memeory of long int dataType = " << sizeof(long int) << " Bytes" << endl;
-                                    cout << "The size of memeory of long long int dataType = " << sizeof(long long int) << " Bytes" << endl;
-                                    cout << "The size of memeory of long  double dataType = " << sizeof(long double) << " Bytes" << endl;
-                                
-                                    return 0;
-                                }
+#include<iostream>
+using namespace std;
+int fact(int);
+int input();
+int main()
+{
+    cout << fact(input());
+    return 0;
+}
+int input()
+{
+    int n;
+    cout<<"Enter a number:"<<endl;
+    cin>>n;
+
+    return n;
+}
+int fact(int n)
+{
+    if(n==1)
+    {
+        return 1;
+    }
+    return(n*fact(n-1));
+}
+
                         </xmp>
                     </code></pre>
                 </div>
             </div>
          </div>
 
+ <h1 id="under-commands">Default Paramerters and function Overloading</h1>
 
-
-
+<br>
          <div class="col-6">
             <div class="row-6-1">
-                <h2>Miles_Per_Gallion</h2>
+                <h2>Power of a number</h2>
                 <div class="code10">
                     <pre><code class="language-cpp">
                         <xmp>
-                            #include <iostream>
-                                using namespace std;
-                                int main()
-                                {
-                                    int gallons_of_Gasoline = 15;
-                                    int car_travel_miles = 375;
-                                    float MPG;
-                                    MPG = (float)car_travel_miles / gallons_of_Gasoline;
-                                    cout << " The number of miles per gallon the car gets = " << MPG<<"m/g" << endl;
-                                
-                                    return 0;
-                                }
+#include <iostream>
+using namespace std;
+int power(int n=2, int p=2);
+int power(int , int , int );//prototypes
+int main()
+{
+    int n, p;
+    
+    cin >> n;
+    cin >> p;
+    cout << power();         // default parameters
+    cout << power(n,p)<<endl;//function overloading 
+    cout << power(n,p,n);
+    return 0;
+}
+int power(int n=2, int p=2)
+{
+    int x = 1;
+    for (int i = 0; i < p; i++)
+    {
+        x = x * n;
+    }
+    return x;
+}
+int power(int n, int p,int v)
+{
+    int x = 1;
+    for (int i = 0; i < p; i++)
+    {
+        x = x * n*v;
+    }
+    return x;
+}
+
                         </xmp>
                     </code></pre>
                 </div>
@@ -393,254 +682,11 @@
          </div>
 
 
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h2>Distance per Tank of Gas </h2>
-                <div class="code11">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            #include <iostream>
-                                using namespace std;
-                                int main()
-                                {
-                                
-                                    int gallon_space = 20;
-                                    float mpg_town = 23.5;
-                                    float mpg_highway = 28.9;
-                                    float distance_town;
-                                    float distance_highway;
-                                    distance_town = gallon_space * mpg_town;
-                                    distance_highway = gallon_space * mpg_highway;
-                                    cout << "The distance the car can travel on one tank of gas when driven in town = " << distance_town <<"miles"<< endl;
-                                    cout << "The distance the car can travel on one tank of gas when driven on highway = " << distance_highway <<"miles"<< endl;
-                                
-                                    return 0;
-                                }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h2>Land Calculation</h2>
-                <div class="code12">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            #include <iostream>
-                                using namespace std;
-                                int main()
-                                {
-                                    int one_acre = 43560;
-                                    long int tract = 391876;
-                                    float numberOfAcresInTract = 0;
-                                    numberOfAcresInTract = (float)tract / one_acre;
-                                    cout << "The number of acres in a tract of land with 391,876 square feet = " << numberOfAcresInTract << endl;
-                                
-                                    return 0;
-                                }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-
-
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h2> Circuit Board Price</h2>
-                <div class="code13">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            #include <iostream>
-                                using namespace std;
-                                int main()
-                                {
-                                    int profit_percent = 35;
-                                    float costs = 14.95;
-                                    float total = 0;
-                                    total = (float)35 / 100;
-                                    total = total * costs;
-                                    total = total + costs;
-                                    cout << "The total cost of the circuit_board = " << total << endl;
-                                
-                                    return 0;
-                                }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h2>Personal Information </h2>
-                <div class="code14">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            #include <iostream>
-                                using namespace std;
-                                int main()
-                                {
-                                    cout << "Muhib Arshad" << endl;
-                                    cout << "Raheem_town street #01 canal_road Tehsil Kabirwala District khanewal Country Pakistan and Zip code is +92" << endl;
-                                    cout << "03006373841" << endl;
-                                    cout << "Software_Engeenering" << endl;
-                                
-                                    return 0;
-                                }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-
-
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h2>Triangle Pattern</h2>
-                <div class="code15">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            #include <iostream>
-                                using namespace std;
-                                int main()
-                                {
-                                    cout << "   *   " << endl;
-                                    cout << "  ***  " << endl;
-                                    cout << " ***** " << endl;
-                                    cout << "*******" << endl;
-                                
-                                    return 0;
-                                }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h2>Diamond</h2>
-                <div class="code16">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            #include <iostream>
-                                using namespace std;
-                                int main()
-                                {
-                                    cout << "   *   " << endl;
-                                    cout << "  ***  " << endl;
-                                    cout << " ***** " << endl;
-                                    cout << "*******" << endl;
-                                    cout << " ***** " << endl;
-                                    cout << "  ***  " << endl;
-                                    cout << "   *   " << endl;
-                                
-                                    return 0;
-                                }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h2> Stock Commission </h2>
-                <div class="code17">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            #include <iostream>
-                                using namespace std;
-                                int main()
-                                {
-                                    int shares = 750;
-                                    float stockprice = 35.00;
-                                    int comession = 2;
-                                    float amount_Of_comession;
-                                    float total_paid;
-                                    amount_Of_comession = (float)2 / 100;
-                                    amount_Of_comession = amount_Of_comession * stockprice;
-                                    total_paid = amount_Of_comession + stockprice;
-                                    cout << " The amount paid for the stock alone (without the commission) = " << stockprice << endl;
-                                    cout << " The amount of the commission = " << amount_Of_comession << endl;
-                                    cout << " The total amount paid (for the stock plus the commission) = " << total_paid << endl;
-                                
-                                    return 0;
-                                }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-
-
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h2> Energy Drink Consumption</h2>
-                <div class="code18">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            #include <iostream>
-                                using namespace std;
-                                int main()
-                                {
-                                    int customers = 16500;
-                                    int purchase_one_or_more_drinks_per_week_percentage = 15;
-                                    int who_prefer_citrus_flavored_energy_drinks = 58;
-                                    float total_customers_who_drink_more = 0;
-                                    float total_customers_who_like_citrus = 0;
-                                    total_customers_who_drink_more = (float)15 / 100;
-                                    total_customers_who_drink_more = total_customers_who_drink_more * customers;
-                                    total_customers_who_like_citrus = (float)58 / 100;
-                                    total_customers_who_like_citrus = total_customers_who_like_citrus * customers;
-                                    cout << " The approximate number of customers in the survey who purchase one or more energy drinks per week = " << total_customers_who_drink_more << endl;
-                                    cout << " The approximate number of customers in the survey who prefer citrus-flavored energy drinks= " << total_customers_who_like_citrus << endl;
-                                
-                                    return 0;
-                                }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
 
 
 
      </div>
- -->
+
 
         <div class="container-3">
             <div class="heading-2">
@@ -677,9 +723,14 @@
                     <div class="footer-col" id="about_us">
                         <h4>About_us</h4>
                         <p>
-                            We are the students from different well knowned UNiversities like PUCIT,FAST,NUST and COMSATS.
-                            Our main goal is to provide good CGPA with Skills to our Begginer programmers.We solve problems
-                            and help our juniors to understand the basice concepts .
+                        I am a student of PUCIT(New-Campus).I am currently doing BSSE.I am passionate about the mern
+                        stack web development ,operating systems,nfts and cyber security.In my first semister I found
+                        ,some students have problems like ,what i do? Which programs i do realted to the topic ,
+                        sometimes
+                        find very difficulty about the assignments than I take a decision ,i have to make a website from
+                        where i can upload all my experiences regarding to first semister and also some blogs to
+                        motivate the students about coding .So ,its a readymade coding dish for you enjoy it. Always
+                        remember me in your prayers.
                         </p>
                     </div>
     
@@ -708,7 +759,7 @@
                         <ul>
                             <li><a href="codesheets.html">Code_sheets</a></li>
                             <li><a href="blog.html">Blog</a></li>
-                            <li><a href="sinup.html">Sin_Up</a></li>
+                            <li><a href="sinup.html">Sign_in</a></li>
                             <li><a href="home.html">Home</a></li>
                         </ul>
                     </div>

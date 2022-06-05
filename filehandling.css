@@ -2,7 +2,7 @@
 {
     padding: 0;
     margin: 0;
-    font-family: 'Baloo Bhaina 2', sans-serif;
+    font-family: 'Baloo Bhaina 2',  sans-serif;
 }
 .contanier
 {
@@ -179,6 +179,7 @@ nav ul li a:hover
    
 }
 }
+
 
 .container-3
 {
@@ -446,7 +447,7 @@ footer
     width: 0ch;
     overflow: hidden;
     white-space: nowrap;
-    animation: text 3s steps(9) infinite alternate;
+    animation: text 6s steps(24) infinite alternate;
     border-right: 3px solid black;
 }
 @keyframes text {
@@ -456,7 +457,7 @@ footer
     }
     50%
     {
-        width: 9ch;
+        width: 24ch;
     }
 }
 .contanier-2
@@ -608,11 +609,11 @@ footer
 
 }
 
-/*All code CSS are WRITTEN As*/
+/* All code CSS are WRITTEN As */
 .contanier-6
 {
     width: 100%;
-    height: 1180vh;
+    height: 3110vh;
     box-sizing: border-box;
 }
 .col-6
@@ -626,6 +627,10 @@ footer
         text-align: center;
         font-size: 30px;
 }
+#under-commands
+{
+        margin-left: 500px;
+}
 @media only screen  and (max-width:700px)
 {
     .col-6
@@ -637,17 +642,22 @@ footer
     {
         height: 950vh;
     }
+     #under-commands
+    {
+        margin-left: 0px;
+    }
 }
 @media only screen  and (max-width:400px)
 {
     .contanier-6
     {
-        height: 870vh;
+        height: 2600vh;
+    }
+    #under-commands
+    {
+        margin-left: 0px;
     }
 }
-
-
-
 
 
 

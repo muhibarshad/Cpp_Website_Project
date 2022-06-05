@@ -607,11 +607,11 @@ footer
 
 }
 
-/*All code CSS are WRITTEN As*/
-/* .contanier-6
+/* All code CSS are WRITTEN As */
+ .contanier-6
 {
     width: 100%;
-    height: 1610vh;
+    height: 110vh;
     box-sizing: border-box;
 }
 .col-6
@@ -634,125 +634,16 @@ footer
     }
     .contanier-6
     {
-        height: 950vh;
+        height: 80vh;
     }
 }
 @media only screen  and (max-width:400px)
 {
     .contanier-6
     {
-        height: 1250vh;
+        height: 10vh;
     }
-} */
-
-
-
-
-/*The Alert part start here*/
-.comingsoon
-{
-    position: absolute;
-    top: 330px;
-    left: 700px;
-    height: 70vh;
-    width: 80vh;
-    text-align: center;
-    z-index: -1;
-    background: #f80202;
 }
-.comingsoon h1
-{
-    color: white;
-}
-.alert img
-{
-    position: absolute;
-    width: 37%;
-    height: 70%;
-    right: 565px;
-    top: 330px;
-    z-index: -1;
-}
-.comingcontact
-{
-    position: absolute;
-    top: 750px;
-    right: 540px;
-}
-.comingcontact button
-{
-    height: 7vh;
-    width: 25vh;
-    font-size: 20px;
-    color: #e9ebf1;
-    background-color: #008170;
-    border: 2px solid #008170;
-    border-radius: 20px;
-}
-.comingcontact button:hover
-{
-    cursor: pointer;
-    height: 7vh;
-    width: 25vh;
-    font-size: 20px;
-    color: #000000;
-    background-color: #10ac97;
-    border: 2px solid #10ac97;
-}
-@media only screen and (max-width:700px)
-{
- .comingsoon
-{
-    position: absolute;
-    top: 650px;
-    left: 110px;
-    height: 67vh;
-    width: 70%;
-    text-align: left;
-    z-index: -1;
-    background: #f80202;
-    font-size: 15px;
-}
-.alert img
-{
-    position: absolute;
-    width: 70%;
-    height: 40%;
-    left: 110px;
-    top: 270px;
-    z-index: -1;
-}
-.comingcontact
-{
-    position: absolute;
-    top: 1300px;
-    right: 40px;
-}
-.comingcontact button
-{
-    height: 7vh;
-    width: 25vh;
-    font-size: 20px;
-    color: #e9ebf1;
-    background-color: #008170;
-    border: 2px solid #008170;
-    border-radius: 20px;
-}
-.comingcontact button:hover
-{
-    cursor: pointer;
-    height: 7vh;
-    width: 25vh;
-    font-size: 20px;
-    color: #000000;
-    background-color: #10ac97;
-    border: 2px solid #10ac97;
-}
-}
-
-
-
-
 
 
 

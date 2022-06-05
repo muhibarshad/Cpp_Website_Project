@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="filehandling.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="./Prism/prism-final.css">
+    <title>Code-sheets/sorting</title>
+</head>
+
+<body>
+    <div class="contanier">
+        <div class="navbar">
+            <h2 class="logo">Muhib_Codes</h2>
+            <nav>
+                <ul id="menu_list">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="codesheets.html">Code_Sheets</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">Contact_Us</a></li>
+                </ul>
+            </nav>
+            <img src="images/menu-icon.png" alt="Menu-icon" id="menu-icon" onclick="toggle_menu()">
+        </div>
+        <div class="arrow">
+            <img src="./images/arrowdown.png" alt="arrow" class="arrowdown">
+        </div>
+        <div class="arrowleft">
+            <img src="./images/arrowright2.png" alt="arrow">
+        </div>
+        <div class="assignments">
+            <a href="assignments.html"><button>PF-(PUCIT_NEW-CAMPUS)
+                    SOLVED ASSIGNMENTS
+                </button></a>
+
+        </div>
+        <div class="contanier-2">
+            <div class="heading">
+                <h1>File Handling</h1>
+            </div>
+            <div class="row-1">
+                <div class="col-1">
+                    <div class="topic">
+                        <h2>Topics:</h2>
+                        <ul>
+                            <li><a href="codesheets.html"><button class="btnside">Basics</button></a></li>
+                            <li><a href="expressions.html"><button class="btnside">Expressions</button></a></li>
+                            <li><a href="decisions.html"><button class="btnside">Making Decisions</button></a></li>
+                            <li><a href="loops.html"><button class="btnside">Loops</button></a></li>
+                            <li><a href="functions.html"><button class="btnside">Functions</button></a></li>
+                            <li><a href="arrays.html"><button class="btnside">Arrays</button></a></li>
+                            <li><a href="filehandling.html"><button class="btnside">File Handling</button></a></li>
+                            <li><a href="structure.html"><button class="btnside">Structure</button></a></li>
+                            <li><a href="pointers.html"><button class="btnside">Pointers</button></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="col-2">
+                    <div class="basics">
+                        <h2>Basic things you remember before doing to file handling</h2>
+                        <div class="code">
+                            <pre class="cpp"><code class="language-cpp">
+                            <xmp>
+                               1.#include<fstream>//library must include every time
+                               2.file.open("fileName.txt"); //To open the txt file in teh folder wher you have cpp program 
+                               (if you don't make it then this is made ownly)
+                               3.ifstream fin;    //to read data from the file 
+                               4.ofstream fout;    //To write data into the file  (!file.eof()--------)
+                              *********Binary Filing******** **fstream file;
+                               *file.open("fileName.txt",ios::out ios::binary ios::app);//To write the data into the file in bianry form
+                               *file.open("fileName.txt",ios::in ios::binary);//To read the data into the file in bianry form
+                               *file.cloe(); //must be apply after every file open or write in the fstream case beacuse file does not know in which mode it works 
+                               ******To get data or write data from the file in binary*****
+                               file.write(reinterpret<cast*>(&varibleName),sizeof(varible_dataType)); //for write
+                               file.read(reinterpret<cast*>(&varibleName),sizeof(varible_dataType));  //for read
+                               file.seekp(sizeinbytes,offsest(ios::beg or ios::cur or ios::end)); //To move the curser position or set it when writing data into the file
+                               file.seekg(sizeinbytes,offsest(ios::beg or ios::cur or ios::end)); //To move the curser position or set it when reading data into the file
+                               file.tellp()/sizeof(varible_dataType)+1; //give the cursor of the data index when writing data into the file
+                               file.tellg()/sizeof(varible_dataType)+1; //give the cursor of the data index when reading data into the file
+                            </xmp>
+                        </code></pre>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contanier-6">
+
+
+            <div class="col-6">
+                <div class="row-6-1">
+                    <h2>Very basic steps of file handing</h2>
+                    <div class="code4">
+                        <pre><code class="language-cpp">
+                        <xmp>
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+    //declare Variables
+    int a;
+    char ch;
+    float x;
+
+   //Declare variable of fstream class and make object to open the files
+    ifstream fin;
+    ofstream fout;
+
+    //open the output and input files
+    fin.open("InText.txt");
+    fout.open("outText.txt");
+    
+    //reading the data from the input file with extraction operator
+    fin>>a;
+    fin>>ch;
+    fin>>x;
+    
+    //writing the data into the output file with the insertion operator 
+    fout << a << endl;
+    fout << ch << endl;
+    fout << x << endl;
+    fout << a << endl;
+    fout << ch << endl;
+    fout << x << endl;
+
+    fin.close();
+
+    return 0;
+}
+                        </xmp>
+                    </code></pre>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-6">
+                <div class="row-6-1">
+                    <h2>Write Copy file 1 into the file 2 and aslo show data of the file 1 into the console.</h2>
+                    <div class="code2">
+                        <pre><code class="language-cpp">
+                        <xmp>
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+    int a;
+
+    ifstream fin;
+    ofstream fout;
+    
+    fin.open("inText.txt");
+    fout.open("outText.txt");
+
+    fout<<"These are the numbers that are to be stored in the input file:"<<endl;
+    while(!fin.eof())
+    {
+        fin>>a;
+        cout<<a<<endl;
+        fout<<a<<endl;
+    }
+
+    return 0;
+}
+                        </xmp>
+                    </code></pre>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="row-6-1">
+                    <h2>Find out the prime,odd and even numbers in the file.</h2>
+                    <div class="code3">
+                        <pre><code class="language-cpp">
+                        <xmp>
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main()
+{
+    ofstream fout;
+    ifstream fin;
+    int num;
+    fin.open("inText.txt");
+    fout.open("outText.txt");
+
+    if (fin.is_open())
+    {
+        cout<<"File is opened:"<<endl;
+        while (!fin.eof())
+        {
+            fin >> num;
+            if (num % 2 == 0)
+            {
+                fout << num << " is an even number:" << endl;
+            }
+            else
+            {
+                fout << num << " is an odd number:" << endl;
+            }
+            int count = 0;
+            for (int i = 1; i <= num; i++)
+            {
+                if (num % i == 0)
+                {
+                    count++;
+                }
+            }
+            if (count == 2)
+            {
+                cout << endl;
+                fout << num << " is also an Prime number:" << endl;
+                cout << endl;
+            }
+        }
+    }
+    else
+    {
+        cout << "File is not opened:" << endl;
+    }
+
+    return 0;
+}
+
+                        </xmp>
+                    </code></pre>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="col-6">
+                <div class="row-6-1">
+                    <h2>Data from the txt file to the output file</h2>
+                    <div class="code5">
+                        <pre><code class="language-cpp">
+                        <xmp>
+#include <iostream>
+#include <fstream>
+using namespace std;
+int main()
+{
+    int size = 100;
+    char arr[size];
+    ifstream fin;
+    ofstream fout;
+
+    fin.open("inText.txt");
+    fout.open("outText.txt");
+
+    fin.getline(arr, size);
+    for (int i = 0; arr[i] != '\0'; i++)
+    {
+        fout << arr[i];
+    }
+
+    return 0;
+}
+                        </xmp>
+                    </code></pre>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-6">
+                <div class="row-6-1">
+                    <h2>Writing Text</h2>
+                    <div class="code6">
+                        <pre><code class="language-cpp">
+                        <xmp>
+#include<iostream>
+#include<fstream>
+using namespace std;
+int main()
+{
+    int size=100;
+    char arr[size];
+    ifstream fin;
+    ofstream fout;
+
+    fin.open("inText.txt");
+    fout.open("outText.txt");
+
+    cin.getline(arr,size);
+    for(int i=0;arr[i]!='\0';i++)
+    {
+        fout<<arr[i];
+    }
+
+
+
+
+    return 0;
+}
+                        </xmp>
+                    </code></pre>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-6">
+                <div class="row-6-1">
+                    <h2>Struct Reading and writing in binary </h2>
+                    <div class="code7">
+                        <pre><code class="language-cpp">
+                        <xmp>
+#include <iostream>
+#include <fstream>
+#include <cstring>
+using namespace std;
+const int totalStudents = 5;
+
+struct student
+{
+  string name;
+  string rollNum;
+};
+int main()
+{
+  student st1[totalStudents];
+  fstream file;
+  string search;
+  // if you want to write the data into the file then uncomment it
+  // file.open("studentsData.txt",   ios::out | ios::binary );
+
+  // if(file.is_open())
+  // {
+  //   for (int i = 0; i < totalStudents; i++)
+  //   {
+  //     cout << "Enter the name of the student:" << endl;
+  //     getline(cin, st1[i].name);
+  //     cout << "Enter the Roll Number of the student:" << endl;
+  //     getline(cin, st1[i].rollNum);
+
+  //     file.write(reinterpret_cast<char *>(&st1[i]), sizeof(student));
+
+  //   }
+  // }
+  // else
+  // {
+  //   cout<<"Error Occured:"<<endl;
+  // }
+  //  file.close();
+
+  // if you read the data from the file to the console
+  cout << "Enter the string thet you want to search by name:" << endl;
+  getline(cin, search);
+  file.open("studentsData.txt", ios::in | ios::binary);
+  if (file.is_open())
+  {
+    for (int i = 0; i < totalStudents; i++)
+    {
+      string rollno;
+      file.read(reinterpret_cast<char *>(&st1[i]), sizeof(student));
+      if (st1[i].name == search)
+      {
+        // cout<<"Enter the roll number of the student to be updated:"<<endl;
+        // getline(cin,rollno);
+        // file.close();
+        // file.open("studentsData.txt", ios::out | ios::binary);
+        // st1[i].rollNum=rollno;
+        // file.write(reinterpret_cast<char *>(&st1[i]), sizeof(student));
+
+        cout<<st1[i].name<<endl;
+        cout<<st1[i].rollNum<<endl;
+        
+        
+      }
+      break;
+    }
+  }
+  else
+  {
+    cout << "Error Occured:" << endl;
+  }
+  file.close();
+}
+                        </xmp>
+                    </code></pre>
+                    </div>
+                </div>
+            </div>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1 id="under-commands">Project:</h1>
+  <br>
+   <h1 id="under-commands">Blood Donor Management system through the binary filing</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+            <div class="col-6">
+                <div class="row-6-1">
+                    <h2>**Feature**</h2>
+                    <h2>1.Add Donor data</h2>
+                    <h2>2.Search Donor data by name</h2>
+                    <h2>3.Search Donors data by blood group</h2>
+                    <h2>4.Update the Donor data after the successful donation </h2>
+                    <h2>5.Delete the Donor data</h2>
+                    <h2>6.Display all the donor data</h2>
+                    <div class="code8">
+                        <pre><code class="language-cpp">
+                        <xmp>
+#include <iostream>
+#include <fstream>
+#include <conio.h>
+#include <string>
+using namespace std;
+
+// global Variables
+fstream file;
+ofstream temp;
+const int totalRecords = 1000;
+
+// Structure
+
+struct record
+{
+    string name;
+    string rollNum;
+    string PhoneNum;
+    string bloodGroup;
+    int no_ofDonate;
+    string dateof_Donation;
+    string permanentAddress;
+};
+
+// For display
+void display(int total)
+{
+    for (int i = 0; i < 4; i++)
+    {
+        cout << endl;
+    }
+    cout << "\t\t\t*************FCIT BLOOD DONOR MANAGEMENT SYSTEM*****************" << endl;
+    cout << endl;
+    cout << "\tTotal Records :" << total << endl;
+    cout << endl;
+    cout << "\t\t\t _______________________________________________________________________________" << endl;
+    cout << "\t\t\t| Press \"A\" to ADD the DONOR\'S Record                                           |" << endl;
+    cout << "\t\t\t| Press \"N\" to SEARCH the DONOR\'S Record based on NAME                          |" << endl;
+    cout << "\t\t\t| Press \"B\" to SEARCH the LIST of DONOR\'S Record based on BLOOD GROUP           |" << endl;
+    cout << "\t\t\t| Press \"U\" to UPDATE the DONOR\'S Record after successful DONATION              |" << endl;
+    cout << "\t\t\t| Press \"R\" to REMOVE the DONOR\'S Record (may be due to medical reasons)        |" << endl;
+    cout << "\t\t\t| Press \"W\" to SHOW ENTIRE the DONOR\'S Record                                   |" << endl;
+    cout << "\t\t\t| Press \"Q\" to QUIT.....                                                        |" << endl;
+    cout << "\t\t\t --------------------------------------------------------------------------------" << endl;
+}
+
+// Function for display record of specific Donor
+void recordOf_specificDonor(record donor[], int i)
+{
+    cout << "\t\t\t\t****************DATA OF THE DONOR " << i + 1 << " ************" << endl;
+    cout << "\t\t\t\tName of the donor " << i + 1 << " : " << donor[i].name << endl;
+    cout << "\t\t\t\tRoll number of the donor " << i + 1 << " : " << donor[i].rollNum << endl;
+    cout << "\t\t\t\tPhone number of the donor " << i + 1 << " : " << donor[i].PhoneNum << endl;
+    cout << "\t\t\t\tBlood Group of the donor " << i + 1 << " : " << donor[i].bloodGroup << endl;
+    cout << "\t\t\t\tNumber of blood donates of the donor " << i + 1 << " : " << donor[i].no_ofDonate << endl;
+    cout << "\t\t\t\tLast Date blood Donation of the donor " << i + 1 << " : " << donor[i].dateof_Donation << endl;
+    cout << "\t\t\t\tPermenant Address of the donor " << i + 1 << " : " << donor[i].permanentAddress << endl;
+    cout << endl;
+}
+
+// Adding the record
+void addRecord(record donor[], int index)
+{
+    file.open("bds_donor_data.txt", ios::out | ios::app | ios::binary);
+    if (file.is_open())
+    {
+        cout << endl;
+        cout << "\t\t\t**************ADDING RECORD OF THE DONOR****************" << endl;
+        cout << endl;
+        cout << "\t\t\tEnter the name of the donor " << index + 1 << " : ";
+        getline(cin, donor[index].name);
+        cout << "\t\t\tEnter the roll number of the donor " << index + 1 << " : ";
+        getline(cin, donor[index].rollNum);
+        cout << "\t\t\tEnter the phone number of the donor " << index + 1 << " : ";
+        getline(cin, donor[index].PhoneNum);
+        cout << "\t\t\tEnter the blood group of the donor " << index + 1 << " : ";
+        getline(cin, donor[index].bloodGroup);
+        cout << "\t\t\tEnter the number of blood donate of the donor " << index + 1 << " : ";
+        cin >> donor[index].no_ofDonate;
+        cin.ignore();
+        cout << "\t\t\tEnter the date of the donation of the donor " << index + 1 << " : ";
+        getline(cin, donor[index].dateof_Donation);
+        cout << "\t\t\tEnter the permannent home address of the donor " << index + 1 << " : ";
+        getline(cin, donor[index].permanentAddress);
+        cout << endl;
+        file.write(reinterpret_cast<char *>(&donor[index]), sizeof(record));
+    }
+    else
+    {
+        cout << endl;
+        cout << "\t\t\t File is not openend:" << endl;
+        cout << endl;
+    }
+    file.close();
+}
+
+// Displaying the all records
+void displayAll_records(record donor[], int index)
+{
+    cout << endl;
+    cout << "\t**DATA OF THE ALL DONORS**" << endl;
+    cout << endl;
+    file.open("bds_donor_data.txt", ios::in | ios::binary);
+    if (file.is_open())
+    {
+        for (int i = 0; i < index; i++)
+        {
+            file.read(reinterpret_cast<char *>(&donor[i]), sizeof(record));
+            recordOf_specificDonor(donor, i);
+        }
+    }
+    else
+    {
+        cout << endl;
+        cout << "\t\t\t File is not openend:" << endl;
+        cout << endl;
+    }
+    file.close();
+}
+
+// Function for  search record by name
+void search_record_ByName(record donor[], int index)
+{
+    string searchBy_name;
+    bool found = false;
+    cout << endl;
+    cout << "\t\t\t Enter the name of the donor to search its data:";
+    getline(cin, searchBy_name);
+    cout << endl;
+    file.open("bds_donor_data.txt", ios::in | ios::binary);
+    if (file.is_open())
+    {
+        cout << "\t\t\t\t****************DATA OF THE DONOR " << searchBy_name << " ************" << endl;
+        for (int i = 0; i < index && found == false; i++)
+        {
+            file.read(reinterpret_cast<char *>(&donor[i]), sizeof(record));
+            if (donor[i].name == searchBy_name)
+            {
+                recordOf_specificDonor(donor, i);
+                found = true;
+                break;
+            }
+        }
+    }
+    else
+    {
+        cout << endl;
+        cout << "\t\t\t File is not openend:" << endl;
+        cout << endl;
+    }
+    file.close();
+    if (found == false)
+    {
+        cout << "\t\t\t Error: No such name can be exist in the donor's list:" << endl;
+    }
+}
+
+// Function for search all records by blood group
+void search_record_ByBloodGroup(record donor[], int index)
+{
+    string searchBy_bloodGroup;
+    bool found = false;
+    cout << endl;
+    cout << "\t\t\t Enter the blood group :";
+    getline(cin, searchBy_bloodGroup);
+    cout << endl;
+    cout << "\t\t\t\t**DATA OF THE ALL THE DONORS WHOSE HAVE " << searchBy_bloodGroup << " BLOOD GROUP **" << endl;
+    file.open("bds_donor_data.txt", ios::in | ios::binary);
+    if (file.is_open())
+    {
+        for (int i = 0; i < index; i++)
+        {
+            file.read(reinterpret_cast<char *>(&donor[i]), sizeof(record));
+            if (donor[i].bloodGroup == searchBy_bloodGroup)
+            {
+                recordOf_specificDonor(donor, i);
+                found = true;
+            }
+        }
+    }
+    else
+    {
+        cout << endl;
+        cout << "\t\t\t File is not openend:" << endl;
+        cout << endl;
+    }
+    file.close();
+    if (found == false)
+    {
+        cout << "\t\t\t Error: No such blood group can be exist in the donor's list:" << endl;
+    }
+}
+
+// Function for update the donors record after successful donation
+void update_record_ofDonor(record donor[], int index)
+{
+    string updateBy_name;
+    bool found = false;
+    cout << endl;
+    cout << "\t\t\t Enter the name of the donor to update its data:";
+    getline(cin, updateBy_name);
+    cout << endl;
+    file.open("bds_donor_data.txt", ios::in | ios::binary | ios::out);
+    // to get the curser at the start use the seekg
+    file.seekg(0);
+    if (file.is_open())
+    {
+        for (int i = 0; i < index && found == false; i++)
+        {
+            file.read(reinterpret_cast<char *>(&donor[i]), sizeof(record));
+
+            if (donor[i].name == updateBy_name)
+            {
+                // updation
+                cout << "\t\t\t** Donor blood donation times updated from " << donor[i].no_ofDonate << " to " << donor[i].no_ofDonate + 1 << "**" << endl;
+                cout << "\t\t\t   Enter the date of the updated Donation:";
+                getline(cin, donor[i].dateof_Donation);
+                donor[i].no_ofDonate = donor[i].no_ofDonate + 1;
+
+                // to change the position of the getting cursor position use seekp
+                // ios::cur is the offset of the seekp that gives that we want to be beg,cur and end position of the file
+                // seekp has the two arguments first gives how much bytes it can move,and second argument gives where to start move the position where
+                // negative sign show move forward or backward
+                file.seekp(-sizeof(record), ios::cur);
+                file.write(reinterpret_cast<char *>(&donor[i]), sizeof(record));
+
+                found = true;
+            }
+        }
+        cout << endl;
+        cout << "\t\t\t\t Recorded Updated Successfully:" << endl;
+        cout << endl;
+    }
+    else
+    {
+        cout << endl;
+        cout << "\t\t\t File is not openend:" << endl;
+        cout << endl;
+    }
+    file.close();
+    if (found == false)
+    {
+        cout << "\t\t\t Error: No such Person's name can be exist in the donor's list:" << endl;
+    }
+}
+
+// Function for  Remove donor’s record (May be due to medical reasons).
+void delete_record_ofDonor(record donor[], int index)
+{
+    string deleteBy_rollNum;
+    bool found = false;
+    cout << endl;
+    cout << "\t\t\t Enter the roll number of the donor to  Remove his/her record (May be due to medical reasons).";
+    getline(cin, deleteBy_rollNum);
+    cout << endl;
+    file.open("bds_donor_data.txt", ios::in | ios::binary | ios::out);
+    temp.open("temp.txt", ios::binary | ios::out);
+    // to get the curser at the start use the seekg
+    if (file.is_open() && temp.is_open())
+    {
+        for (int i = 0; i < index; i++)
+        {
+            file.read(reinterpret_cast<char *>(&donor[i]), sizeof(record));
+
+            if (donor[i].rollNum != deleteBy_rollNum)
+            {
+                // Copying data from bds_donor_data.txt to temp.txt except the deleted data
+                temp.write(reinterpret_cast<char *>(&donor[i]), sizeof(record));
+                found = true;
+            }
+        }
+        file.close();
+        temp.close();
+        // Removation of non-removed data file
+        remove("bds_donor_data.txt");
+        // Rename the temp file to the bds_donor_data.txt
+        rename("temp.txt", "bds_donor_data.txt");
+        cout << endl;
+        cout << "\t\t\t\t Recorded Deleted Successfully:" << endl;
+        cout << endl;
+    }
+    else
+    {
+        cout << endl;
+        cout << "\t\t\t File is not openend:" << endl;
+        cout << endl;
+    }
+    if (found == false)
+    {
+        cout << "\t\t\t Error: No such Roll Number name can be exist in the donor's list:" << endl;
+    }
+}
+
+// Body of the program
+void blood_donor_managementSystem()
+{
+    record donors[totalRecords];
+    bool flag = false;
+    bool iF_recordAdded = false;
+    char input;
+
+    do
+    {
+        // to determine the number of total records added
+        char ch[] = {};
+        int index = 0;
+        int i = -1;
+        file.open("bds_donor_data.txt", ios::in | ios::binary);
+        while (!file.eof())
+        {
+            file >> ch[i];
+            if (i % sizeof(record) == 0)
+            {
+                index++;
+            }
+            i++;
+        }
+        file.close();
+
+        // To check whether atleast one data is entered or not otherwise other options cannot works
+        if (index > 0)
+        {
+            iF_recordAdded = true;
+        }
+
+        // display function call
+        display(index);
+
+        // Input
+        input = getch();
+        input = tolower(input);
+
+        // Input Validation
+        while (input != 'a' && input != 'n' && input != 'b' && input != 'u' && input != 'r' && input != 'w' && input != 'q')
+        {
+            cout << endl;
+            cout << "\t\t\t Error:Invalid Input!" << endl;
+            cout << "\t\t\t Please Enter the Valid Input" << endl;
+            input = getch();
+            input = tolower(input);
+            cout << endl;
+        }
+
+        // Switch cases---Cases can be run on the inputs
+        switch (input)
+        {
+
+        // adding records
+        case 'a':
+        {
+            addRecord(donors, index);
+            system("cls");
+            break;
+        }
+
+        // search record by name
+        case 'n':
+        {
+            if (iF_recordAdded == true)
+            {
+                search_record_ByName(donors, index);
+            }
+            if (iF_recordAdded == false)
+            {
+                cout << endl;
+                cout << "\t\t\t\t ***Error:Firstly add the data At least enter the one donors data:***" << endl;
+            }
+            break;
+        }
+
+            // search record by blood group
+        case 'b':
+        {
+            if (iF_recordAdded == true)
+            {
+                search_record_ByBloodGroup(donors, index);
+            }
+            if (iF_recordAdded == false)
+            {
+                cout << endl;
+                cout << "\t\t\t\t ***Error:Firstly add the data At least enter the one donors data:***" << endl;
+            }
+            break;
+        }
+
+        // display all the records
+        case 'w':
+        {
+            if (iF_recordAdded == true)
+            {
+                displayAll_records(donors, index);
+            }
+            if (iF_recordAdded == false)
+            {
+                cout << endl;
+                cout << "\t\t\t\t ***Error:Firstly add the data At least enter the one donors data:***" << endl;
+            }
+            break;
+        }
+
+            // update the record
+        case 'u':
+        {
+            if (iF_recordAdded == true)
+            {
+                update_record_ofDonor(donors, index);
+            }
+            if (iF_recordAdded == false)
+            {
+                cout << endl;
+                cout << "\t\t\t\t ***Error:Firstly add the data At least enter the one donors data:***" << endl;
+            }
+            break;
+        }
+
+        // Delete the record
+        case 'r':
+        {
+            if (iF_recordAdded == true)
+            {
+                delete_record_ofDonor(donors, index);
+            }
+            if (iF_recordAdded == false)
+            {
+                cout << endl;
+                cout << "\t\t\t\t ***Error:Firstly add the data At least enter the one donors data:***" << endl;
+            }
+            break;
+        }
+
+        // for quiting the program
+        case 'q':
+        {
+            cout << "Quiting....................." << endl;
+            flag = true;
+            break;
+        }
+        }
+    } while (flag == false);
+}
+
+// Main function
+int main()
+{
+
+    // blood_donor_managementSystem
+    blood_donor_managementSystem();
+    return 0;
+}
+                        </xmp>
+                    </code></pre>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+
+        <div class="container-3">
+            <div class="heading-2">
+                <h1>Whats make this website differents from others?</h1>
+            </div>
+            <div class="row-3">
+
+                <div class="amazing">
+                    <div class="amazing-header">
+                        <h1>Amazing Feature That Increase your Productivity</h1>
+                    </div>
+                    <div class="amazing-body">
+                        <p>
+                            If you don't find any problem,in this website and if you have a very difficult assignment
+                            question that
+                            is not present on internet ,then you dont bother yourself,we are here to solve every problem
+                            of
+                            your
+                            life you just click on the Problem asking button and write your problem we slove the code of
+                            your
+                            problem and sent you on your email addres that you put in the sin up form.
+                        </p>
+                        <a href="contact.html"><button class="btn2">Write your Problem here</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="contanier-4">
+                <div class="row-4">
+
+
+
+                    <div class="footer-col" id="about_us">
+                        <h4>About_us</h4>
+                        <p>
+                        I am a student of PUCIT(New-Campus).I am currently doing BSSE.I am passionate about the mern
+                        stack web development ,operating systems,nfts and cyber security.In my first semister I found
+                        ,some students have problems like ,what i do? Which programs i do realted to the topic ,
+                        sometimes
+                        find very difficulty about the assignments than I take a decision ,i have to make a website from
+                        where i can upload all my experiences regarding to first semister and also some blogs to
+                        motivate the students about coding .So ,its a readymade coding dish for you enjoy it. Always
+                        remember me in your prayers.
+                        </p>
+                    </div>
+
+
+
+                    <div class="footer-col">
+                        <h4>Contact_us</h4>
+                        <ul>
+                            <li><a href="https://pucit.edu.pk/" target="blank">PUCIT(New_Campus)</a></li>
+                            <li><a href="https://www.whatsapp.com/" target="blank">phone:03259615088</a></li>
+                            <li><a href="https://gmail.com/" target="blank">email:bsef21m540@pucit.edu.pk</a></li>
+                            <li><a href="https://www.google.com/maps/place/Punjab+University+Hostel+Rd,+Quaid-i-Azam+Campus,+Lahore,+Punjab/@31.4958087,74.3057684,17z/data=!3m1!4b1!4m5!3m4!1s0x39190477c811e4e9:0x9c8824758d8549ae!8m2!3d31.4958087!4d74.3079571"
+                                    target="blank">Punjab,hostel #09 ,Lahore</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Quick_links</h4>
+                        <ul>
+                            <li><a href="https://www.facebook.com/profile.php?id=100039337088172" target="blank"><i
+                                        class="fab fa-facebook-f" id="face"></i>محمد محب الله</a></li>
+                            <li><a href="https://www.instagram.com/muhib7353/" target="blank"><i
+                                        class="fab fa-instagram" id="insta"></i>muhib7353</a></li>
+                            <li><a href="https://www.whatsapp.com/" target="blank"><i class="fab fa-whatsapp"
+                                        id="whats"></i>+923259615088</a></li>
+                            <li><a href="https://twitter.com/muhib7353" target="blank"><i class="fab fa-twitter"
+                                        id="twit"></i>muhib7353</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Quick_Access</h4>
+                        <ul>
+                            <li><a href="codesheets.html">Code_sheets</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="sinup.html">Sign_in</a></li>
+                            <li><a href="home.html">Home</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="container-5">
+            <div class="footer-2">
+                <h1>Copyright &copy;https://muhibcodes.netlify.app/</h1>
+            </div>
+        </div>
+
+        <script>
+            var menu_list = document.getElementById("menu_list");
+            menu_list.style.maxHeight = "0px";
+
+            function toggle_menu() {
+                if (menu_list.style.maxHeight == "0px") {
+                    menu_list.style.maxHeight = "130px"
+                } else {
+                    menu_list.style.maxHeight = "0px"
+                }
+            }
+        </script>
+        <script src="./Prism/prism-final.js"></script>
+</body>
+
+</html>
