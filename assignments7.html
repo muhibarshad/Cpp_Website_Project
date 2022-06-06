@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,55 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assignments7.css">
-    <title>Assignment-7</title>
-</head>
-
-<body>
-    <div class="Alert">
-        <a href="assignments.html" class="access"><button>Go back</button></a>
-        <div class="contanier">
-            <div class="img">
-                <h1>No,Access</h1>
-                <img src="./images/alert2.png" alt="Alert">
-            </div>
-            <div class="heading">
-                It is not assigned yet,
-                <br>
-                When it is assigned to the class,
-                <br>
-                then we uploaded it imediately
-                <br>
-                If you find any problem in c++ in concepts then you must check the blog
-                and also contact us
-            </div>
-
-        </div>
-        <div class="blog">
-            <a href="blog.html"><button>Blog</button></a>
-            <a href="contact.html"><button>Contact</button></a>
-
-        </div>
-        </div>
-</body>
-
-</html>
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assignments.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="./Prism/prism-final.css">
     <title>Assignments-PUCIT(NC)_PF</title>
@@ -88,7 +40,7 @@
         <div class="contanier-2">
             <div class="heading">
                 <h1>PF-PUCIT(NEW-CAMPUS)</h1>
-                <h2>ASSIGNMENT 01:</h2>
+                <h2>ASSIGNMENT 07</h2>
             </div>
             <div class="row-1">
                 <div class="col-1">
@@ -109,22 +61,14 @@
                 </div>
                 <div class="col-2">
                     <div class="basics">
-                      <h2>Sample:Sum_Of_Two_Numbers</h2>
+                      <h2>Arrays</h2>
                        <div class="code">
                         <pre class="cpp"><code class="language-cpp">
                             <xmp>
-                                #include<iostream>
-                                    using namespace std;
-                                    int main()
-                                    {
-                                        int num_1=50;
-                                        int num_2=100;
-                                        int sum;
-                                        sum=num_1+num_2;
-                                        cout<<"The sum of these two numbers = "<<sum<<endl;
-                                        return 0;
-                                    }
-                                    
+                              Arrays are the data structures .
+                              syntex;
+                              dataType variableName [sizeOf array];
+                              arrays index start from 0 ,1,2,...
                             </xmp>
                         </code></pre>
                        </div>
@@ -138,30 +82,49 @@
      <div class="contanier-6">
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 1. Write a program that displays size of int, float, double, char and bool data types, use sizeof() 
-                    function.
+                <h3>Task 1. Write a program that lets the user enter 10 values into an array. The program should
+                    then display the largest and smallest values stored in the array
                     </h3>
                 <div class="code2">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /* This Program is used to display the size of different dataTypes 
-                            Key_point:
-                                 We use the function sizeof(dataTypes) :
-                          */
-                          #include<iostream>
-                          using namespace std;
-                          int main()
-                          {
-                              
-                              cout<<"The size of Int_data_Type  is "<<sizeof(int)<<" Bytes \n";
-                              cout<<"The size of Float_data_Type  is "<<sizeof(float)<<" Bytes \n";
-                              cout<<"The size of Double_data_Type  is "<<sizeof(double)<<" Bytes \n";
-                              cout<<"The size of Char_data_Type is  "<<sizeof(char)<<" Bytes \n";
-                              cout<<"The size of Bool_data_Type is  "<<sizeof(bool)<<" Bytes \n";
-                          
-                              return 0;
-                          }
-                          
+#include <iostream>
+using namespace std;
+int main()
+{
+    const int size = 10;
+    int arr[size] = {};
+    int max;
+    int min;
+    cout << "The random values in the array are given as:" << endl;
+    for (int i = 0; i < size; i++)
+    {
+        cin>>arr[i];
+    }
+    for (int i = 0; i < size; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+    // To find the min and max;
+    max = arr[0];
+    min = arr[0];
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i] > max)
+        {
+            max = arr[i];
+        }
+        if (arr[i] < min)
+        {
+            min = arr[i];
+        }
+    }
+    cout << "The largest in the array is = " << max << endl;
+    cout << "The minimum in the array is = " << min << endl;
+
+    return 0;
+}
                         </xmp>
                     </code></pre>
                 </div>
@@ -170,31 +133,58 @@
          </div>
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 2. Write a program that compute area of a rectangle, whose height if 9m and width is 5m.Display 
-                    its area.</h3>
+                <h3>Task 2. Write a program that lets the user enter the total rainfall for each of 12 months into an
+                    array of
+                    double s. The program should calculate and display the total rainfall for the year, the average
+                    monthly rainfall, and the months with the highest and lowest amounts.
+                    Input Validation: Do not accept negative numbers for monthly rainfall figures</h3>
                 <div class="code3">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*This is a Program to display the area of arectangle
-                            Key_point:
-                               area=height*Width;
-                         */
-                         #include<iostream>
-                         using namespace std;
-                         int main()
-                         {
-                             
-                             int height=9;
-                             int width=5;
-                             int area=0;//Intiliaze to zero to overwrite the garbage value
-                             cout<<"Calculate the area of a rectangle:"<<endl;
-                             cout<<"height=9m"<<endl;
-                             cout<<"width=5m"<<endl;
-                             area=height*width;
-                             cout<<"The area of a rectangle = "<<area<<"m^2"<<endl;
-                             
-                             return 0;
-                         }
+#include <iostream>
+using namespace std;
+int main()
+{
+    const int size = 4;
+    double month[size];
+    double totalRain = 0;
+    double average_rainFall;
+    double highest;
+    double lowest;
+    cout << "___________Average Rinfall Calculator_________" << endl;
+    for (int i = 0; i < size; i++)
+    {
+        cout << "Enter the rainfall of the month " << i + 1 << " :" << endl;
+        cin >> month[i];
+        while(month[i]<0)
+        {
+            cout<<"invalid:Input!"<<endl;
+            cout<<"Please enter the rainfall as a positive number:"<<endl;
+            cin>>month[i];
+        }
+        totalRain = totalRain + month[i];
+    }
+    average_rainFall = totalRain / size;
+    highest = month[0];
+    lowest = month[0];
+    for (int i = 0; i < size; i++)
+    {
+        if (month[i] > highest)
+        {
+            highest = month[i];
+        }
+        if (month[i] < lowest)
+        {
+            lowest = month[i];
+        }
+    }
+    cout<<"The total rainfall of the year :"<<totalRain<<endl;
+    cout<<"The average rainfall of the year "<<average_rainFall<<endl;
+    cout << "The highest rainfall of the year :" << highest << endl;
+    cout << "The lowest rainfall of the year :" << lowest << endl;
+
+    return 0;
+}
                         </xmp>
                     </code></pre>
                 </div>
@@ -204,42 +194,70 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 3. Write a program that displays sum, subtractions, multiplication and division of two float 
-                    numbers. Take any float numbers i.e. float f1 = 5.4, f2 = 7.8;</h3>
+                <h3>Task 3. Write a program that lets a maker of chips and salsa keep track of sales for five different
+                    types
+                    of salsa: mild, medium, sweet, hot, and zesty. The program should use two parallel 5‐element
+                    arrays: an array of strings that holds the five salsa names and an array of integers that holds the
+                    number of jars sold during the past month for each salsa type. The salsa names should be
+                    stored using an initialization list at the time the name array is created. The program should
+                    prompt the user to enter the number of jars sold for each type. Once this sales data has been
+                    entered, the program should produce a report that displays sales for each salsa type, total sales,
+                    and the names of the highest selling and lowest selling products.
+                    Input Validation: Do not accept negative values for number of jars sold.</h3>
                 <div class="code4">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*This is a program that dispaly the sum,subtraction ,multiplication and division 
-                            of the two "Float_numbers"*/
-                           #include<iostream>
-                           using namespace std;
-                           int main()
-                           {
-                               
-                               float num1=5.4;
-                               float num2=7.2;
-                               float sum=0;//Initilaize to zero to overwrite the garbage values
-                               float sub=0;
-                               float multiplay=0;
-                               double division=0;//Take is double because its a chance to get the point values greater than float range
-                               cout<<"we have two numbers:"<<endl;
-                               cout<<"Number_1=5.4 \n";
-                               cout<<"Number_2=7.2 \n";
-                               cout<<endl;
-                               cout<<"The arthematic_operations on these floating point numbers:"<<endl;
-                               cout<<endl;
-                               //Araathematic Operations on it
-                               sum=num1+num2;
-                               sub=num1-num2;
-                               multiplay=num1*num2;
-                               division=num1/num2;
-                               cout<<"The Addition of these two floating numbers = "<<sum<<endl;
-                               cout<<"The Subtraction of these two floating numbers = "<<sub<<endl;
-                               cout<<"The Multiplication of these two floating numbers = "<<multiplay<<endl;
-                               cout<<"The division of these two floating numbers = "<<division<<endl;
-                           
-                               return 0;
-                           }
+#include <iostream>
+#include <cstring>
+using namespace std;
+int main()
+{
+    const int size = 5;
+    string salsa[size] = {"Mild", "Medium", "Sweet", "Hot", "zesty"};
+    int num_ofJars[size];
+    int totalSlaes = 0;
+    int highestSelling;
+    int lowestSelling;
+    cout << "___________Salsa Sales Monthly Report_________" << endl;
+    for (int i = 0; i < size; i++)
+    {
+        cout << "Enter the number of jars sold for " << salsa[i] << " :" << endl;
+        cin >> num_ofJars[i];
+        while (num_ofJars[i] < 0)
+        {
+            cout << "Invalid input!" << endl;
+            cout << "Please Enter the valid input" << endl;
+            cout << "Enter the number of jars sold for " << salsa[i] << " :" << endl;
+            cin >> num_ofJars[i];
+        }
+        totalSlaes = totalSlaes + num_ofJars[i];
+    }
+    highestSelling = num_ofJars[0];
+    lowestSelling = num_ofJars[0];
+    for (int i = 0; i < size; i++)
+    {
+        if (num_ofJars[i] > highestSelling)
+        {
+            highestSelling = num_ofJars[i];
+        }
+        if (num_ofJars[i] < lowestSelling)
+        {
+            lowestSelling = num_ofJars[i];
+        }
+    }
+    cout << endl;
+    cout << "Data of the saled products of the month:" << endl;
+    for (int i = 0; i < size; i++)
+    {
+        cout << "The sales for the " << salsa[i] << " = " << num_ofJars[i] << endl;
+    }
+    cout << "The totals sales of the salsa = " << totalSlaes << endl;
+    cout << "The highest seeling salsa is " << highestSelling << endl;
+    cout << "The lowest seeling salsa is " << lowestSelling << endl;
+
+    return 0;
+}
+
                         </xmp>
                     </code></pre>
                 </div>
@@ -249,50 +267,39 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 4. Write reasons for errors in following codes:
-                    <br>
-                     int number = 10;
-                    <br>
-                    cout << number;
-                    <br>
-                    cout << number2;
-                    <br>
-                    int number2 = 50;
-                    <br>
-                    char ch = 'Programming Fundamental ';
-                    <br>
-                    cout << ch ;
+                <h3>Task 4. Write a Program that take a number n input from user a. Assume that the array of size 100
+                    contains random integers range 1 to 500. The program should display all of the numbers in the
+                    array that are greater than the number n .
                     </h3>
                 <div class="code5">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*
-                            Errors in the code*/
-                          #include<iostream>
-                          using namespace std;
-                          int main()
-                          {
-                              cout<<"we have a code as:"<<endl<<endl<<"int number = 10"
-                              <<endl<<"cout << number;"<<endl<<"cout << number2;"<<endl
-                              <<"int number2 = 50;"<<endl<<"char ch = 'Programming Fundamental;"
-                              <<endl<<"cout << ch ;";
-                              cout<<endl;
-                              cout<<"The errors in the code are as follows;"<<endl<<endl;
-                              cout<<endl;
-                              
-                              cout<<"First ERROR:"<<endl;
-                              cout<<"In the third line we cout the number2 first and decalre and initlize it later.Its scope is invalid because C++ compilers compile it line by line "<<endl
-                              <<"The error is \" SCOPE_Invalid : a variable cannot be used in any part of the program before the definition\" "<<endl;
-                              cout<<endl;
-                              
-                              cout<<"Second_ERROR:"<<endl;
-                              cout<<"IN fifth_line we initiliaze the char datatype with a string but char dataType has store only one ASCII character and size of its is only one bit"<<endl
-                              <<"The error is \"  Strings are consecutive sequences of characters that occupy consecutive bytes of memory \" "<<endl
-                              <<"Characters normally occupy a single byte of memory:"<<endl; 
-                              cout<<endl;
-                              
-                              return 0;
-                          }
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+int main()
+{
+    const int size = 100;
+    int arr[size];
+    int n;
+    for (int i = 0; i < size; i++)
+    {
+        arr[i] = (rand() % 500) + 1;
+    }
+    cout << "Enter the number :" << endl;
+    cin >> n;
+    cout << "All of the numbers in the array that are greater than the number " << n << " are given as:" << endl;
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i] > n)
+        {
+            cout << arr[i] << endl;
+        }
+    }
+
+    return 0;
+}
                         </xmp>
                     </code></pre>
                 </div>
@@ -303,36 +310,77 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 5. Write a program that converts Fahrenheit temperature to Celsius temperature. Initialize a 
-                    variable with Fahrenheit temperature value i.e float Fahrenheit = 35; And convert it into Celsius 
-                    <br>
-                    temperature. Hint: Celsius = (Fahrenheit - 32) * 5/9
-                    <br>
-                    Sample Output:
-                    <br>
-                    Temperature in Fahrenheit : 212
-                    <br>
-                    Temperature in Celsius : 100</h3>
+                <h3>Task 5.Use a an array to solve the following problem.
+                    Read in 20 numbers, each of which is between 10 and 100, inclusive. As each number is read,
+                    validate it and store it in the array only if it is not a duplicate of a number already read. After
+                    reading all the values, display only the unique values that the user entered. Provide for the
+                    "worst case" in which all 20 numbers are different. Use the smallest possible array to solve this
+                    problem.</h3>
                 <div class="code6">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*This is program to display the Celsius to fanheit temparature
-                            Key point:
-                                  celsius=(farnheit-32)*5/9;
-                           */
-                           #include<iostream>
-                           using namespace std;
-                           int main()
-                           {
-                               
-                               double farnheit=212;
-                               double celsius=0;//Intiliaze to zero to overwrite the garbage value
-                               celsius=(farnheit-32)*5/9;//Parantesis are used to discarge the priority order of division
-                               cout<<"The temperature in Farnheit = "<<farnheit<<endl;
-                               cout<<"The temperature in Celsius = "<<celsius<<endl;
-                               return 0;
-                               
-                           }
+#include <iostream>
+using namespace std;
+int main()
+{
+    const int size = 10;
+    int arr[size];
+    int dup_count[size] = {0};
+    int tally;
+    cout << "______Unique Elements Detector________" << endl;
+    for (int i = 0; i < size; i++)
+    {
+        cout << "Enter the number " << i + 1 << " :" << endl;
+        cin >> arr[i];
+        while (arr[i] < 10 || arr[i] > 100)
+        {
+            cout << "Invalid Input!" << endl;
+            cout << "Enter  the number between the 10 and 100 ,inclusive." << endl;
+            cout << "Enter the number " << i + 1 << " :" << endl;
+            cin >> arr[i];
+        }
+        dup_count[i] = arr[i];
+        tally++;
+        int count = 0;
+        for (int j = 0; j < sizeof(dup_count) / sizeof(int); j++)
+        {
+            if (dup_count[j] == arr[i])
+            {
+                count++;
+            }
+        }
+        if (count == 2)
+        {
+            cout<<dup_count[i]<<" is a duplicate number!"<<endl;
+            dup_count[i] = 0;
+
+        }
+        int temp;
+        if (tally != 1)
+        {
+            if (dup_count[i - 1] == 0)
+            {
+                if (count == 1)
+                {
+                    int m = i;
+                    while (dup_count[m - 1] == 0)
+                    {
+                        temp = dup_count[m];
+                        dup_count[m] = dup_count[m - 1];
+                        dup_count[m - 1] = temp;
+                        m--;
+                    }
+                }
+            }
+        }
+    }
+    for(int i=0;dup_count[i]!=0;i++)
+    {
+        cout<<dup_count[i]<<" ";
+    }
+
+    return 0;
+}
                         </xmp>
                     </code></pre>
                 </div>
@@ -343,205 +391,213 @@
 
          <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 6. Write a program that swaps value of two integer. Display values before and after swapping. 
-                    Hint: Take help from third variable.
+                <h3>Task 6. ( Airline Reservations System)<br>
                     <br>
-                    Sample Output:
+                    A small airline has just purchased a computer for its new automated reservations system. You
+                    have been asked to program the new system. You are to write a program to assign seats on
+                    each flight of the airline's only plane (capacity: 10 seats).<br>
                     <br>
-                    Before Swapping:
+                    Your program should display the following menu of alternativesPlease type 1 for "First Class"
+                    and Please type 2 for "Economy". If the person types 1, your program should assign a seat in
+                    the first class section (seats 1‐5). If the person types 2, your program should assign a seat in the
+                    economy section (seats 6‐10). Your program should print a boarding pass indicating the
+                    person's seat number and whether it is in the first class or economy section of the plane.<br>
                     <br>
-                    Value of no1 = 5
-                    <br>
-                    Value of no2 = 10
-                    <br>
-                    After Swapping:
-                    <br>
-                    Value of no1 = 10
-                    <br>
-                    Value of no2 = 5</h3>
+                    Use a one‐dimensional array to represent the seating chart of the plane. Initialize all the
+                    elements of the array to 0 to indicate that all seats are empty. As each seat is assigned, set the
+                    corresponding elements of the array to 1 to indicate that the seat is no longer available.
+                    Your program should, of course, never assign a seat that has already been assigned. When the
+                    first class section is full, your program should ask the person if it is acceptable to be placed in
+                    the economy section (and vice versa). If yes, then make the appropriate seat assignment. If no,
+                    then print the message "Next flight leaves in 3 hours".</h3>
                 <div class="code7">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*This is a program to Swap the values
-                            key_Point:
-                               {
-                                 int a,b,temp;
-                                 temp=a;
-                                 a=b;
-                                b=temp;
-                            }    
-                          */
-                          #include<iostream>
-                          using namespace std;
-                          int main()
-                          {
-                              int num1=5;
-                              int num2=10;
-                              int temp=0;//used the third variable for help
-                              cout<<"The Numbers before swaping are written as:"<<endl;
-                              cout<<"The number_1 = "<<num1<<endl;
-                              cout<<"The number_2 = "<<num2<<endl;
-                              cout<<endl;
-                              //Now Swap the Values
-                              temp=num1;
-                              num1=num2;
-                              num2=temp;
-                              cout<<"The Numbers After swaping are written as:"<<endl;
-                              cout<<"The number_1 = "<<num1<<endl;
-                              cout<<"The number_2 = "<<num2<<endl;
-                              cout<<endl;
-                              
-                              return 0;
-                          }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
+#include <iostream>
+using namespace std;
+int main()
+{
+    const int seats = 5;
+    bool flag = true;
+    int n;
+    int arr_first[seats] = {0};
+    int arr_economy[seats] = {0};
+    int first = 1;
+    int economy = 6;
+    char ch;
+    do
+    {
+        cout << " _______________________________________________________" << endl;
+        cout << "|________________Airline Reservations System____________|" << endl;
+        cout << "|                       Welcome Sir!                    |" << endl;
+        cout << "| Press 1 to book seat in bussiness Section             |" << endl;
+        cout << "| Press 2 to book seat in economySection                |" << endl;
+        cout << " _______________________________________________________" << endl;
+        cin >> n;
+        while (n != 1 && n != 2)
+        {
+            cout << "Invalid Input" << endl;
+            cout << "Please enter the valid input as 1 or 2" << endl;
+            cin >> n;
+        }
+        switch (n)
+        {
+        case 1:
+        {
+            if (first <= 5)
+            {
+                arr_first[first - 1] = first;
+                cout << "There is available seat in this section!" << endl;
+                cout << " ________________________________________________" << endl;
+                cout << "|****************|_1_|-BOARDING PASS*************|" << endl;
+                cout << "| YOUR SECTION : | 1                             |" << endl;
+                cout << "| YOUR SEAT #  : | " << arr_first[first - 1] << "                             |" << endl;
+                cout << "| SEATS AVAILABLE IN FIRST CLASS SECTION:        |" << endl;
+                cout << "| Seat # 1:      |" << arr_first[0] << "                              |" << endl;
+                cout << "| Seat # 2:      |" << arr_first[1] << "                              |" << endl;
+                cout << "| Seat # 3:      |" << arr_first[2] << "                              |" << endl;
+                cout << "| Seat # 4:      |" << arr_first[3] << "                              |" << endl;
+                cout << "| Seat # 5:      |" << arr_first[4] << "                              |" << endl;
+                cout << " ________________________________________________" << endl;
+                first++;
+            }
+            else if (first > 5)
+            {
+                cout << "There is \"NO\" seat available in FIRST CLASS SECTION." << endl;
+                if (economy <= 10)
+                {
+                    cout << "There is available seat in the ECONOMOY SECTION:" << endl;
+                    cout << "Are you want to buy it press \"Y\" FOR YES and \"N\" FOR NO!" << endl;
+                    cin >> ch;
+                    ch = tolower(ch);
+                    while (ch != 'y' && ch != 'n')
+                    {
+                        cout << "Invalid Input" << endl;
+                        cout << "Please enter the valid input as y or n" << endl;
+                        cin >> ch;
+                    }
+                    ch = tolower(ch);
+                    switch (ch)
+                    {
+                    case 'n':
+                    {
+                        cout << "Next flight leaves in 3 hours:" << endl;
+                        break;
+                    }
+                    case 'y':
+                    {
+                        if (economy <= 10)
+                        {
+                            arr_economy[economy - 6] = economy;
+                            cout << "There is available seat in this section!" << endl;
+                            cout << " ________________________________________________" << endl;
+                            cout << "|****************|_2_|-BOARDING PASS*************|" << endl;
+                            cout << "| YOUR SECTION : | 2                             |" << endl;
+                            cout << "| YOUR SEAT #  : | " << arr_economy[economy - 6] << "                             |" << endl;
+                            cout << "| SEATS AVAILABLE IN ECONOMY CLASS SECTION:      |" << endl;
+                            cout << "| Seat # 1:      |" << arr_economy[0] << "                              |" << endl;
+                            cout << "| Seat # 2:      |" << arr_economy[1] << "                              |" << endl;
+                            cout << "| Seat # 3:      |" << arr_economy[2] << "                              |" << endl;
+                            cout << "| Seat # 4:      |" << arr_economy[3] << "                              |" << endl;
+                            cout << "| Seat # 5:      |" << arr_economy[4] << "                              |" << endl;
+                            cout << " ________________________________________________" << endl;
+                            economy++;
+                        }
+                        break;
+                    }
+                    }
+                }
+                if (economy > 10)
+                {
+                    cout << "You have booked last seat,There is also \"NO\" seats  available now in FIRST CLASS SECTION." << endl;
+                    cout << "You have booked last seat,There is also \"NO\" seats  available now in ECONOMY CLASS SECTION." << endl;
+                    cout << "Next flight leaves in 3 hours:" << endl;
+                    flag = false;
+                }
+            }
+            break;
+        }
+        case 2:
+        {
+            if (economy <= 10)
+            {
+                arr_economy[economy - 6] = economy;
+                cout << "There is available seat in this section!" << endl;
+                cout << " ________________________________________________" << endl;
+                cout << "|****************|_2_|-BOARDING PASS*************|" << endl;
+                cout << "| YOUR SECTION : | 2                             |" << endl;
+                cout << "| YOUR SEAT #  : | " << arr_economy[economy - 6] << "                             |" << endl;
+                cout << "| SEATS AVAILABLE IN ECONOMY CLASS SECTION:       |" << endl;
+                cout << "| Seat # 1:      |" << arr_economy[0] << "                              |" << endl;
+                cout << "| Seat # 2:      |" << arr_economy[1] << "                              |" << endl;
+                cout << "| Seat # 3:      |" << arr_economy[2] << "                              |" << endl;
+                cout << "| Seat # 4:      |" << arr_economy[3] << "                              |" << endl;
+                cout << "| Seat # 5:      |" << arr_economy[4] << "                              |" << endl;
+                cout << " ________________________________________________" << endl;
+                economy++;
+            }
+            else if (economy > 10)
+            {
+                cout << "There is \"NO\" seat available in ECONOMY CLASS SECTION." << endl;
+                if (first <= 5)
+                {
+                    cout << "There is available seat in the FIRST SECTION:" << endl;
+                    cout << "Are you want to buy it press \"Y\" FOR YES and \"N\" FOR NO!" << endl;
+                    cin >> ch;
+                    ch = tolower(ch);
+                    while (ch != 'y' && ch != 'n')
+                    {
+                        cout << "Invalid Input" << endl;
+                        cout << "Please enter the valid input as y or n" << endl;
+                        cin >> ch;
+                    }
+                    ch = tolower(ch);
+                    switch (ch)
+                    {
+                    case 'n':
+                    {
+                        cout << "Next flight leaves in 3 hours:" << endl;
+                        break;
+                    }
+                    case 'y':
+                    {
+                        if (first <= 5)
+                        {
+                            arr_first[first - 1] = first;
+                            cout << "There is available seat in this section!" << endl;
+                            cout << " ________________________________________________" << endl;
+                            cout << "|****************|_1_|-BOARDING PASS*************|" << endl;
+                            cout << "| YOUR SECTION : | 1                             |" << endl;
+                            cout << "| YOUR SEAT #  : | " << arr_first[first - 1] << "                             |" << endl;
+                            cout << "| SEATS AVAILABLE IN FIRST CLASS SECTION:        |" << endl;
+                            cout << "| Seat # 1:      |" << arr_first[0] << "                              |" << endl;
+                            cout << "| Seat # 2:      |" << arr_first[1] << "                              |" << endl;
+                            cout << "| Seat # 3:      |" << arr_first[2] << "                              |" << endl;
+                            cout << "| Seat # 4:      |" << arr_first[3] << "                              |" << endl;
+                            cout << "| Seat # 5:      |" << arr_first[4] << "                              |" << endl;
+                            cout << " ________________________________________________" << endl;
+                            first++;
+                        }
+                        break;
+                    }
+                    }
+                }
+                if (first > 5)
+                {
+                    cout << "You have booked last seat,There is also \"NO\" seats  available now in FIRST CLASS SECTION." << endl;
+                    cout << "You have booked last seat,There is also \"NO\" seats  available now in ECONOMY CLASS SECTION." << endl;
+                    cout << "Next flight leaves in 3 hours:" << endl;
+                    flag = false;
+                }
+            }
+            break;
+        }
+        }
 
+    } while (flag == true);
 
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h3>Task 7. Write a program that stores your name, rollno, age and degree in valid data type variables. And 
-                    displays in following format:
-                    <br>
-                    Hi, my name is ------- having roll number ------- and enrolled in -------. My age is -----</h3>
-                <div class="code8">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            /*Program to display the Information
-                            Key_point:
-                                 we use the string library and strimg dataType to store the stings*/
-                          #include<iostream>
-                          #include<string>
-                          using namespace std;
-                          int main()
-                          {
-                              //use the string dataType because we cannot store the more than one 
-                              //letter in char dataType so to store the complete string we use the string dataType in 
-                              //string libraray
-                              string name="Muhib Arshad";
-                              string roll_no="BSEF21M540";
-                              string enrolled="FCIT(New_Campus) BSSE";
-                              int age=19;
-                              cout<<"My name is "<<name<<" having roll number "<<roll_no<<" and enrolled in "<<enrolled<<". My age is "<<age<<endl;
-                              return 0;
-                              
-                          }
-                          
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-
-
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h3>Task 8. Write a program that displays average of three numbers. Hardcode values of variables</h3>
-                <div class="code9">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            /*Program to display the Average of three variables*/
-                            #include<iostream>
-                            using namespace std;
-                            int main()
-                            {
-                                
-                                int num1=5;
-                                float num2=8.9;
-                                double num3=9.888;
-                                double average=0;//Intiliaze to zero to overwrite the garbage value
-                                average=(num1+num2+num3)/3;//Parantesis are used to discarge the priority order of division
-                                cout<<"Number 1 = "<<num1<<endl;
-                                cout<<"Number 2 = "<<num2<<endl;
-                                cout<<"Number 3 = "<<num3<<endl;
-                                cout<<"The average of these three numbers = "<<average<<endl;
-                                return 0;
-                                
-                            }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h3>Task 9. Write a program in which you store float value in int variable. Explain the output.</h3>
-                <div class="code10">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            /*Program to check float in int*/
-                            #include<iostream>
-                            using namespace std;
-                            int main()
-                            {
-                                int num1=7.98;
-                                cout<<"The number_1 is equal to = "<<num1<<endl;
-                                cout<<endl;
-                                
-                                cout<<"Explanation:"<<endl;
-                                cout<<"I store the varible in int as 7.98 in source code but in console answer is 7"<<endl
-                                <<"Beacuse when we store the floating point variable in int dataType it ignores the values after the(.)"<<endl
-                                <<"Integer dataType only stores the integer values without point values"<<endl
-                                <<"To store the variable with the point_values we use the float dataType properly"<<endl;
-                                
-                                return 0;
-                                
-                            }
-                        </xmp>
-                    </code></pre>
-                </div>
-            </div>
-         </div>
-
-
-
-
-         <div class="col-6">
-            <div class="row-6-1">
-                <h3>Task 10. Suppose an employee gets paid every month and earns 2000 each pay period. In a year the 
-                    employee gets paid 12 times. Write a program that defines the following variables:
-                    <br>
-                    payAmount; this variable will hold the amount of pay the employee earns each pay period.
-                    <br>
-                    payPeriods; this variable will hold the number of pay periods in a year.
-                    <br>
-                    annualPay; this variable will hold the employee’s total annual pay, which will be calculated.
-                    <br>
-                    Display the value of annualPay variable.
-                    <br>
-                    Hint: Employee’s total annual pay can be calculated by multiplying employee’s pay amount by number 
-        
-                    of pay periods in a year </h3>
-                <div class="code11">
-                    <pre><code class="language-cpp">
-                        <xmp>
-                            /*Program to display the anual_pay of user income */
-                            #include<iostream>
-                            using namespace std;
-                            int main()
-                            {
-                                
-                                int pay_Amount=2000;
-                                int pay_Periods=12;
-                                int annual_Pay=0;//Intiliaze to zero to overwrite the garbage value
-                                cout<<"The amount of pay the employee earns each pay period = "<<pay_Amount<<endl;
-                                cout<<"The number of pay periods in a year = "<<pay_Periods<<endl;
-                                annual_Pay=pay_Amount*pay_Periods;
-                                cout<<"The employee\'s total annual pay, which will be calculated = "<<annual_Pay<<endl;
-                                
-                                return 0;
-                            }
+    return 0;
+}
                         </xmp>
                     </code></pre>
                 </div>
@@ -589,14 +645,11 @@
                     <div class="footer-col" id="about_us">
                         <h4>About_us</h4>
                         <p>
-                        I am a student of PUCIT(New-Campus).I am currently doing BSSE.I am passionate about the mern
-                        stack web development ,operating systems,nfts and cyber security.In my first semister I found
-                        ,some students have problems like ,what i do? Which programs i do realted to the topic ,
-                        sometimes
-                        find very difficulty about the assignments than I take a decision ,i have to make a website from
-                        where i can upload all my experiences regarding to first semister and also some blogs to
-                        motivate the students about coding .So ,its a readymade coding dish for you enjoy it. Always
-                        remember me in your prayers.
+                         Hey, I am muhib a student of pucit and doing BSSE. I am keen off about MERN stack web
+                         development,operating systems.ntfs and cyber security.
+                         I found many problems about assignments, programs etc in first semester so i decided to make a
+                         website about my journey of coding so further upcoming students can take benefit from it.Yours
+                         wellwisher Muhib Arshad.
                         </p>
                     </div>
     
@@ -653,4 +706,4 @@
         <script src="./Prism/prism-final.js" ></script>
 </body>
 
-</html> -->
+</html>

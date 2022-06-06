@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -37,7 +37,7 @@
         </div>
 </body>
 
-</html>
+</html> -->
 
 
 
@@ -47,14 +47,14 @@
 
 
 
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assignments.css">
+    <link rel="stylesheet" href="assignments5.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="./Prism/prism-final.css">
     <title>Assignments-PUCIT(NC)_PF</title>
@@ -75,20 +75,20 @@
             <img src="images/menu-icon.png" alt="Menu-icon" id="menu-icon" onclick="toggle_menu()">
         </div>
         <div class="arrow">
-            <img src="./images/arrowdown.png" alt="arrow" class="arrowdown" >
+            <img src="./images/arrowdown.png" alt="arrow" class="arrowdown">
         </div>
         <div class="arrowleft">
-            <img src="./images/arrowright2.png" alt="arrow" >
+            <img src="./images/arrowright2.png" alt="arrow">
         </div>
         <div class="assignments">
-        <a href="codesheets.html"><button>CODE-SHEETS
-        </button></a>
+            <a href="codesheets.html"><button>CODE-SHEETS
+                </button></a>
 
         </div>
         <div class="contanier-2">
             <div class="heading">
                 <h1>PF-PUCIT(NEW-CAMPUS)</h1>
-                <h2>ASSIGNMENT 01:</h2>
+                <h2>ASSIGNMENT 05:</h2>
             </div>
             <div class="row-1">
                 <div class="col-1">
@@ -103,554 +103,844 @@
                             <li><a href="assignments6.html"><button class="btnside">Assignmen 6</button></a></li>
                             <li><a href="assignments7.html"><button class="btnside">Assignment 7</button></a></li>
                             <li><a href="assignments8.html"><button class="btnside">Assignment 8</button></a></li>
-                            <li><a href= "assignments9.html"><button class="btnside">Assignment 9</button></a></li>
+                            <li><a href="assignments9.html"><button class="btnside">Assignment 9</button></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-2">
                     <div class="basics">
-                      <h2>Sample:Sum_Of_Two_Numbers</h2>
-                       <div class="code">
-                        <pre class="cpp"><code class="language-cpp">
+                        <h2>Assignment Topics</h2>
+                        <div class="code">
+                            <pre class="cpp"><code class="language-cpp">
                             <xmp>
-                                #include<iostream>
-                                    using namespace std;
-                                    int main()
-                                    {
-                                        int num_1=50;
-                                        int num_2=100;
-                                        int sum;
-                                        sum=num_1+num_2;
-                                        cout<<"The sum of these two numbers = "<<sum<<endl;
-                                        return 0;
-                                    }
-                                    
+                              Loops:
+                              1.For Loop
+                              2.Do while Loop
+                              3.While Loop
                             </xmp>
                         </code></pre>
-                       </div>
+                        </div>
 
-                        
+
                     </div>
                 </div>
             </div>
         </div>
 
-     <div class="contanier-6">
-         <div class="col-6">
-            <div class="row-6-1">
-                <h3>Task 1. Write a program that displays size of int, float, double, char and bool data types, use sizeof() 
-                    function.
+        <div class="contanier-6">
+            <div class="col-6">
+                <div class="row-6-1">
+                    <h3>Task1.Assume that you want to generate a table of multiples of any given number. Write a program
+                        that allows the user to enter the number and then generates the table, formatting it into 10
+                        columns and 20 lines.
                     </h3>
-                <div class="code2">
-                    <pre><code class="language-cpp">
+                    <div class="code2">
+                        <pre><code class="language-cpp">
                         <xmp>
-                            /* This Program is used to display the size of different dataTypes 
-                            Key_point:
-                                 We use the function sizeof(dataTypes) :
-                          */
-                          #include<iostream>
-                          using namespace std;
-                          int main()
-                          {
-                              
-                              cout<<"The size of Int_data_Type  is "<<sizeof(int)<<" Bytes \n";
-                              cout<<"The size of Float_data_Type  is "<<sizeof(float)<<" Bytes \n";
-                              cout<<"The size of Double_data_Type  is "<<sizeof(double)<<" Bytes \n";
-                              cout<<"The size of Char_data_Type is  "<<sizeof(char)<<" Bytes \n";
-                              cout<<"The size of Bool_data_Type is  "<<sizeof(bool)<<" Bytes \n";
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num;
+    int n=1;
+    int table;
+    cout<<"___________________________________________"<<endl;
+    cout<<"--------------Table of a number-------------"<<endl;
+    cout<<"____________________________________________"<<endl;
+    cout<<"Enter the number :"<<endl;
+    cin>>num;
+    int i=1;
+    while(i<=20)
+    {
+        int j=1;
+        while(j<=10)
+        {
+         table=num*n;
+         cout<<table<<"  ";
+            j++;
+            n++;
+        }
+        cout<<endl;
+        i++;
+    }
+    return 0;
+}
                           
-                              return 0;
-                          }
-                          
                         </xmp>
                     </code></pre>
+                    </div>
+
                 </div>
-                
             </div>
-         </div>
-         <div class="col-6">
-            <div class="row-6-1">
-                <h3>Task 2. Write a program that compute area of a rectangle, whose height if 9m and width is 5m.Display 
-                    its area.</h3>
-                <div class="code3">
-                    <pre><code class="language-cpp">
+            <div class="col-6">
+                <div class="row-6-1">
+                    <h3>Task 2. Suppose you give a dinner party for six guests, but your table seats only four. In how
+                        many ways
+                        can four of the six guests arrange themselves at the table?
+                        Any of the six guests can sit in the first chair. Any of the remaining five can sit in the
+                        second chair.
+                        Any of the remaining four can sit in the third chair, and any of the remaining three can sit in
+                        the
+                        fourth chair. (The last two will have to stand.)
+                        So the number of possible arrangements of six guests in four chairs is 6*5*4*3, which is 360.
+                        Write a program that calculates the number of possible arrangements for any number of guests
+                        and any number of chairs. (Assume there will never be fewer guests than chairs.) Don’t let this
+                        get too complicated. A simple loop should do it.</h3>
+                    <div class="code3">
+                        <pre><code class="language-cpp">
                         <xmp>
-                            /*This is a Program to display the area of arectangle
-                            Key_point:
-                               area=height*Width;
-                         */
-                         #include<iostream>
-                         using namespace std;
-                         int main()
-                         {
-                             
-                             int height=9;
-                             int width=5;
-                             int area=0;//Intiliaze to zero to overwrite the garbage value
-                             cout<<"Calculate the area of a rectangle:"<<endl;
-                             cout<<"height=9m"<<endl;
-                             cout<<"width=5m"<<endl;
-                             area=height*width;
-                             cout<<"The area of a rectangle = "<<area<<"m^2"<<endl;
-                             
-                             return 0;
-                         }
+#include <iostream>
+using namespace std;
+int main()
+{
+    int noOf_Guest;
+    int noOf_chairs;
+    cout << "___________________________________________" << endl;
+    cout << "--------------Table of a number-------------" << endl;
+    cout << "____________________________________________" << endl;
+    cout << "Enter the number of guests:" << endl;
+    cin >> noOf_Guest;
+    cout << "Enter the number of chairs:" << endl;
+    cin >> noOf_chairs;
+    while (noOf_Guest < noOf_chairs)
+    {
+        cout << "Inavalid :Input" << endl;
+        cout << "Number of guest are always be greater than the number of the chairs:" << endl;
+        cout << " Again Enter the number of guests:" << endl;
+        cin >> noOf_Guest;
+        cout << " Agin Enter the number of chairs:" << endl;
+        cin >> noOf_chairs;
+    }
+    int upper = noOf_Guest;
+    int cal_upper = 1;
+    int lower = noOf_Guest - noOf_chairs;
+    int cal_lower = 1;
+    while (upper != 0)
+    {
+        cal_upper = cal_upper * upper;
+        upper--;
+    }
+    while (lower != 0)
+    {
+        cal_lower = cal_lower * lower;
+        lower--;
+    }
+    float combination;
+    combination = (float)cal_upper / cal_lower;
+    cout << "The number of possible arrangements " << noOf_Guest << " number of guests and " << noOf_chairs << " number of chairs = " << combination << endl;
+
+    return 0;
+}
                         </xmp>
                     </code></pre>
+                    </div>
                 </div>
             </div>
-         </div>
 
 
-         <div class="col-6">
-            <div class="row-6-1">
-                <h3>Task 3. Write a program that displays sum, subtractions, multiplication and division of two float 
-                    numbers. Take any float numbers i.e. float f1 = 5.4, f2 = 7.8;</h3>
-                <div class="code4">
-                    <pre><code class="language-cpp">
+            <div class="col-6">
+                <div class="row-6-1">
+                    <h3>Task 3. Create a four‐function calculator for fractions. Here are the formulas for the four
+                        arithmetic<br>
+                        operations applied to fractions:<br>
+                        Addition :  a/b + c/d = (a*d+b*c)/(b*d);<br>
+                        Subtraction :  a/b - c/d = (a*d-b*c)/(b*d);<br>
+                        Multiplication :  a/b * c/d = (a*c)/(b*d);<br>
+                        Division :  a/b / c/d = (a*d)(/b*c);<br>
+                        The user should type the first fraction, an operator, and a second fraction. The program should
+                        then display the result and ask whether the user wants to continue.<br>
+                        Do you wish to continue (y/n)?<br>
+                        y mean executes the above program again. n mean end the program</h3>
+                    <div class="code4">
+                        <pre><code class="language-cpp">
                         <xmp>
-                            /*This is a program that dispaly the sum,subtraction ,multiplication and division 
-                            of the two "Float_numbers"*/
-                           #include<iostream>
-                           using namespace std;
-                           int main()
-                           {
-                               
-                               float num1=5.4;
-                               float num2=7.2;
-                               float sum=0;//Initilaize to zero to overwrite the garbage values
-                               float sub=0;
-                               float multiplay=0;
-                               double division=0;//Take is double because its a chance to get the point values greater than float range
-                               cout<<"we have two numbers:"<<endl;
-                               cout<<"Number_1=5.4 \n";
-                               cout<<"Number_2=7.2 \n";
-                               cout<<endl;
-                               cout<<"The arthematic_operations on these floating point numbers:"<<endl;
-                               cout<<endl;
-                               //Araathematic Operations on it
-                               sum=num1+num2;
-                               sub=num1-num2;
-                               multiplay=num1*num2;
-                               division=num1/num2;
-                               cout<<"The Addition of these two floating numbers = "<<sum<<endl;
-                               cout<<"The Subtraction of these two floating numbers = "<<sub<<endl;
-                               cout<<"The Multiplication of these two floating numbers = "<<multiplay<<endl;
-                               cout<<"The division of these two floating numbers = "<<division<<endl;
-                           
-                               return 0;
-                           }
+#include <iostream>
+using namespace std;
+int main()
+{
+    bool flag = true;
+    while (flag == true)
+    {
+        int a, b, c, d;
+        int upper;
+        int lower;
+        float cal;
+        char ch;
+        char wish;
+        cout << "___________________________________________" << endl;
+        cout << "--------------Fraction Calculator-------------" << endl;
+        cout << "____________________________________________" << endl;
+        cout << "Enter the fraction 1:" << endl;
+        cin >> a;
+        cout << "/" << endl;
+        cin >> b;
+        cout << "Enter the operation:" << endl;
+        cin >> ch;
+        cout << "Enter the second fraction:" << endl;
+        cin >> c;
+        cout << "/" << endl;
+        cin >> d;
+        cout << endl;
+        switch (ch)
+        {
+        case '+':
+        {
+            upper = ((a * d) + (b * c));
+            lower = (b * d);
+            cout << "The sum of these two fractions = " << upper << "/" << lower << endl;
+            break;
+        }
+        case '-':
+        {
+            upper = ((a * d) - (b * c));
+            lower = (b * d);
+            cout << "The subtraction of these two fractions = " << upper << "/" << lower << endl;
+            break;
+        }
+        case '*':
+        {
+            upper = (a * c);
+            lower = (b * d);
+            cout << "The Multipliaction of these two fractions = " << upper << "/" << lower << endl;
+            break;
+        }
+        case '/':
+        {
+            upper = (a * d);
+            lower = (b * c);
+            cout << "The division of these two fractions = " << upper << "/" << lower << endl;
+            break;
+        }
+        }
+        cout << "Do you wish to continue? Enter y or yes or n for not!" << endl;
+        cin >> wish;
+        if (wish == 'y')
+        {
+            system("cls");
+            flag = true;
+        }
+        else if (wish == 'n')
+        {
+
+            flag = false;
+        }
+    }
+
+    return 0;
+}
                         </xmp>
                     </code></pre>
+                    </div>
                 </div>
             </div>
-         </div>
 
 
-         <div class="col-6">
-            <div class="row-6-1">
-                <h3>Task 4. Write reasons for errors in following codes:
-                    <br>
-                     int number = 10;
-                    <br>
-                    cout << number;
-                    <br>
-                    cout << number2;
-                    <br>
-                    int number2 = 50;
-                    <br>
-                    char ch = 'Programming Fundamental ';
-                    <br>
-                    cout << ch ;
-                    </h3>
-                <div class="code5">
-                    <pre><code class="language-cpp">
+            <div class="col-6">
+                <div class="row-6-1">
+                    <h3>Task 4.Write a program that asksthe user to enter today’ssalesfor five stores. The program
+                        should then
+                        display a bar graph comparing each store’s sales. Create each bar in the bar graph by displaying
+                        a row of asterisks. Each asterisk should represent $100 of sales. Here is an example of the
+                        program’s output <br>
+                    ___________________________________________<br>
+                    --------------Store Sale graph-------------<br>
+                    ____________________________________________<br>
+                    Enter today's sale for store 1 :<br>
+                    1000<br>
+                    Enter today's sale for store 2 :<br>
+                    1200<br>
+                    Enter today's sale for store 3 :<br>
+                    1800<br>
+                    Enter today's sale for store 4 :<br>
+                    800<br>
+                    Enter today's sale for store 5 :<br>
+                    1900<br>
+<br>
+                    Sales Bar Chart :<br>
+                    Store 1: **********<br>
+                    Store 2: ************<br>
+                    Store 3: ******************<br>
+                    Store 4: ********<br>
+                    Store 5: *******************</h3>
+
+                    <div class="code5">
+                                    <pre><code class="language-cpp">
                         <xmp>
-                            /*
-                            Errors in the code*/
-                          #include<iostream>
-                          using namespace std;
-                          int main()
-                          {
-                              cout<<"we have a code as:"<<endl<<endl<<"int number = 10"
-                              <<endl<<"cout << number;"<<endl<<"cout << number2;"<<endl
-                              <<"int number2 = 50;"<<endl<<"char ch = 'Programming Fundamental;"
-                              <<endl<<"cout << ch ;";
-                              cout<<endl;
-                              cout<<"The errors in the code are as follows;"<<endl<<endl;
-                              cout<<endl;
-                              
-                              cout<<"First ERROR:"<<endl;
-                              cout<<"In the third line we cout the number2 first and decalre and initlize it later.Its scope is invalid because C++ compilers compile it line by line "<<endl
-                              <<"The error is \" SCOPE_Invalid : a variable cannot be used in any part of the program before the definition\" "<<endl;
-                              cout<<endl;
-                              
-                              cout<<"Second_ERROR:"<<endl;
-                              cout<<"IN fifth_line we initiliaze the char datatype with a string but char dataType has store only one ASCII character and size of its is only one bit"<<endl
-                              <<"The error is \"  Strings are consecutive sequences of characters that occupy consecutive bytes of memory \" "<<endl
-                              <<"Characters normally occupy a single byte of memory:"<<endl; 
-                              cout<<endl;
-                              
-                              return 0;
-                          }
+#include <iostream>
+using namespace std;
+int main()
+{
+    float store1, store2, store3, store4, store5;
+    cout << "___________________________________________" << endl;
+    cout << "--------------Store Sale graph-------------" << endl;
+    cout << "____________________________________________" << endl;
+    cout << "Enter today's sale for store 1 :" << endl;
+    cin >> store1;
+    cout << "Enter today's sale for store 2 :" << endl;
+    cin >> store2;
+    cout << "Enter today's sale for store 3 :" << endl;
+    cin >> store3;
+    cout << "Enter today's sale for store 4 :" << endl;
+    cin >> store4;
+    cout << "Enter today's sale for store 5 :" << endl;
+    cin >> store5;
+    cout << endl;
+    cout << "Sales Bar Chart :" << endl;
+    store1 = store1 / 100;
+    store2 = store2 / 100;
+    store3 = store3 / 100;
+    store4 = store4 / 100;
+    store5 = store5 / 100;
+    // displays
+    int s1 = 1;
+    int s2 = 1;
+    int s3 = 1;
+    int s4 = 1;
+    int s5 = 1;
+    cout << "Store 1: ";
+    while (s1 <= store1)
+    {
+        cout << "*";
+        s1++;
+    }
+    cout << endl;
+    cout << "Store 2: ";
+    while (s2 <= store2)
+    {
+        cout << "*";
+        s2++;
+    }
+    cout << endl;
+    cout << "Store 3: ";
+    while (s3 <= store3)
+    {
+        cout << "*";
+        s3++;
+    }
+    cout << endl;
+    cout << "Store 4: ";
+    while (s4 <= store4)
+    {
+        cout << "*";
+        s4++;
+    }
+    cout << endl;
+    cout << "Store 5: ";
+    while (s5 <= store5)
+    {
+        cout << "*";
+        s5++;
+    }
+    cout << endl;
+
+    return 0;
+}
                         </xmp>
                     </code></pre>
                 </div>
             </div>
-         </div>
+        </div>
 
 
 
-         <div class="col-6">
+        <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 5. Write a program that converts Fahrenheit temperature to Celsius temperature. Initialize a 
-                    variable with Fahrenheit temperature value i.e float Fahrenheit = 35; And convert it into Celsius 
-                    <br>
-                    temperature. Hint: Celsius = (Fahrenheit - 32) * 5/9
-                    <br>
-                    Sample Output:
-                    <br>
-                    Temperature in Fahrenheit : 212
-                    <br>
-                    Temperature in Celsius : 100</h3>
+                <h3>Task 5. Write a program with a loop that lets the user enter a series of integers. The user should
+                    enter
+                    −99 to signal the end of the series. AŌer all the numbers have been entered, the program should
+                    display the largest and smallest numbers entered.</h3>
                 <div class="code6">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*This is program to display the Celsius to fanheit temparature
-                            Key point:
-                                  celsius=(farnheit-32)*5/9;
-                           */
-                           #include<iostream>
-                           using namespace std;
-                           int main()
-                           {
-                               
-                               double farnheit=212;
-                               double celsius=0;//Intiliaze to zero to overwrite the garbage value
-                               celsius=(farnheit-32)*5/9;//Parantesis are used to discarge the priority order of division
-                               cout<<"The temperature in Farnheit = "<<farnheit<<endl;
-                               cout<<"The temperature in Celsius = "<<celsius<<endl;
-                               return 0;
-                               
-                           }
+#include<iostream>
+using namespace std;
+int main()
+{
+   int num=0;
+   int temp;
+   int larger;
+   int smaller;
+     cout << "___________________________________________" << endl;
+    cout << "--------------Greater or Smaller-------------" << endl;
+    cout << "____________________________________________" << endl;
+   while(num!=-99)
+   {
+    temp=num;
+     cout<<"Enter a number :"<<endl;
+     cin>>num;
+     if(num>temp)
+     {
+         larger=num;
+     }
+    else if(num<temp && num!=-99)
+     {
+       smaller=num;
+     }
+   }
+   cout<<"The larger number from the above inputs = "<<larger<<endl;
+   cout<<"The smaller number from the above inputs = "<<smaller<<endl;
+
+    return 0;
+}
                         </xmp>
                     </code></pre>
                 </div>
             </div>
-         </div>
+        </div>
 
 
 
-         <div class="col-6">
+        <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 6. Write a program that swaps value of two integer. Display values before and after swapping. 
-                    Hint: Take help from third variable.
-                    <br>
-                    Sample Output:
-                    <br>
-                    Before Swapping:
-                    <br>
-                    Value of no1 = 5
-                    <br>
-                    Value of no2 = 10
-                    <br>
-                    After Swapping:
-                    <br>
-                    Value of no1 = 10
-                    <br>
-                    Value of no2 = 5</h3>
+                <h3>A teacher has asked all his students to line up single file according to their first name.
+                    For example, in one class Amy will be at the front of the line and Yolanda will be at the end.
+                    Write a program that prompts the user to enter the number of students in the class, then loops
+                    to read that many names. Once all the names have been read it reports which student would be
+                    at the front of the line and which one would be at the end of the line. You may assume that no
+                    two students have the same name.
+                    Input Validation: Do not accept a number less than 1 or greater than 25 for the number of students.
+                </h3>
                 <div class="code7">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*This is a program to Swap the values
-                            key_Point:
-                               {
-                                 int a,b,temp;
-                                 temp=a;
-                                 a=b;
-                                b=temp;
-                            }    
-                          */
-                          #include<iostream>
-                          using namespace std;
-                          int main()
-                          {
-                              int num1=5;
-                              int num2=10;
-                              int temp=0;//used the third variable for help
-                              cout<<"The Numbers before swaping are written as:"<<endl;
-                              cout<<"The number_1 = "<<num1<<endl;
-                              cout<<"The number_2 = "<<num2<<endl;
-                              cout<<endl;
-                              //Now Swap the Values
-                              temp=num1;
-                              num1=num2;
-                              num2=temp;
-                              cout<<"The Numbers After swaping are written as:"<<endl;
-                              cout<<"The number_1 = "<<num1<<endl;
-                              cout<<"The number_2 = "<<num2<<endl;
-                              cout<<endl;
-                              
-                              return 0;
-                          }
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    int num;
+    string name;
+    string temp;
+    string temp1;
+    string temp2;
+    cout << "______________________________________________________________________" << endl;
+    cout << "--------------Class line first and last student in a list-------------" << endl;
+    cout << "_______________________________________________________________________ " << endl;
+    cout << "Enter the number of students:" << endl;
+    cin >> num;
+    while (num < 1 || num > 25)
+    {
+        cout << "Invalid Input:" << endl;
+        cout << "Again Enter the Number of students that are in the range of 1 to 25:" << endl;
+        cout << "Enter the number of students:" << endl;
+        cin >> num;
+    }
+        cout<<"Enter the first name of the student 1 :"<<endl;
+        cin>>temp; 
+        temp1=temp;
+        temp2=temp; 
+    int i=2;
+    while (i <= num)
+    {
+        cout<<"Enter the name of the student "<<i<<" :"<<endl;
+        cin>>name;
+         if(name>temp1)
+         {
+             temp1=name;
+         }
+    else  if(name<temp2)
+         {
+            temp2=name;
+         }
+
+        i++;
+    }
+    cout<<"The first name in the list should be = "<<temp2<<endl;
+    cout<<"The last name in the list should be = "<<temp1<<endl;
+
+    return 0;
+}
+
+
                         </xmp>
                     </code></pre>
                 </div>
             </div>
-         </div>
+        </div>
 
 
 
-         <div class="col-6">
+        <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 7. Write a program that stores your name, rollno, age and degree in valid data type variables. And 
-                    displays in following format:
-                    <br>
-                    Hi, my name is ------- having roll number ------- and enrolled in -------. My age is -----</h3>
+                <h3>Task 7. Write a program that asksthe user to enter the amount that he or she has budgeted for a
+                    month.
+                    A loop should then prompt the user to enter each of his or her expenses for the month and keep
+                    a running total. When the loop finishes, the program should display the amount that the user is
+                    over or under budget.</h3>
                 <div class="code8">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*Program to display the Information
-                            Key_point:
-                                 we use the string library and strimg dataType to store the stings*/
-                          #include<iostream>
-                          #include<string>
-                          using namespace std;
-                          int main()
-                          {
-                              //use the string dataType because we cannot store the more than one 
-                              //letter in char dataType so to store the complete string we use the string dataType in 
-                              //string libraray
-                              string name="Muhib Arshad";
-                              string roll_no="BSEF21M540";
-                              string enrolled="FCIT(New_Campus) BSSE";
-                              int age=19;
-                              cout<<"My name is "<<name<<" having roll number "<<roll_no<<" and enrolled in "<<enrolled<<". My age is "<<age<<endl;
-                              return 0;
-                              
-                          }
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
+{
+
+    float budget;
+    float expense=0.0;
+    float sum = 0;
+    bool flag = true;
+    int i = 1;
+    cout << "____________________________________________________" << endl;
+    cout << "--------------Monthly Budget calculator-------------" << endl;
+    cout << "_____________________________________________________" << endl;
+    cout << "Enter the total budget of a month:" << endl;
+    cin >> budget;
+    cout << "Enter the values of a expenses and when you enter all and finish it enter -1" << endl;
+    while (flag == true)
+    {
+        sum = sum + expense;
+        cout << "Enter an amount spent for the expense " << i << " = " << endl;
+        cin >> expense;
+        if (expense == -1)
+        {
+            flag = false;
+        }
+        i++;
+    }
+    cout << endl;
+    cout << "Your total bydget is = $" << budget << endl;
+    cout << "Your total expenses = $" << sum << endl;
+    if (sum > budget)
+    {
+        cout << "Your are $" << sum - budget << " over the budget:" << endl;
+    }
+    else if (sum < budget)
+    {
+        cout << "Your are $" << budget - sum << " under the budget:" << endl;
+    }
+    else
+    {
+        cout << " your expenses are equal to budget:" << endl;
+    }
+
+    return 0;
+}
                           
                         </xmp>
                     </code></pre>
                 </div>
             </div>
-         </div>
+        </div>
 
 
 
 
 
 
-         <div class="col-6">
+        <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 8. Write a program that displays average of three numbers. Hardcode values of variables</h3>
+                <h3>Task 8. Write a program that displays a weekly payroll report. A loop in the program should ask the
+                    user for the employee number, gross pay, state tax, federal tax, and FICA with‐holdings.
+                    The loop will terminate when 0 is entered for the employee number.
+                    After the data is entered, the program should display totals for gross pay, state tax, federal tax,
+                    FICA withholdings, and net pay.
+                    Input Validation: Do not accept negative numbers for any of the items entered. Do not accept values
+                    for state,
+                    federal, or FICA withholdings that are greater than the gross pay. If the sum state tax + federal
+                    tax + FICA
+                    withholdings for any employee is greater than gross pay, print an error message and ask the user to
+                    reenter the data
+                    for that employee</h3>
                 <div class="code9">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*Program to display the Average of three variables*/
-                            #include<iostream>
-                            using namespace std;
-                            int main()
-                            {
-                                
-                                int num1=5;
-                                float num2=8.9;
-                                double num3=9.888;
-                                double average=0;//Intiliaze to zero to overwrite the garbage value
-                                average=(num1+num2+num3)/3;//Parantesis are used to discarge the priority order of division
-                                cout<<"Number 1 = "<<num1<<endl;
-                                cout<<"Number 2 = "<<num2<<endl;
-                                cout<<"Number 3 = "<<num3<<endl;
-                                cout<<"The average of these three numbers = "<<average<<endl;
-                                return 0;
-                                
-                            }
+#include <iostream>
+using namespace std;
+int main()
+{
+    cout << "____________________________________________________" << endl;
+    cout << "--------------Weekly payroll Report-------------" << endl;
+    cout << "_____________________________________________________" << endl;
+    int empNo = 1;
+    bool flag = true;
+    bool invalid;
+    float gross, state, federal, fica, reenter;
+    float sum_gross = 0, sum_state = 0, sum_federal = 0, sum_fica = 0, sum_reenter = 0, total_net = 0, total_pay;
+    while (flag == true)
+    {
+
+        do
+        {
+            cout << "Enter the emplyee number :" << endl;
+            cin >> empNo;
+            while (empNo < 0)
+            {
+                cout << "!INVALID INPUT:AGAIN ENTERD THE EMPLOYEE NUMBER( it should not be negative):" << endl;
+                cin >> empNo;
+            }
+            if (empNo == 0)
+            {
+                flag = false;
+                break;
+            }
+            cout << "Enter the gross value number :" << endl;
+            cin >> gross;
+            while (gross < 0)
+            {
+                cout << "!INVALID INPUT:AGAIN ENTERD THE GROSS VALUE( it should not be negative):" << endl;
+                cin >> gross;
+            }
+            cout << "Enter the STATE TAX :" << endl;
+            cin >> state;
+            while (state < 0)
+            {
+                cout << "!INVALID INPUT:AGAIN ENTERD THE STATE TAX( it should not be negative):" << endl;
+                cin >> state;
+            }
+            cout << "Enter the FEDERAL TAX: :" << endl;
+            cin >> federal;
+            while (federal < 0)
+            {
+                cout << "!INVALID INPUT:AGAIN ENTERD THE  FEDERAL TAX:( it should not be negative):" << endl;
+                cin >> federal;
+            }
+            cout << "Enter the FICA holdings :" << endl;
+            cin >> fica;
+            while (fica < 0)
+            {
+                cout << "!INVALID INPUT:AGAIN ENTERD THE FICA holdings( it should not be negative):" << endl;
+                cin >> fica;
+            }
+            reenter = state + federal + fica;
+            if (reenter > gross)
+            {
+                invalid = false;
+                cout << "The sum of state tax , federal tax and FICA holdingsis greater than the gross value " << endl;
+                cout << "So,re-enter the values for the emplyee number :" << empNo << endl;
+            }
+            else if (reenter < gross)
+            {
+                invalid = true;
+            }
+            if (invalid == true)
+            {
+                sum_gross = sum_gross + gross;
+                sum_state = sum_state + state;
+                sum_federal = sum_federal + federal;
+                sum_fica = sum_fica + fica;
+            }
+        } while (invalid);
+    }
+    total_pay = sum_federal + sum_fica + sum_state;
+    total_net = sum_gross - total_pay;
+    cout << "\n Pay_Roll Weekly Report:" << endl;
+    cout << "The total gross value = $" << sum_gross << endl;
+    cout << "The total state_tax value = $" << sum_state << endl;
+    cout << "The total federal_tax value = $" << sum_federal << endl;
+    cout << "The total FICA holdings value = $" << sum_fica << endl;
+    cout << "The total net pay  = $" << total_net << endl;
+
+    return 0;
+}
                         </xmp>
                     </code></pre>
                 </div>
             </div>
-         </div>
+        </div>
 
 
 
 
-         <div class="col-6">
+        <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 9. Write a program in which you store float value in int variable. Explain the output.</h3>
+                <h3>Task 9. A prime number is a number that is only evenly divisible by itself and 1. For example, the
+                    number
+                    5 is prime because it can only be evenly divided by 1 and 5. The number 6, however, is not prime
+                    because it can be divided evenly by 1, 2, 3, and 6.
+                    Write a program, which takes an integer from user and print “Number is Prime” if the number is
+                    a prime number, or “Number is not Prime” otherwise.</h3>
                 <div class="code10">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*Program to check float in int*/
-                            #include<iostream>
-                            using namespace std;
-                            int main()
-                            {
-                                int num1=7.98;
-                                cout<<"The number_1 is equal to = "<<num1<<endl;
-                                cout<<endl;
-                                
-                                cout<<"Explanation:"<<endl;
-                                cout<<"I store the varible in int as 7.98 in source code but in console answer is 7"<<endl
-                                <<"Beacuse when we store the floating point variable in int dataType it ignores the values after the(.)"<<endl
-                                <<"Integer dataType only stores the integer values without point values"<<endl
-                                <<"To store the variable with the point_values we use the float dataType properly"<<endl;
-                                
-                                return 0;
-                                
-                            }
+#include<iostream>
+using namespace std;
+int main()
+{
+    int num;
+    bool flag=true;
+    int i=2;
+    cout << "____________________________________________________" << endl;
+    cout << "-------------------Prime Number---------------------" << endl;
+    cout << "_____________________________________________________" << endl;
+    cout<<"Enter a number:"<<endl;
+    cin>>num;
+    while(i<num)
+    {
+        if(num%i==0)
+        {
+            flag=false;
+        }
+        i++;
+    }
+    if(flag==true)
+    {
+        cout<<num<<" is a prime number :"<<endl;
+    }
+    else if(flag==false)
+    {
+        cout<<num<<" is not a prime number :"<<endl;
+    }
+    
+
+    return 0;
+}
                         </xmp>
                     </code></pre>
                 </div>
             </div>
-         </div>
+        </div>
 
 
 
 
-         <div class="col-6">
+        <div class="col-6">
             <div class="row-6-1">
-                <h3>Task 10. Suppose an employee gets paid every month and earns 2000 each pay period. In a year the 
-                    employee gets paid 12 times. Write a program that defines the following variables:
-                    <br>
-                    payAmount; this variable will hold the amount of pay the employee earns each pay period.
-                    <br>
-                    payPeriods; this variable will hold the number of pay periods in a year.
-                    <br>
-                    annualPay; this variable will hold the employee’s total annual pay, which will be calculated.
-                    <br>
-                    Display the value of annualPay variable.
-                    <br>
-                    Hint: Employee’s total annual pay can be calculated by multiplying employee’s pay amount by number 
-        
-                    of pay periods in a year </h3>
+                <h3>Task 10. Write a C++ program that reads an integer between 0 and 65535 from the keyboard and uses it
+                    to seed a random number generator. Then output 20 random numbers between 1 and 100 on
+                    screen. </h3>
                 <div class="code11">
                     <pre><code class="language-cpp">
                         <xmp>
-                            /*Program to display the anual_pay of user income */
-                            #include<iostream>
-                            using namespace std;
-                            int main()
-                            {
-                                
-                                int pay_Amount=2000;
-                                int pay_Periods=12;
-                                int annual_Pay=0;//Intiliaze to zero to overwrite the garbage value
-                                cout<<"The amount of pay the employee earns each pay period = "<<pay_Amount<<endl;
-                                cout<<"The number of pay periods in a year = "<<pay_Periods<<endl;
-                                annual_Pay=pay_Amount*pay_Periods;
-                                cout<<"The employee\'s total annual pay, which will be calculated = "<<annual_Pay<<endl;
-                                
-                                return 0;
-                            }
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+int main()
+{
+    int num;
+    cout << "_______________________________________________________________" << endl;
+    cout << "-------------------Random Number Generator---------------------" << endl;
+    cout << "_______________________________________________________________" << endl;
+    cout << "Enter the number betwwen the 0 and 65535 :" << endl;
+    cin >> num;
+    while (num < 0 || num > 65535)
+    {
+        cout << "Inavlid Input! Plaese enter the number in the range of the 0 and 65535:" << endl;
+        cin >> num;
+    }
+    srand(num);
+    int i = 1;
+    while (i <= 20)
+    {
+        int x;
+        x = (rand() % 100) + 1;
+        cout << "The  random number " << i << " = " << x << endl;
+        i++;
+    }
+
+    return 0;
+}
                         </xmp>
                     </code></pre>
                 </div>
             </div>
-         </div>
+        </div>
 
 
 
 
-     </div>
+    </div>
 
 
-        <div class="container-3">
-            <div class="heading-2">
-                <h1>Whats make this website differents from others?</h1>
-            </div>
-            <div class="row-3">
+    <div class="container-3">
+        <div class="heading-2">
+            <h1>Whats make this website differents from others?</h1>
+        </div>
+        <div class="row-3">
 
-                <div class="amazing">
-                    <div class="amazing-header">
-                        <h1>Amazing Feature That Increase your Productivity</h1>
-                    </div>
-                    <div class="amazing-body">
-                        <p>
-                            If you don't find any problem,in this website and if you have a very difficult assignment
-                            question that
-                            is not present on internet ,then you dont bother yourself,we are here to solve every problem
-                            of
-                            your
-                            life you just click on the Problem asking button and write your problem we slove the code of
-                            your
-                            problem and sent you on your email addres that you put in the sin up form.
-                        </p>
-                        <a href="contact.html"><button class="btn2">Write your Problem here</button></a>
-                    </div>
+            <div class="amazing">
+                <div class="amazing-header">
+                    <h1>Amazing Feature That Increase your Productivity</h1>
+                </div>
+                <div class="amazing-body">
+                    <p>
+                        If you don't find any problem,in this website and if you have a very difficult assignment
+                        question that
+                        is not present on internet ,then you dont bother yourself,we are here to solve every problem
+                        of
+                        your
+                        life you just click on the Problem asking button and write your problem we slove the code of
+                        your
+                        problem and sent you on your email addres that you put in the sin up form.
+                    </p>
+                    <a href="contact.html"><button class="btn2">Write your Problem here</button></a>
                 </div>
             </div>
         </div>
-        <footer>
-            <div class="contanier-4">
-                <div class="row-4">
-    
-    
-    
-                    <div class="footer-col" id="about_us">
-                        <h4>About_us</h4>
-                        <p>
-                        I am a student of PUCIT(New-Campus).I am currently doing BSSE.I am passionate about the mern
-                        stack web development ,operating systems,nfts and cyber security.In my first semister I found
-                        ,some students have problems like ,what i do? Which programs i do realted to the topic ,
-                        sometimes
-                        find very difficulty about the assignments than I take a decision ,i have to make a website from
-                        where i can upload all my experiences regarding to first semister and also some blogs to
-                        motivate the students about coding .So ,its a readymade coding dish for you enjoy it. Always
-                        remember me in your prayers.
-                        </p>
-                    </div>
-    
-    
-    
-                    <div class="footer-col">
-                        <h4>Contact_us</h4>
-                        <ul>
-                            <li><a href="https://pucit.edu.pk/" target="=blank">PUCIT(New_Campus)</a></li>
-                            <li><a href="https://www.whatsapp.com/" target="=blank">phone:03259615088</a></li>
-                            <li><a href="https://gmail.com/" target="=blank">email:bsef21m540@pucit.edu.pk</a></li>
-                            <li><a href="https://www.google.com/maps/place/Punjab+University+Hostel+Rd,+Quaid-i-Azam+Campus,+Lahore,+Punjab/@31.4958087,74.3057684,17z/data=!3m1!4b1!4m5!3m4!1s0x39190477c811e4e9:0x9c8824758d8549ae!8m2!3d31.4958087!4d74.3079571" target="=blank">Punjab,hostel #09 ,Lahore</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Quick_links</h4>
-                        <ul>
-                            <li><a href="https://www.facebook.com/profile.php?id=100039337088172" target="=blank"><i class="fab fa-facebook-f" id="face"></i>محمد محب الله</a></li>
-                            <li><a href="https://www.instagram.com/muhib7353/" target="=blank"><i class="fab fa-instagram" id="insta"></i>muhib7353</a></li>
-                            <li><a href="https://www.whatsapp.com/" target="=blank"><i class="fab fa-whatsapp" id="whats"></i>+923259615088</a></li>
-                            <li><a href="https://twitter.com/muhib7353" target="=blank"><i class="fab fa-twitter" id="twit"></i>muhib7353</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Quick_Access</h4>
-                        <ul>
-                            <li><a href="codesheets.html">Code_sheets</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="sinup.html">Sign_in</a></li>
-                            <li><a href="home.html">Home</a></li>
-                        </ul>
-                    </div>
+    </div>
+    <footer>
+        <div class="contanier-4">
+            <div class="row-4">
+
+
+
+                <div class="footer-col" id="about_us">
+                    <h4>About_us</h4>
+                    <p>
+                          Hey, I am muhib a student of pucit and doing BSSE. I am keen off about MERN stack web
+                          development,operating systems.ntfs and cyber security.
+                          I found many problems about assignments, programs etc in first semester so i decided to make a
+                          website about my journey of coding so further upcoming students can take benefit from it.Yours
+                          wellwisher Muhib Arshad.
+                    </p>
+                </div>
+
+
+
+                <div class="footer-col">
+                    <h4>Contact_us</h4>
+                    <ul>
+                        <li><a href="https://pucit.edu.pk/" target="=blank">PUCIT(New_Campus)</a></li>
+                        <li><a href="https://www.whatsapp.com/" target="=blank">phone:03259615088</a></li>
+                        <li><a href="https://gmail.com/" target="=blank">email:bsef21m540@pucit.edu.pk</a></li>
+                        <li><a href="https://www.google.com/maps/place/Punjab+University+Hostel+Rd,+Quaid-i-Azam+Campus,+Lahore,+Punjab/@31.4958087,74.3057684,17z/data=!3m1!4b1!4m5!3m4!1s0x39190477c811e4e9:0x9c8824758d8549ae!8m2!3d31.4958087!4d74.3079571"
+                                target="=blank">Punjab,hostel #09 ,Lahore</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick_links</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/profile.php?id=100039337088172" target="=blank"><i
+                                    class="fab fa-facebook-f" id="face"></i>محمد محب الله</a></li>
+                        <li><a href="https://www.instagram.com/muhib7353/" target="=blank"><i class="fab fa-instagram"
+                                    id="insta"></i>muhib7353</a></li>
+                        <li><a href="https://www.whatsapp.com/" target="=blank"><i class="fab fa-whatsapp"
+                                    id="whats"></i>+923259615088</a></li>
+                        <li><a href="https://twitter.com/muhib7353" target="=blank"><i class="fab fa-twitter"
+                                    id="twit"></i>muhib7353</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick_Access</h4>
+                    <ul>
+                        <li><a href="codesheets.html">Code_sheets</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="sinup.html">Sign_in</a></li>
+                        <li><a href="home.html">Home</a></li>
+                    </ul>
                 </div>
             </div>
-        </footer>
-        <div class="container-5">
-            <div class="footer-2">
-                <h1>Copyright &copy;https://muhibcodes.netlify.app/</h1>
-            </div>
         </div>
+    </footer>
+    <div class="container-5">
+        <div class="footer-2">
+            <h1>Copyright &copy;https://muhibcodes.netlify.app/</h1>
+        </div>
+    </div>
 
-        <script>
-            var menu_list = document.getElementById("menu_list");
-            menu_list.style.maxHeight = "0px";
-            function toggle_menu() {
-                if (menu_list.style.maxHeight == "0px") {
-                    menu_list.style.maxHeight = "130px"
-                }
-                else {
-                    menu_list.style.maxHeight = "0px"
-                }
+    <script>
+        var menu_list = document.getElementById("menu_list");
+        menu_list.style.maxHeight = "0px";
+
+        function toggle_menu() {
+            if (menu_list.style.maxHeight == "0px") {
+                menu_list.style.maxHeight = "130px"
+            } else {
+                menu_list.style.maxHeight = "0px"
             }
-        </script>
-        <script src="./Prism/prism-final.js" ></script>
+        }
+    </script>
+    <script src="./Prism/prism-final.js"></script>
 </body>
 
-</html> -->
+</html>
